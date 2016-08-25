@@ -5,9 +5,9 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.dee1024</groupId>
-    <artifactId>sloth</artifactId>
-    <version>1.0.1-snapshot</version>
+    <groupId>com.xsj</groupId>
+    <artifactId>RepeateKiller</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -17,13 +17,14 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!--用户参数缺省时的数据库参数 -->
         <db.url>jdbc:mysql://localhost:3306</db.url>
         <db.username>root</db.username>
         <db.password></db.password>
         <db.schema>test</db.schema>
-        <start-class>com.github.dee1024.sloth.Application</start-class>
+        <start-class>com.xsj.Application</start-class>
     </properties>
 
     <dependencies>
@@ -32,7 +33,7 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
-        <!--support http-->
+        <!--加入对Http支持-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -44,26 +45,26 @@
             <optional>true</optional>
         </dependency>
 
-        <!--support unit test-->
+        <!--加入单元测试支持-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
-        <!--AOP-->
+        <!--AOP支持-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
-        <!--Freemarker-->
+        <!--Freemarker支持-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
 
-        <!-- apache -->
+        <!-- apache组件 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -81,6 +82,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.37</version>
         </dependency>
+        <!-- guava -->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
@@ -98,6 +100,7 @@
             <artifactId>freemarker</artifactId>
             <version>2.3.20</version>
         </dependency>
+        <!--日志管理-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -114,9 +117,19 @@
             <version>1.1.7</version>
         </dependency>
 
+
+        <!--如果不将该包导入, 编译会报错, 有人遇到了同样的问题.https://code.google.com/p/jsonrpc4j/issues/detail?id=21-->
+        <dependency>
+            <groupId>javax.portlet</groupId>
+            <artifactId>portlet-api</artifactId>
+            <version>2.0</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
+
         <resources>
             <resource>
                 <directory>${basedir}/src/main/config</directory>
@@ -129,16 +142,27 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.3</version>
                 <configuration>
+                    <appendAssemblyId>false</appendAssemblyId>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.github.dee1024.sloth.Application</mainClass>
+                            <mainClass>com.xsj.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>assembly</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

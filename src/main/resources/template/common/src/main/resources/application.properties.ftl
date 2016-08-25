@@ -1,3 +1,4 @@
+#启动端口
 baseServiceUrl=http://localhost:8081
 server.port=8081
 
@@ -7,16 +8,6 @@ ${packageName}.dbPort = ${sourceDbPort}
 ${packageName}.dbUser = ${sourceDbUsername}
 ${packageName}.dbPassword = ${sourceDbPassword}
 ${packageName}.dbName = ${sourceDbSchema}
-
-#redis config
-#${packageName}.redis.host=127.0.0.1
-#${packageName}.redis.port=6379
-#${packageName}.redis.database=0
-#${packageName}.redis.password=
-#${packageName}.redis.timeout=
-#${packageName}.redis.maxPoolSize=
-#${packageName}.redis.poolName=
-#${packageName}.redis.expireTime=
 
 #freemarker config
 spring.freemarker.templateLoaderPath=classpath:/template/

@@ -4,7 +4,7 @@
         xsi:schemaLocation="
 	http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2
 	http://maven.apache.org/xsd/assembly-1.1.2.xsd">
-    <id>v${"$"}{current.time}-deployable</id>
+    <id>bin</id>
     <formats>
         <format>zip</format>
     </formats>
