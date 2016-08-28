@@ -1,4 +1,4 @@
-package com.xsj.generate.strategy.impl.SSM;
+package com.xsj.generate.strategy.impl.ssm;
 import com.xsj.generate.strategy.AbstractGeneratorStrategy;
 import com.xsj.generate.strategy.impl.support.GeneratorStrategyCategory;
 

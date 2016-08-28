@@ -20,8 +20,8 @@ public class IndexController {
 
     @RequestMapping(value="/build", method= RequestMethod.POST)
     public String build(WebBuildParameters webBuildParameters) throws Exception {
-        JSONObject result = Generator.execute(webBuildParameters.getBuildParams());
-        return result.toString();
+        Generator.execute(webBuildParameters.getBuildParams());
+        return "";
     }
 
 }

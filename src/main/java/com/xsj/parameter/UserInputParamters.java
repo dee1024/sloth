@@ -5,7 +5,8 @@ import com.xsj.utils.StringUtil;
 import java.io.File;
 
 /**
- * 用户输入参数解析和设值
+ * resolution the parameters in java -jar
+ * TODO Consider using args4j
  * Created by dee on 16/6/16.
  */
 public abstract class UserInputParamters {
@@ -25,13 +26,6 @@ public abstract class UserInputParamters {
 
     private static String rollbackVersionParam = "";
 
-    /**
-     * 解析在java -jar 命令中的参数
-     *
-     * TODO 参数较多时, 考虑使用args4j
-     *
-     * @param inputArgs
-     */
     public static int init(String[] inputArgs) {
         if (inputArgs != null) {
             for (int i = 0; i < inputArgs.length; i++) {

@@ -3,7 +3,7 @@ package com.xsj.parameter;
 import com.xsj.generate.strategy.impl.support.TemplateParameterInfo;
 
 /**
- * 模版配置
+ * Setting template parameters
  * Created by dee on 16/6/16.
  */
 public abstract class TemplateParameters {

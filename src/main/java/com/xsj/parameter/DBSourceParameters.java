@@ -3,6 +3,7 @@ package com.xsj.parameter;
 import com.xsj.utils.StringUtil;
 
 /**
+ * Setting database parameters
  * Created by dee on 16/6/16.
  */
 public abstract class DBSourceParameters {

@@ -3,7 +3,8 @@ package com.xsj.parameter;
 import java.io.File;
 
 /**
- * 目标项目所用参数
+ * setting target project's path parameter
+ *
  * Created by dee on 16/6/16.
  */
 public abstract class TargetProjectParameters {

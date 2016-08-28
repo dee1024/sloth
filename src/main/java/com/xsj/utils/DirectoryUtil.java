@@ -254,10 +254,4 @@ public abstract class DirectoryUtil {
         return files;
     }
 
-    public static void main(String[] args) {
-        DirectoryUtil.readFile("/Users/dee/Documents/dev/git/yishiyong/");
-
-    }
-
-
 }

@@ -1,20 +1,20 @@
 package com.xsj.parameter;
 
 import com.xsj.generate.strategy.GeneratorStrategy;
-import com.xsj.generate.strategy.impl.SSM.SSMGeneratorStrategy;
+import com.xsj.generate.strategy.impl.ssm.SSMGeneratorStrategy;
 
 /**
- * 生成策略所用参数
+ * Setting steategy parameters
  * Created by dee on 16/6/26.
  */
 public abstract class GeneratorSteategyParameters {
     /**
-     * 默认策略
+     * default steategy
      */
     final static GeneratorStrategy defaultGeneratorStrategy = new SSMGeneratorStrategy();
 
     /**
-     * 指定策略
+     * customized steategy
      */
     static GeneratorStrategy generatorStrategy;
 
