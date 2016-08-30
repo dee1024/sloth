@@ -5,8 +5,8 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.xsj</groupId>
-    <artifactId>RepeateKiller</artifactId>
+    <groupId>com.dee</groupId>
+    <artifactId>sloth</artifactId>
     <version>1.0.1-SNAPSHOT</version>
 
     <parent>
@@ -24,7 +24,7 @@
         <db.username>root</db.username>
         <db.password></db.password>
         <db.schema>test</db.schema>
-        <start-class>com.xsj.Application</start-class>
+        <start-class>com.dee.Application</start-class>
     </properties>
 
     <dependencies>
@@ -150,7 +150,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.xsj.Application</mainClass>
+                            <mainClass>com.dee.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
