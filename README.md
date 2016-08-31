@@ -1,5 +1,5 @@
-Autoenv: Directory-based Environments
-=====================================
+SLOTH
+=====
 123
 What is it?
 ===========
