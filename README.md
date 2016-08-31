@@ -1,9 +1,12 @@
-![](https://raw.githubusercontent.com/coolcooldee/sloth/master/src/main/resources/static/images/logo.png)SLOTH
-=====
-123
+![](https://raw.githubusercontent.com/coolcooldee/sloth/master/src/main/resources/static/images/logo.png)
+
+SLOTH 1.0
+=========
+
 What is it?
 ===========
-123
+Sloth is A tool to generate java scaffold code for SQL databases.
+
 Usage
 =====
 Install
