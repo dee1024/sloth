@@ -32,10 +32,11 @@ cd sloth
 mvn install
 ```
 4. Prepare Your Database
-| host        | port | username  |  password  |  dbname |
-| ----------- |:----:| :--------:|:----------:|--------:|
-| 127.0.0.1   | 3306 | root      |            |         |
-
+```
+ host      | port | username | password | dbname 
+ --------- | ---- | -------- | -------- | ------ 
+ 127.0.0.1 | 3306 | root     |          |         
+```
 
 5. Sloth Generating
 ```bash
@@ -43,14 +44,14 @@ mvn exec:java
     -Dexec.cleanupDaemonThreads=false
     -Dexec.mainClass=”com.dee.Application”
     -Dexec.args=
-        ”-path/Users/sloth/generated-sources-by-sloth
-        -h127.0.0.1
-        -P3306
-        -uroot
+        ”-path**/Users/sloth/generated-sources-by-sloth**
+        -h**127.0.0.1**
+        -P**3306**
+        -u**root**
         -p
-        -dgamesapi
-        -strategyssm
-        -packagecom.new
+        -d**gamesapi**
+        -strategy**ssm**
+        -package**com.new**
         ”
 ```
 
