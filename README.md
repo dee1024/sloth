@@ -40,7 +40,7 @@ mvn install
 ```
 - __Sloth Generating__
 ```
-mvn exec:java -Dexec.args=”-path/workspaces/mySlothProject -packagecom.test -h127.0.0.1 -P3306 -uroot -p123456 -dtest -strategyssm”  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass=”com.sloth.Application”
+mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h127.0.0.1 -P3306 -uroot -p123456 -dtest -strategyssm"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.sloth.Application"
 ```
       generate args             | e.g | description 
       :--------- | ---- | ---- 
