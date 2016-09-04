@@ -60,12 +60,12 @@ cd /workspaces/mySlothProject
 
 - __Runngin Sloth Target Project__
 ```bash
-mvn exec:java -Dexec.mainClass=”com.new.Application” -Dexec.cleanupDaemonThreads=false
+mvn install
+mvn exec:java -Dexec.mainClass=”com.test.Application” -Dexec.cleanupDaemonThreads=false
 ```
 - __OK__
 ```bash
-http://localhost:8080
-http://localhost:8080/apis-docs-by-sloth.html
+<http://localhost:8081/apis-docs-by-sloth.html>
 ```
 
 
