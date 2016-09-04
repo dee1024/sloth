@@ -20,57 +20,57 @@ Features
 Quick Start
 ===========
 - __Clone Sloth__
-    ```bash
-    git clone https://github.com/coolcooldee/sloth.git
-    ```
+```bash
+git clone https://github.com/coolcooldee/sloth.git
+```
 - __Into The Sloth Root Directory__
-    ```bash
-    cd sloth
-    ```
+```bash
+cd sloth
+```
 - __Maven Install__
-    ```bash
-    mvn install
-    ```
+```bash
+mvn install
+```
 - __Prepare Your Database__
-    ```
-     host      | port | username | password | dbname 
-     --------- | ---- | -------- | -------- | ------ 
-     127.0.0.1 | 3306 | root     |          |         
-    ```
+```
+host      | port | username | password | dbname 
+--------- | ---- | -------- | -------- | ------ 
+127.0.0.1 | 3306 | root     |          |         
+```
 
 - __Sloth Generating__
-    ```bash
-    mvn exec:java
-        -Dexec.cleanupDaemonThreads=false
-        -Dexec.mainClass=”com.dee.Application”
-        -Dexec.args=
-            ”-path**/Users/sloth/generated-sources-by-sloth**
-            -h**127.0.0.1**
-            -P**3306**
-            -u**root**
-            -p
-            -d**gamesapi**
-            -strategy**ssm**
-            -package**com.new**
-            ”
-    ```
+```bash
+mvn exec:java
+    -Dexec.cleanupDaemonThreads=false
+    -Dexec.mainClass=”com.dee.Application”
+    -Dexec.args=
+        ”-path**/Users/sloth/generated-sources-by-sloth**
+        -h**127.0.0.1**
+        -P**3306**
+        -u**root**
+        -p
+        -d**gamesapi**
+        -strategy**ssm**
+        -package**com.new**
+        ”
+```
 
 - __Into Sloth Target Project Generated__
-    ```bash
-    cd /Users/sloth/generated-sources-by-sloth
-    ```
+```bash
+cd /Users/sloth/generated-sources-by-sloth
+```
 
 - __Runngin Sloth Target Project__
-    ```bash
-    mvn exec:java
-        -Dexec.cleanupDaemonThreads=false
-        -Dexec.mainClass=”com.new.Application”
-    ```
+```bash
+mvn exec:java
+    -Dexec.cleanupDaemonThreads=false
+    -Dexec.mainClass=”com.new.Application”
+```
 - __OK__
-    ```bash
-    http://localhost:8080
-    http://localhost:8080/apis-docs-by-sloth.html
-    ```
+```bash
+http://localhost:8080
+http://localhost:8080/apis-docs-by-sloth.html
+```
 
 
 Author
