@@ -36,7 +36,7 @@ cd sloth
 ```
 - __Maven Install__
 ```bash
-mvn install
+mvn clean install
 ```
 - __Sloth Generating__
 ```
@@ -60,21 +60,97 @@ cd /workspaces/mySlothProject
 
 - __Runngin Sloth Target Project__
 ```bash
-mvn install
+mvn clean install
 mvn exec:java -Dexec.mainClass=”com.test.Application” -Dexec.cleanupDaemonThreads=false
 ```
-- __OK__
-```bash
+- __DONE__
 <http://localhost:8081/apis-docs-by-sloth.html>
+
+Example
+=======
+- __Database Tables Source__
+
+      TableName |
+      --------- |
+      game |
+      gameRole |
+      gameServer |
+      
+- __Target Project Code__
+```bash
+├── deploy.sh
+├── mvn.sh
+├── pom.xml
+├── src
+│   ├── main
+│   │   ├── assembly
+│   │   │   ├── assembly.xml
+│   │   ├── java
+│   │   │   ├── com
+│   │   │   │   ├── sloth
+│   │   │   │   │   ├── aop
+│   │   │   │   │   │   ├── LogAspect.java
+│   │   │   │   │   ├── Application.java
+│   │   │   │   │   ├── common
+│   │   │   │   │   │   ├── Page.java
+│   │   │   │   │   ├── config
+│   │   │   │   │   │   ├── database
+│   │   │   │   │   │   │   ├── DB.java
+│   │   │   │   │   │   │   ├── DBConfig.java
+│   │   │   │   │   │   ├── redis
+│   │   │   │   │   │   │   ├── RedisConfig.java
+│   │   │   │   │   │   ├── swagger
+│   │   │   │   │   │   │   ├── SwaggerConfig.java
+│   │   │   │   │   ├── controller
+│   │   │   │   │   │   ├── IndexController.java
+│   │   │   │   │   │   ├── restfulapi
+│   │   │   │   │   │   │   ├── GameController.java
+│   │   │   │   │   │   │   ├── GameRoleController.java
+│   │   │   │   │   │   │   ├── GameServerController.java
+│   │   │   │   │   │   ├── webpage
+│   │   │   │   │   │   │   ├── GamePageController.java
+│   │   │   │   │   │   │   ├── GameRolePageController.java
+│   │   │   │   │   │   │   ├── GameServerPageController.java
+│   │   │   │   │   ├── mapper
+│   │   │   │   │   │   ├── GameMapper.java
+│   │   │   │   │   │   ├── GameRoleMapper.java
+│   │   │   │   │   │   ├── GameServerMapper.java
+│   │   │   │   │   ├── model
+│   │   │   │   │   │   ├── Game.java
+│   │   │   │   │   │   ├── GameRole.java
+│   │   │   │   │   │   ├── GameServer.java
+│   │   │   │   │   ├── service
+│   │   │   │   │   │   ├── GameRoleService.java
+│   │   │   │   │   │   ├── GameServerService.java
+│   │   │   │   │   │   ├── GameService.java
+│   │   │   │   │   │   ├── impl
+│   │   │   │   │   │   │   ├── GameRoleServiceImpl.java
+│   │   │   │   │   │   │   ├── GameServerServiceImpl.java
+│   │   │   │   │   │   │   ├── GameServiceImpl.java
+│   │   ├── resources
+│   │   │   ├── application.properties
+│   │   │   ├── static
+│   │   │   │   ├── apis-docs-by-sloth.html
+│   │   │   │   ├── css
+│   │   │   │   ├── fonts
+│   │   │   │   ├── html
+│   │   │   │   ├── js
+│   │   │   ├── template
+├── start.sh
+├── stop.sh
 ```
 
+Contributing
+============
+If you want to contribute code, we are waiting for your pull requests !
 
 Author
 ======
+* __Dee Qiu__ <coolcooldee@gmail.com>
 
 License
 =======
-
+Sloth is licensed under the Apache License, Version 2.0 (the "License");
 
 
 
