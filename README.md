@@ -7,20 +7,22 @@ You just need to specify your application database may be used.
 
 Features
 ========
-1. __Create stand-alone SpringBoot applications__　
-2. __Generate model–view–controller code__
-3. __Provide many kinds of Data access with JDBC__　
+1. __Generate Stand-Alone SpringBoot Applications__　
+2. __Generate Model–View–Controller Code__
+3. __Generate API DOC__
+4. __Provide Many Kinds Of Data Access With JDBC__　
     * Mybatis
     * JOOQ
     * Spring JDBC
-4. __Generate API DOC__
 5. __DRY ( don't repeat yourself principle )__
     * Never copy and paste boilerplate between projects again
 
 Quick Start
 ===========
 1.Clone Sloth
-``git clone https://github.com/coolcooldee/sloth.git``
+```bash
+git clone https://github.com/coolcooldee/sloth.git
+```
 2.Into The Sloth Root Directory
 ``cd sloth``
 
