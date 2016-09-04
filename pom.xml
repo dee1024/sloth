@@ -24,7 +24,7 @@
         <db.username>root</db.username>
         <db.password></db.password>
         <db.schema>test</db.schema>
-        <start-class>com.dee.Application</start-class>
+        <start-class>com.sloth.Application</start-class>
     </properties>
 
     <dependencies>
@@ -150,7 +150,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.dee.Application</mainClass>
+                            <mainClass>com.sloth.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
