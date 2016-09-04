@@ -40,11 +40,11 @@ mvn install
 ```
 - __Sloth Generating__
 ```
-mvn exec:java -Dexec.args=”-path/workspaces/generated-project-by-sloth -packagecom.test -h127.0.0.1 -P3306 -uroot -p123456 -dtest -strategyssm”  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass=”com.sloth.Application”
+mvn exec:java -Dexec.args=”-path/workspaces/mySlothProject -packagecom.test -h127.0.0.1 -P3306 -uroot -p123456 -dtest -strategyssm”  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass=”com.sloth.Application”
 ```
       generate args             | e.g | description 
       :--------- | ---- | ---- 
-      -path |/workspaces/generatedProject | the path where code generate  
+      -path |/workspaces/mySlothProject | the path where code generate  
       -package | com.test | Tell Sloth to use the package name
       -strategy | ssm | generattion strategy. ssm=SpringMVC+Spring+Mybatis, ssj=SpringMVC+Spring+JOOQ, sss=SpringMVC+Spring+SpringJDBC
       -h | 127.0.0.1 | database host 
@@ -55,7 +55,7 @@ mvn exec:java -Dexec.args=”-path/workspaces/generated-project-by-sloth -packag
 
 - __Into Sloth Target Project Generated__
 ```bash
-cd /workspaces/generated-project-by-sloth
+cd /workspaces/mySlothProject
 ```
 
 - __Runngin Sloth Target Project__
