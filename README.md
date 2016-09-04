@@ -19,58 +19,58 @@ Features
 
 Quick Start
 ===========
-1. Clone Sloth
-```bash
-git clone https://github.com/coolcooldee/sloth.git
-```
-2. Into The Sloth Root Directory
-```bash
-cd sloth
-```
-3. Maven Install
-```bash
-mvn install
-```
-4. Prepare Your Database
-```
- host      | port | username | password | dbname 
- --------- | ---- | -------- | -------- | ------ 
- 127.0.0.1 | 3306 | root     |          |         
-```
+1. __Clone Sloth__
+    ```bash
+    git clone https://github.com/coolcooldee/sloth.git
+    ```
+2. __Into The Sloth Root Directory__
+    ```bash
+    cd sloth
+    ```
+3. __Maven Install__
+    ```bash
+    mvn install
+    ```
+4. __Prepare Your Database__
+    ```
+     host      | port | username | password | dbname 
+     --------- | ---- | -------- | -------- | ------ 
+     127.0.0.1 | 3306 | root     |          |         
+    ```
 
-5. Sloth Generating
-```bash
-mvn exec:java
-    -Dexec.cleanupDaemonThreads=false
-    -Dexec.mainClass=”com.dee.Application”
-    -Dexec.args=
-        ”-path**/Users/sloth/generated-sources-by-sloth**
-        -h**127.0.0.1**
-        -P**3306**
-        -u**root**
-        -p
-        -d**gamesapi**
-        -strategy**ssm**
-        -package**com.new**
-        ”
-```
+5. __Sloth Generating__
+    ```bash
+    mvn exec:java
+        -Dexec.cleanupDaemonThreads=false
+        -Dexec.mainClass=”com.dee.Application”
+        -Dexec.args=
+            ”-path**/Users/sloth/generated-sources-by-sloth**
+            -h**127.0.0.1**
+            -P**3306**
+            -u**root**
+            -p
+            -d**gamesapi**
+            -strategy**ssm**
+            -package**com.new**
+            ”
+    ```
 
-6. Into Sloth Target Project Generated
-```bash
-cd /Users/sloth/generated-sources-by-sloth
-```
+6. __Into Sloth Target Project Generated__
+    ```bash
+    cd /Users/sloth/generated-sources-by-sloth
+    ```
 
-7. Runngin Sloth Target Project
-```bash
-mvn exec:java
-    -Dexec.cleanupDaemonThreads=false
-    -Dexec.mainClass=”com.new.Application”
-```
-8. OK
-```bash
-http://localhost:8080
-http://localhost:8080/apis-docs-by-sloth.html
-```
+7. __Runngin Sloth Target Project__
+    ```bash
+    mvn exec:java
+        -Dexec.cleanupDaemonThreads=false
+        -Dexec.mainClass=”com.new.Application”
+    ```
+8. __OK__
+    ```bash
+    http://localhost:8080
+    http://localhost:8080/apis-docs-by-sloth.html
+    ```
 
 
 Author
