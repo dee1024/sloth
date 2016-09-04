@@ -7,38 +7,38 @@ You just need to specify your application database may be used.
 
 Features
 ========
-1. __Generate Stand-Alone SpringBoot Applications__　
-2. __Generate Model–View–Controller Code__
-3. __Generate API DOC__
-4. __Provide Many Kinds Of Data Access With JDBC__　
+__Generate Stand-Alone SpringBoot Applications__　
+__Generate Model–View–Controller Code__
+__Generate API DOC__
+__Provide Many Kinds Of Data Access With JDBC__　
     * Mybatis
     * JOOQ
     * Spring JDBC
-5. __DRY ( don't repeat yourself principle )__
+__DRY ( don't repeat yourself principle )__
     * Never copy and paste boilerplate between projects again
 
 Quick Start
 ===========
-1. __Clone Sloth__
+__Clone Sloth__
     ```bash
     git clone https://github.com/coolcooldee/sloth.git
     ```
-2. __Into The Sloth Root Directory__
+__Into The Sloth Root Directory__
     ```bash
     cd sloth
     ```
-3. __Maven Install__
+__Maven Install__
     ```bash
     mvn install
     ```
-4. __Prepare Your Database__
+__Prepare Your Database__
     ```
      host      | port | username | password | dbname 
      --------- | ---- | -------- | -------- | ------ 
      127.0.0.1 | 3306 | root     |          |         
     ```
 
-5. __Sloth Generating__
+__Sloth Generating__
     ```bash
     mvn exec:java
         -Dexec.cleanupDaemonThreads=false
@@ -55,18 +55,18 @@ Quick Start
             ”
     ```
 
-6. __Into Sloth Target Project Generated__
+__Into Sloth Target Project Generated__
     ```bash
     cd /Users/sloth/generated-sources-by-sloth
     ```
 
-7. __Runngin Sloth Target Project__
+__Runngin Sloth Target Project__
     ```bash
     mvn exec:java
         -Dexec.cleanupDaemonThreads=false
         -Dexec.mainClass=”com.new.Application”
     ```
-8. __OK__
+__OK__
     ```bash
     http://localhost:8080
     http://localhost:8080/apis-docs-by-sloth.html
