@@ -19,6 +19,12 @@ Features
 
 Quick Start
 ===========
+- __Prepare Your Database__
+```
+host      | port | username | password | dbname 
+--------- | ---- | -------- | -------- | ------ 
+127.0.0.1 | 3306 | root     |          | test    
+```
 - __Clone Sloth__
 ```bash
 git clone https://github.com/coolcooldee/sloth.git
@@ -31,28 +37,9 @@ cd sloth
 ```bash
 mvn install
 ```
-- __Prepare Your Database__
-```
-host      | port | username | password | dbname 
---------- | ---- | -------- | -------- | ------ 
-127.0.0.1 | 3306 | root     |          |         
-```
-
 - __Sloth Generating__
-```bash
-mvn exec:java
-    -Dexec.cleanupDaemonThreads=false
-    -Dexec.mainClass=”com.dee.Application”
-    -Dexec.args=
-        ”-path**/Users/sloth/generated-sources-by-sloth**
-        -h**127.0.0.1**
-        -P**3306**
-        -u**root**
-        -p
-        -d**gamesapi**
-        -strategy**ssm**
-        -package**com.new**
-        ”
+```
+mvn exec:java -Dexec.cleanupDaemonThreads=false -Dexec.mainClass=”com.dee.Application” -Dexec.args=”-path/Users/sloth/generated-sources-by-sloth -h127.0.0.1 -P3306 -uroot -p -dtest -strategyssm -packagecom.test”
 ```
 
 - __Into Sloth Target Project Generated__
