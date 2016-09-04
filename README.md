@@ -19,28 +19,25 @@ Features
 
 Quick Start
 ===========
-1.Clone Sloth
+1. Clone Sloth
 ```bash
 git clone https://github.com/coolcooldee/sloth.git
 ```
-2.Into The Sloth Root Directory
+2. Into The Sloth Root Directory
 ```bash
 cd sloth
 ```
-3.Maven Install
+3. Maven Install
 ```bash
 mvn install
 ```
-4.Prepare Your Database
-```bash
-host:port, 127.0.0.1:3306
-username, root
-password, 
-dbname, test
-```
+4. Prepare Your Database
+| host        | port | username  |  password  |  dbname |
+| ----------- |:----:| :--------:|:----------:|--------:|
+| 127.0.0.1   | 3306 | root      |            |         |
 
 
-5.Sloth Generating
+5. Sloth Generating
 ```bash
 mvn exec:java
     -Dexec.cleanupDaemonThreads=false
@@ -57,18 +54,18 @@ mvn exec:java
         ”
 ```
 
-6.Into Sloth Target Project Generated
+6. Into Sloth Target Project Generated
 ```bash
 cd /Users/sloth/generated-sources-by-sloth
 ```
 
-7.Runngin Sloth Target Project
+7. Runngin Sloth Target Project
 ```bash
 mvn exec:java
     -Dexec.cleanupDaemonThreads=false
     -Dexec.mainClass=”com.new.Application”
 ```
-8.OK
+8. OK
 ```bash
 http://localhost:8080
 http://localhost:8080/apis-docs-by-sloth.html
