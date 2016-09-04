@@ -111,12 +111,12 @@
                                 <div class="tab-pane fade" id="projextset">
                                     <div class="form-group">
                                         <label for="inputProjectname" class="sr-only">projectName</label>
-                                        <input type="text" id="inputProjectname" name="projectName" class="form-control" placeholder="generated-sources-by-rkiller" required>
+                                        <input type="text" id="inputProjectname" name="projectName" class="form-control" placeholder="generated-sources-by-sloth" required>
                                         <p class="text-left help-white">项目名称</p>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputPackage" class="sr-only">packageName</label>
-                                        <input type="text" id="inputPackage" name="packageName" class="form-control" placeholder="com.rkiller.generated" required>
+                                        <input type="text" id="inputPackage" name="packageName" class="form-control" placeholder="com.sloth.generated" required>
                                         <p class="text-left help-white">项目包名</p>
                                     </div>
                                     <div class="form-group">

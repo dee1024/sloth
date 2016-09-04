@@ -14,7 +14,7 @@ public class Application {
 
     public static void main(String[] args) throws Exception {
         if(args==null || args.length==0) {
-            String str = "-path/Users/sloth/Downloads/Project -h127.0.0.1 -P3306 -uroot -p  -dgamesapi -strategyssm -packagecom.sloth";
+            String str = "-path/Users/dee/Downloads/abcd/Projectdee -h127.0.0.1 -P3306 -uroot -p  -dgamesapi -strategyssm -packagecom.sloth";
             String[] testargs = str.split(" ");
             Generator.execute(testargs);
         }else{

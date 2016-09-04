@@ -11,8 +11,8 @@ public abstract class TargetProjectParameters {
 
     // TARGET INFO 缺省参数
     protected static String targetsDirectory = System.getProperty("user.dir") + "/target/";
-    protected static String targetsName = "generated-sources-by-sloth";
-    protected static String targetPackage = "com.rkiller.generated";
+    protected static String targetsName = "mySlothProject";
+    protected static String targetPackage = "com.sloth.generated";
     protected static String encoding = "UTF-8";
 
 
