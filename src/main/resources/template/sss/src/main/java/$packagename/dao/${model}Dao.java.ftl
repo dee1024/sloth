@@ -8,40 +8,18 @@ import ${packageName}.model.${upperFirstLetterName};
  */
 public interface ${upperFirstLetterName}Dao{
 
-	/**
-	*  获取${upperFirstLetterName}的数量
-	*/
 	Integer count();
 
-	/**
-	* 根据主键查询
-	*/
 	${upperFirstLetterName} getByPrimaryKey(Object primaryKey);
 
-	/**
-	* 根据主键删除
-	*/
 	Integer deleteByPrimaryKey(Object primaryKey);
 
-	/**
-	* 根据主键更新
-	*/
 	Integer updateByPrimaryKey(${upperFirstLetterName} ${lowerFirstLetterName});
 
-	/**
-	* 插入新数据
-	*/
 	Integer insert(${upperFirstLetterName} ${lowerFirstLetterName});
 
-
-	/**
-	* 获取前10条数据
-	*/
 	List<${upperFirstLetterName}> list();
 
-	/**
-	* 分页查找
-	*/
 	List<${upperFirstLetterName}> page(int start, int step );
 	
 }

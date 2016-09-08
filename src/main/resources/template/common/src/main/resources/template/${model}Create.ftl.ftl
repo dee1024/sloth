@@ -21,20 +21,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">管理后台</a>
+            <a class="navbar-brand" href="#">Admin</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <!-- Single button -->
-                <li><a href="../../../index">主页</a></li>
-                <!-- <li><a href="#">设置</a></li> -->
+                <li><a href="../../../index">Index</a></li>
+                <!-- <li><a href="#">Setting</a></li> -->
                 <li role="presentation" class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                        个人中心 <span class="caret"></span>
+                        Profile<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">个人资料</a></li>
-                        <li><a href="#">登出</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">log out</a></li>
                     </ul>
                 </li>
             </ul>
@@ -48,9 +48,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-            <p>表单</p>
+            <p>Form</p>
             <ul class="nav nav-sidebar">
-                <li><a href="../../../index">总览 <span class="sr-only">(current)</span></a></li>
+                <li><a href="../../../index">Overview <span class="sr-only">(current)</span></a></li>
             <#assign tables = allTablesName?replace(" ","")?split(",")>
             <#list tables as table>
                 <#if table == name>
@@ -73,23 +73,22 @@
                 </div>
             </#list>
             ${r'</#escape>'}
-                <button type="button" id="submit" class="btn btn-primary btn-lg pull-right" data-loading-text="<i class='fa fa-spinner fa-spin'></i> 请稍等..">送出</button>
+                <button type="button" id="submit" class="btn btn-primary btn-lg pull-right" data-loading-text="<i class='fa fa-spinner fa-spin'></i> sending..">Send</button>
 
-                <button type="button" id="cancel" class="btn btn-default btn-lg" data-dismiss="modal">返回</button>
+                <button type="button" id="cancel" class="btn btn-default btn-lg" data-dismiss="modal">Back</button>
             </form>
         </div>
 
     </div>
 </div>
 
-<!-- json编辑器 -->
 <div class="modal fade" id="jsonModal" tabindex="-1" role="dialog" aria-labelledby="jsonModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                 <h4 class="modal-title" id="jsonModalLabel">Json editor</h4>
-                <h5 class="modal-title" id="jsonModalLabel">删除key即可删除字段</h5>
+                <h5 class="modal-title" id="jsonModalLabel">delete key and delete field</h5>
             </div>
 
             <div class="modal-body">
@@ -97,7 +96,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -109,14 +108,14 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="messageTitle">结果</h4>
+                <h4 class="modal-title" id="messageTitle">Result</h4>
             </div>
             <div class="modal-body">
                 <p id="messageText" class="text-left"></p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" id="confirmDelete" class="btn btn-primary" data-loading-text="<i class='fa fa-spinner fa-spin'></i> 请稍等..">Ok</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" id="confirmDelete" class="btn btn-primary" data-loading-text="<i class='fa fa-spinner fa-spin'></i> please wait..">Ok</button>
             </div>
         </div>
     </div>
@@ -170,16 +169,16 @@
 
                 success: function(msg){
                     createFlag = true;
-                    $('#messageTitle').html("结果");
+                    $('#messageTitle').html("result");
                     $("#confirmDelete").hide();
-                    $("#messageText").html("新增成功");
+                    $("#messageText").html("add successfully");
                     $('#messageModal').modal('toggle');
                     $this.button('reset');
                 },
                 error:function(xhr, ajaxOptions, thrownError){
-                    $('#messageTitle').html("结果");
+                    $('#messageTitle').html("result");
                     $("#confirmDelete").hide();
-                    $("#messageText").html("新增失败<br>"+thrownError);
+                    $("#messageText").html("fail<br>"+thrownError);
                     $('#messageModal').modal('toggle');
                     $this.button('reset');
                 }
@@ -187,8 +186,8 @@
         });
 
         $("#cancel").click(function(){
-            $('#messageTitle').html("请确认");
-            $("#messageText").html("返回後数据將丟失，是否继续执行？");
+            $('#messageTitle').html("please confirm");
+            $("#messageText").html("data will loss ，yes or no？");
             $("#confirmDelete").show();
             $('#messageModal').modal('toggle');
         });

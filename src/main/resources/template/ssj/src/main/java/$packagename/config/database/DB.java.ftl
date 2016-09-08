@@ -36,10 +36,6 @@ public class DB {
     @Autowired
     private DBConfig dbConfig;
 
-    /**
-    * 数据连接池
-    * @return
-    */
     @Bean(destroyMethod = "close")
     @Primary
     public DataSource dataSource(){

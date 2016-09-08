@@ -9,39 +9,18 @@ import ${packageName}.common.Page;
  */
 public interface ${upperFirstLetterName}Service{
 
-	/**
-	*  保存${upperFirstLetterName}
-	*/
 	Integer save(${upperFirstLetterName} ${lowerFirstLetterName});
 
-	/**
-	*  获取${upperFirstLetterName}的数量
-	*/
 	Integer count();
 
-	/**
-	* 根据主键查询
-	*/
 	${upperFirstLetterName} getById(Object id);
 
-	/**
-	* 根据主键删除
-	*/
 	void deleteById(Object id);
 
-	/**
-	* 根据主键更新
-	*/
 	void update(${upperFirstLetterName} ${lowerFirstLetterName});
 
-	/**
-	* 查看列表(最多10个)
-	*/
 	List<${upperFirstLetterName}> list();
 
-	/**
-	* 分页查找
-	*/
 	Page<${upperFirstLetterName}> page(int pageNo, int pageSize);
 
 

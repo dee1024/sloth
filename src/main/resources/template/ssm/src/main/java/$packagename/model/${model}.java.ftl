@@ -23,11 +23,7 @@ public class ${upperFirstLetterName} {
 	
 	</#list>
 		
-	//分页
-	<#--private Page pagetemplate;-->
-	
-	
-	 <#--字段的get和set -->
+
 	<#list columns as column>
 	
 	public ${column.type} get<#if column.name?index_of("_") gt -1>${column.name}<#else>${column.upperFirstLetterName}</#if>() {

@@ -10,19 +10,13 @@ import org.jooq.Field;
  */
 public interface ${jooqName}Service{
 
-	/**
-	*  获取${jooqName}Record的数量
-	*/
+
 	public Integer count();
 
-	/**
-	* 根据主键查询(唯一)
-	*/
+
 	public ${jooqName}Record getById(Integer id);
 
-	/**
-	* 查看列表(最多10个)
-	*/
+
 	public List<${jooqName}Record> list();
 
 }

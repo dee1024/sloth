@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.dee</groupId>
+    <groupId>com.github.coolcooldee</groupId>
     <artifactId>sloth</artifactId>
     <version>1.0.1-SNAPSHOT</version>
 
@@ -19,7 +19,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <!--用户参数缺省时的数据库参数 -->
         <db.url>jdbc:mysql://localhost:3306</db.url>
         <db.username>root</db.username>
         <db.password></db.password>
@@ -33,7 +32,7 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
-        <!--加入对Http支持-->
+        <!--support http-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -45,7 +44,7 @@
             <optional>true</optional>
         </dependency>
 
-        <!--加入单元测试支持-->
+        <!--support unit test-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

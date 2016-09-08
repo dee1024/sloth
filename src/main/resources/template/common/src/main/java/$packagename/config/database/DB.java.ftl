@@ -40,10 +40,7 @@ public class DB {
     @Autowired
     private DBConfig dbConfig;
 
-    /**
-    * 数据连接池
-    * @return
-    */
+
     @Bean(destroyMethod = "close")
     @Primary
     public DataSource dataSource(){
@@ -66,12 +63,6 @@ public class DB {
         return new JdbcTemplate(dataSource());
     }
 
-    /**
-    * SQL会话管理
-    * @param dataSource
-    * @return
-    * @throws Exception
-    */
     @Bean
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
         log.info(">>>>sqlSessionFactory init, dataSource:" + dataSource);

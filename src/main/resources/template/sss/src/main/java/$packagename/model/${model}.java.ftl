@@ -23,13 +23,9 @@ public class ${upperFirstLetterName} {
 	
 	</#list>
 		
-	//分页
-	<#--private Page pagetemplate;-->
-	
-	
-	 <#--字段的get和set -->
+
 	<#list columns as column>
-	
+
 	public ${column.type} get${column.upperFirstLetterName}() {
 		return ${column.lowerFirstLetterName};
 	}

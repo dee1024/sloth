@@ -18,7 +18,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.7</java.version>
-        <!--数据库迁移所用的参数 -->
         <db.url>jdbc:mysql://${sourceDbHost}:${sourceDbPort}</db.url>
         <db.username>${sourceDbUsername}</db.username>
         <db.password>${sourceDbPassword}</db.password>
@@ -32,7 +31,6 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
-        <!--加入对Http支持-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -56,26 +54,22 @@
             <optional>true</optional>
         </dependency>
 
-        <!--加入对Websocket支持-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-websocket</artifactId>
         </dependency>
 
-        <!--加入对于MQ支持-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-messaging</artifactId>
         </dependency>
 
-        <!--加入单元测试支持-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
-        <!--AOP支持-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
@@ -86,7 +80,6 @@
             <version>1.8.0</version>
         </dependency>-->
 
-        <!--DB连接支持-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
@@ -102,7 +95,6 @@
             <version>2.4.2</version>
         </dependency>
 
-        <!-- apache组件 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -128,7 +120,6 @@
             <version>2.2.4</version>
         </dependency>
 
-        <!--其它-->
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
@@ -173,7 +164,6 @@
             <artifactId>dom4j</artifactId>
             <version>1.6.1</version>
         </dependency>
-        <!--对swagger2的支持-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -184,7 +174,6 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.2.2</version>
         </dependency>
-        <!--日志-->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
@@ -205,7 +194,6 @@
             <artifactId>log4j-slf4j-impl</artifactId>
             <version>2.4.1</version>
         </dependency>
-        <!--数据库schema代码生成器 -->
         <dependency>
             <groupId>org.jooq</groupId>
             <artifactId>jooq-codegen</artifactId>
@@ -276,8 +264,8 @@
                 <artifactId>maven-dependency-plugin</artifactId>
                 <configuration>
                     <outputDirectory>${"$"}{project.build.directory}/lib</outputDirectory>
-                    <excludeTransitive>false</excludeTransitive> <!-- 表示是否不包含间接依赖的包 -->
-                    <stripVersion>false</stripVersion> <!-- 去除版本信息 -->
+                    <excludeTransitive>false</excludeTransitive>
+                    <stripVersion>false</stripVersion>
                 </configuration>
 
                 <executions>
@@ -288,7 +276,6 @@
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
-                            <!-- 拷贝项目依赖包到lib/目录下 -->
                             <outputDirectory>${"$"}{project.build.directory}/lib</outputDirectory>
                             <excludeTransitive>false</excludeTransitive>
                             <stripVersion>false</stripVersion>
@@ -310,7 +297,6 @@
                         </goals>
                         <configuration>
                             <encoding>UTF-8</encoding>
-                            <!-- 拷贝项目src/excut/resources/下，除.bat以外的所有文件到conf/目录下 -->
                             <outputDirectory>${"$"}{project.build.directory}/conf</outputDirectory>
                             <resources>
                                 <resource>
@@ -328,7 +314,6 @@
                         </goals>
                         <configuration>
                             <encoding>UTF-8</encoding>
-                            <!-- 只拷贝项目src/excut/resources/目录下的.bat文件到输出目录下 -->
                             <outputDirectory>${"$"}{project.build.directory}</outputDirectory>
                             <resources>
                                 <resource>
@@ -365,9 +350,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
-                    <#--<descriptors>-->
-                        <#--<descriptor>src/excut/assembly/assembly.xml</descriptor>-->
-                    <#--</descriptors>-->
                     <finalName>${"$"}{project.artifactId}</finalName>
                         <archive>
                             <manifest>
@@ -389,7 +371,6 @@
                 </executions>
             </plugin>
 
-            <!-- 可选 插件 JOOQ 数据库代码生成的插件 -->
             <plugin>
                 <!-- Specify the maven code generator plugin -->
                 <groupId>org.jooq</groupId>
