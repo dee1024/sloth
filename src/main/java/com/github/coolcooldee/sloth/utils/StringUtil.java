@@ -33,6 +33,7 @@ public class StringUtil {
 		return sb.toString();
 	}
 
+
 	public static final String newTableName(String tableName) {
 		String strS[] = tableName.split("_");
 		String newStr = "";
@@ -40,20 +41,6 @@ public class StringUtil {
 			newStr += StringUtil.upperFirst(st);
 		}
 		return newStr;
-	}
-
-	public static <T> T[] concatAll(T[] first, T[]... rest) {
-		int totalLength = first.length;
-		for (T[] array : rest) {
-			totalLength += array.length;
-		}
-		T[] result = Arrays.copyOf(first, totalLength);
-		int offset = first.length;
-		for (T[] array : rest) {
-			System.arraycopy(array, 0, result, offset, array.length);
-			offset += array.length;
-		}
-		return result;
 	}
 
 

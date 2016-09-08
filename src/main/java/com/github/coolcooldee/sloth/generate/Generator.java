@@ -29,7 +29,7 @@ public class Generator {
     }
 
     private static void printlnResult(){
-        logger.info("Target project directory is : /n" + TargetProjectParameters.getTargetProjectStorePath());
+        logger.info("\nTarget project directory is : " + TargetProjectParameters.getTargetProjectStorePath());
         DirectoryUtil.readFile(TargetProjectParameters.getTargetProjectStorePath());
         logger.info("\n\n");
         logger.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");

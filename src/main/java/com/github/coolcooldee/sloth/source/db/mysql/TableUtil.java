@@ -11,6 +11,7 @@ import java.util.*;
 /**
  * Created by sloth on 16/6/17.
  */
+@SuppressWarnings("unchecked")
 public abstract class TableUtil {
 
     public static final List<String> getTableNames(Connection conn, String... tableNames) throws SQLException {
