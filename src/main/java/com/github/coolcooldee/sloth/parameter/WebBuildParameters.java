@@ -6,7 +6,6 @@ import java.util.List;
 
 /**
  * Created by Chihche on 16/7/12.
- * 用于后台构建时交互参数
  */
 public class WebBuildParameters {
     String host;

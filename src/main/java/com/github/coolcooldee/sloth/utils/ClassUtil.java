@@ -15,14 +15,6 @@ import java.util.List;
  */
 public abstract class ClassUtil {
 
-    /**
-     * 取得当前类路径下的所有类
-     *
-     * @param cls
-     * @return
-     * @throws IOException
-     * @throws ClassNotFoundException
-     */
     public static List<Class<?>> getClasses(Class<?> cls) {
         String pk = cls.getPackage().getName();
         String path = pk.replace('.', '/');
@@ -37,13 +29,6 @@ public abstract class ClassUtil {
     }
 
 
-    /**
-     * 获取同一路径下所有子类或接口实现类
-     *
-     * @return
-     * @throws IOException
-     * @throws ClassNotFoundException
-     */
     public static List<Class<?>> getAllAssignedClass(Class<?> cls) {
         List<Class<?>> classes = new ArrayList<Class<?>>();
         for (Class<?> c : getClasses(cls)) {
@@ -54,14 +39,6 @@ public abstract class ClassUtil {
         return classes;
     }
 
-    /**
-     * 迭代查找类
-     *
-     * @param dir
-     * @param pk
-     * @return
-     * @throws ClassNotFoundException
-     */
     private static List<Class<?>> getClasses(File dir, String pk) throws ClassNotFoundException {
         List<Class<?>> classes = new ArrayList<Class<?>>();
         if (!dir.exists()) {

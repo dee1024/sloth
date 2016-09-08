@@ -6,11 +6,11 @@ package com.github.coolcooldee.sloth.source.db.mysql;
  */
 public class Column {
 
-	private String name;// 原名称
-	private String upperFirstLetterName;// 首字母大写
-	private String lowerFirstLetterName;// 首字母小写
-	private String type;// 字段类型
-	private String remark; //字段注释
+	private String name;
+	private String upperFirstLetterName;
+	private String lowerFirstLetterName;
+	private String type;
+	private String remark;
 
 	public Column(String name, String upperFirstLetterName,
 				  String lowerFirstLetterName, String type, String remark) {

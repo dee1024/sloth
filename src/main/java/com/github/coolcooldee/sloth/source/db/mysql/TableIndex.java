@@ -3,21 +3,18 @@ package com.github.coolcooldee.sloth.source.db.mysql;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 表的索引
- */
 public class TableIndex {
-	private String indexName; // 索引名称
-	private List<String> carrayNames;// 原关联字段
-	private List<String> carrayNames_d;// 大写关联字段
-	private List<String> carrayNames_x;// 小写关联字段
-	private List<Map<String, String>> carrayNameMaps;// 原字段+小写字段
-	private String stringCarrayNames1;// 直接拼接大写字段
-	private String stringCarrayNames2;// ","拼接大写字段
-	private String stringCarrayNames3;// 类型+ ","拼接大写字段
-	private String stringCarrayNames4;// ","拼接小写字段
-	private String stringCarrayNames5;// sqlMap中sql用的 原字段-小写字段
-	private boolean unique; // 是否唯一索引
+	private String indexName;
+	private List<String> carrayNames;
+	private List<String> carrayNames_d;
+	private List<String> carrayNames_x;
+	private List<Map<String, String>> carrayNameMaps;
+	private String stringCarrayNames1;// append upper columns
+	private String stringCarrayNames2;// "," append upper columns
+	private String stringCarrayNames3;// type+ ","append upper columns
+	private String stringCarrayNames4;// ","append lower columns
+	private String stringCarrayNames5;// columns-lower columns
+	private boolean unique;
 
 	public TableIndex(String indexName, List<String> carrayNames,
 			List<String> carrayNamesD, List<String> carrayNamesX,

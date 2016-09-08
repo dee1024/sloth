@@ -31,10 +31,7 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
 
     static Logger logger = LoggerFactory.getLogger(AbstractGeneratorStrategy.class);
 
-    /**
-     * 执行生成任务
-     *
-     */
+
     public void execute(){
         //genVersionControllFileAndBackup();
 
@@ -54,7 +51,7 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
 
 
     /**
-     * 到公共的模版路径下, 获取所有的公共的模版文件
+     * get all files in the path "resources/templae/common/"
      * @return
      */
     private  EnableGeneratedFile[] getAllCommonFiles(){
@@ -62,66 +59,29 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
     }
 
     /**
-     * 根据指定的策略到对应的目录下, 获取在该策略下所有定制化的模版文件
-     * 如果有与公共生成文件重名的, 会优先使用定制化的生成规则覆盖默认的
+     * get all files by strategy, e.g: when the strategy is "ssm", files are in the path "resources/templae/ssm/"
      * @return
      */
     private  EnableGeneratedFile[] getAllCustomizedFiles(){
         return getAllTemplateFilesByTemplatePath(SourceProjectPathParamters.getSourceProjectClassPath()+"template/"+getSpecifiedStr()+"/");
     }
 
-    /**
-     * 是否忽略默认的DB代码生成,包括 DB.java 和DBConfig.java
-     * @return
-     */
     protected abstract boolean ignoreDefaultDBCode();
 
-    /**
-     * 是否忽略启动文件生成, Application.java
-     * @return
-     */
     protected abstract boolean ignoreDefaultApplicationCode();
 
-    /**
-     * 是否忽略资源文件, application.properties
-     * @return
-     */
     protected abstract boolean ignoreDefaultResourceFile();
 
-    /**
-     * 是否忽略POM文件, pom.xml
-     * @return
-     */
     protected abstract boolean ignoreDefaultAssemblyFile();
 
-    /**
-     * 是否忽略脚本文件文件生成, 包括 mvn.sh、start.sh 等
-     * @return
-     */
     protected abstract boolean ignoreDefaultShellScriptFiles();
 
-    /**
-     * 是否忽略POM文件生成, pom.xml
-     * @return
-     */
     protected abstract boolean ignoreDefaultPomFile();
 
-    /**
-     * 是否忽略 IndexController 文件生成, IndexController.java
-     * @return
-     */
     protected abstract boolean ignoreDefaultIndexControllerCode();
 
-    /**
-     * 是否忽略 页面模版文件生成
-     * @return
-     */
     protected abstract boolean ignoreDefaultTemplateFile();
 
-
-    /**
-     * generate file with template
-     */
     private void genEnableGeneratedFileIn(EnableGeneratedFile[] enableGeneratedFiles){
         genEnableGeneratedFileIn(enableGeneratedFiles, null);
     }
@@ -240,12 +200,12 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
 
 
     /**
-     * 最基础的Freemarker生成方法
-     * @param templateData 渲染模版所需要的数据
-     * @param templateFileRelativeDir 模版文件的 "相对路径", 该路径必须以 "/" 开头 ( 该相对路径是相对于 classpath 目录, 一般是指项目的 resources 目录 )
-     * @param templateFileName 模版文件的名字
-     * @param targetFileAbsoluteDir 目标文件的 "绝对路径"
-     * @param targetFileName 目标文件的名字
+     * base freemarker genarate method
+     * @param templateData
+     * @param templateFileRelativeDir
+     * @param templateFileName
+     * @param targetFileAbsoluteDir
+     * @param targetFileName
      */
     private void gen(Object templateData, String templateFileRelativeDir, String templateFileName, String targetFileAbsoluteDir, String targetFileName){
         try{
@@ -266,11 +226,7 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
         }
     }
 
-    /**
-     * 获取某个路径下的所有模版文件, 以 .ftl 结尾的
-     * @param templatePath
-     * @return
-     */
+
     private  EnableGeneratedFile[] getAllTemplateFilesByTemplatePath(String templatePath){
         List<EnableGeneratedFile> enableGeneratedFileList = new ArrayList<EnableGeneratedFile>();
         List<File> files = DirectoryUtil.getListFiles(templatePath);
@@ -281,7 +237,6 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
             String templateFileName = file.getName();
             String targetFileAbsoluteBaseDir = TargetProjectParameters.getTargetProjectStorePath();
             String targetFileRelativeDir = file.getAbsolutePath().replace(templatePath,"").replace("$packagename",TargetProjectParameters.getTargetPackagePath()).replace(file.getName(),"");
-            //删除最后面的一个.ftl, 其他的不删除, 不能使用replace, 只能去除后四个字符
             //String targetFileName = file.getName().replace(".ftl","");
             String targetFileName = file.getName().substring(0,file.getName().length()-4);
 

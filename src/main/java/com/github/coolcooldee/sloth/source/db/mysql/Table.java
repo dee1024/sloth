@@ -6,21 +6,21 @@ import java.util.Set;
 
 public class Table {
 
-    private String name;// 原表名称
+    private String name;
 
-    private String upperFirstLetterName;// 大写表名称
+    private String upperFirstLetterName;
 
-    private String lowerFirstLetterName;// 小写表名称
+    private String lowerFirstLetterName;
 
     private String packageName;
 
-    private List<Column> columns;// 表字段
+    private List<Column> columns;
 
     private String primaryKey;
 
-    private String upperFirstLetterPrimaryKey;// 主键大写
+    private String upperFirstLetterPrimaryKey;
 
-    private String lowerFirstLetterPrimaryKey;// 主键小写
+    private String lowerFirstLetterPrimaryKey;
 
     public String getUpperFirstLetterPrimaryKey() {
         return upperFirstLetterPrimaryKey;
@@ -30,36 +30,32 @@ public class Table {
         this.upperFirstLetterPrimaryKey = upperFirstLetterPrimaryKey;
     }
 
-    private List<TableIndex> tableIndexs;// 表索引
+    private List<TableIndex> tableIndexs;
 
-    private List<TableBind> tableBinds;// 表主外键
+    private List<TableBind> tableBinds;
 
-    private Set<String> importPojos;// 需要导入的POJO
+    private Set<String> importPojos;
 
-    private String stringCarrayNames1;// ","拼接大写字段
+    private String stringCarrayNames1;// "," append upper columns
 
     private String stringCarrayNames2;// int id ,String userCord ,..
 
-    private String stringCarrayNames3;// ","拼接原字段
+    private String stringCarrayNames3;// "," append columns
 
-    private String stringCarrayNames4;// "#%s#,"拼接小写字段
+    private String stringCarrayNames4;// "#%s#," append lower columns
 
-    private String stringCarrayNames5;// "%s=#%s#,"拼接原字段-小写字段
+    private String stringCarrayNames5;// "%s=#%s#," append columns-lower columns
 
-    private String stringCarrayNames6;// "%s=#%s#,"拼接原字段-小写字段
+    private String stringCarrayNames6;// "%s=#%s#,"append columns-lower columns
 
-    private String stringCarrayNames7;// "%s=#%s#,"拼接原字段-小写字段
+    private String stringCarrayNames7;// "%s=#%s#,"append columns-lower columns
 
-    private String stringCarrayNames8;//根据主键得到实体
+    private String stringCarrayNames8;
 
-    /**
-     * 获取所有表的名字,多个用逗号隔开(如: game, gameRole)
-     */
+
     private String allTablesName;
 
-    /**
-     * DbSchema 用於查詢increment
-     */
+
     private String sourceDbSchema;
 
     public Table(String name, String classNameD, String classNameX, String packageName,
@@ -235,10 +231,7 @@ public class Table {
         this.packageName = packageName;
     }
 
-    /**
-     * 返回  字段A = ?, 字段B = ? ....
-     * @return
-     */
+
     public String getStringCarrayNames9(){
         if(columns==null)
             return "";
@@ -251,10 +244,7 @@ public class Table {
         return sb.toString();
     }
 
-    /**
-     * 返回  类名.get字段A(), 类名.get字段B() ...
-     * @return
-     */
+
     public String getStringCarrayNames10(){
         if(columns==null)
             return "";

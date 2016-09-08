@@ -14,12 +14,11 @@ public class TemplateParameterInfo {
     String sourceDbPassword;
     String allTablesName; //获取所有表的名字,多个用逗号隔开(如: game, gameRole)
     /**
-     *  模型层的模型的名字
-     *  如: user、order
+     *  model name, e.g : user、order
      */
     String modelName;
     /**
-     *  具体的类的名字
+     *  class name
      *  如: user、userService、userController
      */
     String className;

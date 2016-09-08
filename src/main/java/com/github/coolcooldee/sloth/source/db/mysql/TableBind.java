@@ -1,15 +1,13 @@
 package com.github.coolcooldee.sloth.source.db.mysql;
 
-/**
- * 表的主外键关系
- */
+
 public class TableBind {
-	private String keyName;// 键名称
-	private String keyType;// 键类型
-	private String tableName_d;// 大写表名称
-	private String tableName_x;// 小写表名称
-	private String carrayName_d;// 大写字段名称
-	private String carrayName_x;// 小写字段名称
+	private String keyName;
+	private String keyType;
+	private String tableName_d;
+	private String tableName_x;
+	private String carrayName_d;
+	private String carrayName_x;
 
 	public TableBind(String keyName, String keyType, String tableNameD,
 			String tableNameX, String carrayNameD, String carrayNameX) {

@@ -8,12 +8,7 @@ import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombi
 
 
 public class PinYinUtil {
-	/**
-	 * 获取汉字串拼音首字母，英文字符不变
-	 * 
-	 * @param chinese 汉字串
-	 * @return 汉语拼音首字母
-	 */
+
 	public static String getFirstSpell(String chinese) {
 		StringBuffer pybf = new StringBuffer();
 		char[] arr = chinese.toCharArray();
@@ -38,12 +33,7 @@ public class PinYinUtil {
 		return pybf.toString().replaceAll("\\W", "").trim();
 	}
 
-	/**
-	 * 获取汉字串拼音，英文字符不变
-	 * 
-	 * @param chinese 汉字串
-	 * @return 汉语拼音
-	 */
+
 	public static String getFullSpell(String chinese) {
 		StringBuffer pybf = new StringBuffer();
 		char[] arr = chinese.toCharArray();

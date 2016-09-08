@@ -1,7 +1,6 @@
 package com.github.coolcooldee.sloth.generate.strategy.impl.support;
 
 /**
- * 生成策略类别
  * Created by sloth on 16/6/24.
  */
 public enum GeneratorStrategyCategory {

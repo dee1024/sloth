@@ -9,7 +9,7 @@ import java.io.File;
  */
 public abstract class TargetProjectParameters {
 
-    // TARGET INFO 缺省参数
+    // TARGET INFO
     protected static String targetsDirectory = System.getProperty("user.dir") + "/target/";
     protected static String targetsName = "mySlothProject";
     protected static String targetPackage = "com.sloth.generated";
@@ -18,7 +18,6 @@ public abstract class TargetProjectParameters {
 
     //TODO  对includes, excludes, includeExcludeColumns的支持
 
-    //目录接口与Maven约定格式统一
 
     //xxxxx/target/DefauleProjectByRK/
     private static String targetProjectStorePath = targetsDirectory + targetsName + "/";

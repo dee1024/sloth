@@ -40,11 +40,6 @@ public abstract class TableUtil {
         return tableNanes;
     }
 
-    /**
-     * 取得表中的字段
-     *
-     * @throws Exception
-     */
     public static final List<Map<String, Object>> getCarrays(Connection conn, String tableName) throws Exception {
         String sql = String.format("SELECT * FROM `%s` LIMIT 1", tableName);
 
@@ -57,11 +52,6 @@ public abstract class TableUtil {
         return list;
     }
 
-    /**
-     * 取得表中的字段的注视
-     *
-     * @throws Exception
-     */
     public static final String getRemark(Connection conn, String tableName, String columnName) throws Exception {
         String sql = String.format("SELECT " + "COLUMN_NAME, DATA_TYPE, "
                 + "COLUMN_COMMENT FROM information_schema.columns " + "WHERE table_name  =? and COLUMN_NAME =? ");
@@ -79,26 +69,13 @@ public abstract class TableUtil {
         return remark;
     }
 
-    /**
-     * 取得表中的索引
-     *
-     * @return
-     * @throws SQLException
-     */
+
     public static final List<Map> getIndexs(Connection conn, String tableName, boolean unique) throws SQLException {
         DatabaseMetaData dmd = conn.getMetaData();
         ResultSet rs = dmd.getIndexInfo(null, null, tableName, unique, true);
         return resToList(rs);
     }
 
-    /**
-     * 取得主外键关系
-     *
-     * @param conn
-     * @param tableName
-     * @return
-     * @throws Exception
-     */
     public static final Map getBinds(Connection conn, String tableName) throws Exception {
         DatabaseMetaData dmd = conn.getMetaData();
         Map map = new HashMap();
@@ -111,13 +88,7 @@ public abstract class TableUtil {
         return map;
     }
 
-    /**
-     * ResultSet转List
-     *
-     * @param resultSets
-     * @return
-     * @throws SQLException
-     */
+
     public static final List<Map> resToList(ResultSet resultSets) throws SQLException {
         List<Map> list = new ArrayList<Map>();
         while (resultSets.next()) {
@@ -126,13 +97,6 @@ public abstract class TableUtil {
         return list;
     }
 
-    /**
-     * List<ResultSet>转List
-     *
-     * @param resultSets
-     * @return
-     * @throws SQLException
-     */
     public static final List<Map> resToList(List<ResultSet> resultSets) throws SQLException {
         List<Map> list = new ArrayList<Map>();
         for (int i = 0; i < resultSets.size(); i++) {
@@ -143,13 +107,7 @@ public abstract class TableUtil {
         return list;
     }
 
-    /**
-     * ResultSet转Map
-     *
-     * @param rs
-     * @return
-     * @throws SQLException
-     */
+
     private static final Map resToMap(ResultSet rs) throws SQLException {
         Map map = new HashMap();
         ResultSetMetaData rsmd = rs.getMetaData();
@@ -160,17 +118,9 @@ public abstract class TableUtil {
         return map;
     }
 
-    /**
-     * 取得字段详情
-     *
-     * @param rs
-     * @return
-     * @throws Exception
-     */
     public static final List<Map<String, Object>> getColumns(ResultSet rs) throws Exception {
         List<Map<String, Object>> ret = new ArrayList<Map<String, Object>>();
 
-        // ResultSetMetaData 有关 ResultSet 中列的名称和类型的信息。
         ResultSetMetaData rsmd = rs.getMetaData();
 
         int count = rsmd.getColumnCount();
@@ -226,20 +176,13 @@ public abstract class TableUtil {
         return ret;
     }
 
-    /**
-     * @param conn          数据库连接
-     * @return
-     * @throws Exception
-     */
     public static final List<Table> getTables(Connection conn, String packageName, String[] tableNames)
             throws Exception {
 
-        // 存放数据库当中的表
         List<Table> tables = new ArrayList<Table>();
 
         Table table = null;
 
-        // 取得表名称集合
         List<String> tabelNames = getTableNames(conn, tableNames);
 
         StringBuilder tableNamesStr = new StringBuilder();
@@ -251,26 +194,13 @@ public abstract class TableUtil {
             tableNamesStr.append(tabelNames.get(i));
         }
 
-        // 遍历所有的表名。转换成大写或者小写
         for (String tableName : tabelNames) {
-
-            // 大写表名称
             String className_d = StringUtil.upperFirst(PinYinUtil.getFirstSpell(StringUtil.newTableName(tableName)));
-
-            // 小写表名称
             String className_x = StringUtil.lowerFirst(PinYinUtil.getFirstSpell(StringUtil.newTableName(tableName)));
-
-            // 表索引
-            List<TableIndex> tableIndexs = getTableIndexs(conn, tableName);// 表索引
-
-            // 表主外键
-            List<TableBind> tableBinds = getTableBinds(conn, tableName);// 表主外键
-
-            // 存放大写的表名
+            List<TableIndex> tableIndexs = getTableIndexs(conn, tableName);
+            List<TableBind> tableBinds = getTableBinds(conn, tableName);
             Set<String> upperTableNames = new HashSet<String>();
             upperTableNames.add(className_d);
-
-            // TableBind: 表的主外键关系
             for (TableBind tableBind : tableBinds) {
                 upperTableNames.add(tableBind.getTableName_d());
             }
@@ -284,13 +214,10 @@ public abstract class TableUtil {
             String stringCarrayNames6 = "";
             String stringCarrayNames7 = "";
 
-            // 表字段
-            List<Column> columns = getTableCarrays(conn, tableName);// 表字段
+            List<Column> columns = getTableCarrays(conn, tableName);
 
-            // Column 表字段
             for (Column column : columns) {
 
-                // 设置这个字段的注释
                 String remark = getRemark(conn, tableName, column.getName());
                 column.setRemark(remark);
 
@@ -310,12 +237,10 @@ public abstract class TableUtil {
                     stringCarrayNames5 += ", ";
                 }
                 //
-                stringCarrayNames1 += column.getLowerFirstLetterName();// 首字母小写
+                stringCarrayNames1 += column.getLowerFirstLetterName();
 
-                // 字段类型 CarrayType
                 stringCarrayNames2 += column.getType() + " " + column.getLowerFirstLetterName();
 
-                // 原表名 CarrayName
                 stringCarrayNames3 += column.getName();
 
                 stringCarrayNames4 += String.format("#{%s}", column.getLowerFirstLetterName());
@@ -349,7 +274,7 @@ public abstract class TableUtil {
             if (table.getPrimaryKey() == null) {
                 ResultSet rs = conn.getMetaData().getPrimaryKeys("", "", tableName);
                 while (rs.next()) {
-                    String primaryKey = rs.getString("COLUMN_NAME");//获取主键名字
+                    String primaryKey = rs.getString("COLUMN_NAME");
                     table.setPrimaryKey(primaryKey);
                     table.setLowerFirstLetterPrimaryKey(StringUtil.lowerFirst(StringUtil.newTableName(primaryKey)));
                     table.setUpperFirstLetterPrimaryKey(StringUtil.upperFirst(StringUtil.newTableName(primaryKey)));
@@ -384,12 +309,11 @@ public abstract class TableUtil {
 
             String columnLabel = map.get("columnLabel").toString();
 
-            String carrayName_d = StringUtil.upperFirst(PinYinUtil.getFirstSpell(StringUtil.newTableName(columnLabel)));// 首字母大写
+            String carrayName_d = StringUtil.upperFirst(PinYinUtil.getFirstSpell(StringUtil.newTableName(columnLabel)));
 
-            String carrayName_x = StringUtil.lowerFirst(PinYinUtil.getFirstSpell(StringUtil.newTableName(columnLabel)));// 首字母小写
+            String carrayName_x = StringUtil.lowerFirst(PinYinUtil.getFirstSpell(StringUtil.newTableName(columnLabel)));
 
-            String carrayType = map.get("javaForType").toString();// 字段类型
-            //转为它的包装类
+            String carrayType = map.get("javaForType").toString();
             if (carrayType.equals("int")) {
                 carrayType = "Integer";
             } else if (carrayType.equals("short")) {
@@ -417,7 +341,7 @@ public abstract class TableUtil {
         Map<String, String> carrayTypes = getTableCarrayTypes(conn, tableName);
         Map<String, List<Map>> _index = new HashMap<String, List<Map>>();
         for (Map map : indexs) {
-            String indexName = map.get("INDEX_NAME").toString(); // 索引名称
+            String indexName = map.get("INDEX_NAME").toString();
             List<Map> list = _index.remove(indexName);
             if (list == null) {
                 list = new ArrayList<Map>();
@@ -488,8 +412,8 @@ public abstract class TableUtil {
         List<Map<String, Object>> carrays = getCarrays(conn, tableName);
         for (Map<String, Object> map : carrays) {
             String columnLabel = map.get("columnLabel").toString();
-            String carrayName_d = StringUtil.upperFirst(PinYinUtil.getFirstSpell(columnLabel));// 首字母大写
-            String carrayType = map.get("javaForType").toString();// 字段类型
+            String carrayName_d = StringUtil.upperFirst(PinYinUtil.getFirstSpell(columnLabel));
+            String carrayType = map.get("javaForType").toString();
             tableCarrayTypes.put(carrayName_d, carrayType);
         }
         return tableCarrayTypes;
@@ -498,7 +422,7 @@ public abstract class TableUtil {
     public static final List<TableBind> getTableBinds(Connection conn, String tableName) throws Exception {
         List<TableBind> tableBinds = new ArrayList<TableBind>();
         TableBind tableBind = null;
-        Map map = getBinds(conn, tableName);// 表主外键
+        Map map = getBinds(conn, tableName);
 
         String keyName = "";
         String keyType = "";

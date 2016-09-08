@@ -17,10 +17,10 @@ public enum PLAYCodeCategory implements EnableGeneratedFile {
 
 
     /**
-     * @param templateFileRelativeDir 模版相对地址 ( 相对于 classpath 目录, 必须以 "/" 开头)
-     * @param templateFileName 模版名字
-     * @param targetFileRelativeDir 目标文件保存的相对路径目录 ( 相对于项目包下面,如 com.sloth )
-     * @param targetFileName 目标文件名字
+     * @param templateFileRelativeDir relative to the "classpath" directory , start with "/"
+     * @param templateFileName
+     * @param targetFileRelativeDir relative to the packageName directory , e.g com.github.coolcooldee.sloth )
+     * @param targetFileName
      */
     private PLAYCodeCategory(String targetFileName, String targetFileRelativeDir, String templateFileName, String templateFileRelativeDir){
         this.targetFileName = targetFileName;
