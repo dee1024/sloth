@@ -158,7 +158,7 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
         for (int i = 0; i < enableGeneratedFiles.length; i++) {
             EnableGeneratedFile enableGeneratedFile = enableGeneratedFiles[i];
             String targetFileName = enableGeneratedFile.getTargetFileName();
-            if(targetFileName.indexOf("*")>-1){
+            if(targetFileName.indexOf("${model}")>-1){
                 for(Table table : tables){
                     String modelName = enableGeneratedFile.getOriginalModelName(table.getUpperFirstLetterName());
                     if(isGenAllTables) {
@@ -230,7 +230,7 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
         String templateName = enableGeneratedFile.getTemplateFileName();
         String templateRelativeDir = enableGeneratedFile.getTemplateFileRelativeDir();
         String targetFileAbsoluteDir = enableGeneratedFile.getTargetFileAbsoluteBaseDir() + enableGeneratedFile.getTargetFileRelativeDir();
-        String targetFileName = enableGeneratedFile.getTargetFileName().replace("*", modelName) ;
+        String targetFileName = enableGeneratedFile.getTargetFileName().replace("${model}", modelName) ;
         gen(templateData, templateRelativeDir, templateName, targetFileAbsoluteDir, targetFileName);
     }
 
