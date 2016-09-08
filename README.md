@@ -99,18 +99,11 @@ Example
 │   │   │   │   │   │   │   ├── DBConfig.java
 │   │   │   │   │   │   ├── redis
 │   │   │   │   │   │   │   ├── RedisConfig.java
-│   │   │   │   │   │   ├── swagger
-│   │   │   │   │   │   │   ├── SwaggerConfig.java
 │   │   │   │   │   ├── controller
-│   │   │   │   │   │   ├── IndexController.java
 │   │   │   │   │   │   ├── restfulapi
 │   │   │   │   │   │   │   ├── GameController.java
 │   │   │   │   │   │   │   ├── GameRoleController.java
 │   │   │   │   │   │   │   ├── GameServerController.java
-│   │   │   │   │   │   ├── webpage
-│   │   │   │   │   │   │   ├── GamePageController.java
-│   │   │   │   │   │   │   ├── GameRolePageController.java
-│   │   │   │   │   │   │   ├── GameServerPageController.java
 │   │   │   │   │   ├── mapper
 │   │   │   │   │   │   ├── GameMapper.java
 │   │   │   │   │   │   ├── GameRoleMapper.java
