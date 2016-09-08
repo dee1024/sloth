@@ -1,4 +1,3 @@
-#启动端口
 baseServiceUrl=http://localhost:8081
 server.port=8081
 

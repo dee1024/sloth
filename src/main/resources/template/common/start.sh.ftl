@@ -7,5 +7,5 @@ nohup java -jar $filename >/dev/null 2>&1 &
 echo $! > ./${projectName}.pid
 echo '[success!]'
 sleep 5
-open  http://localhost:8080/
+open  http://localhost:8081/apis-docs-by-sloth.html
 
