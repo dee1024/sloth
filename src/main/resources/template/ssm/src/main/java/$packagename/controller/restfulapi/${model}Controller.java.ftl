@@ -8,6 +8,7 @@ import ${packageName}.service.${upperFirstLetterName}Service;
 import ${packageName}.common.Page;
 import javax.annotation.Generated;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import javax.annotation.Generated;
 
 @Generated(
 	value = {

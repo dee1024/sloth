@@ -17,7 +17,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.7</java.version>
+        <java.version>1.8</java.version>
         <db.url>jdbc:mysql://${sourceDbHost}:${sourceDbPort}</db.url>
         <db.username>${sourceDbUsername}</db.username>
         <db.password>${sourceDbPassword}</db.password>

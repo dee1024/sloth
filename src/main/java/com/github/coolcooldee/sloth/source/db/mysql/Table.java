@@ -8,6 +8,8 @@ public class Table {
 
     private String name;
 
+    private String upperName;
+
     private String upperFirstLetterName;
 
     private String lowerFirstLetterName;
@@ -267,6 +269,14 @@ public class Table {
             sb.append("?");
         }
         return sb.toString();
+    }
+
+    public String getUpperName() {
+        return upperName;
+    }
+
+    public void setUpperName(String upperName) {
+        this.upperName = upperName;
     }
 
     public String getAllTablesName() {

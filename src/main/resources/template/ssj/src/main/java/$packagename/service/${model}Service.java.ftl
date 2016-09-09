@@ -11,12 +11,12 @@ import org.jooq.Field;
 public interface ${jooqName}Service{
 
 
-	public Integer count();
+	Integer count();
 
 
-	public ${jooqName}Record getById(Integer id);
+	${jooqName}Record getById(Long id);
 
 
-	public List<${jooqName}Record> list();
+	List<${jooqName}Record> list();
 
 }

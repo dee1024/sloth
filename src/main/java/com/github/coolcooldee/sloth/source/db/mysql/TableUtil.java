@@ -268,7 +268,7 @@ public abstract class TableUtil {
                     upperTableNames, stringCarrayNames1, stringCarrayNames2, stringCarrayNames3, stringCarrayNames4,
                     stringCarrayNames5, stringCarrayNames6, stringCarrayNames7);
             String stringCarrayNames8 = "";
-
+            table.setUpperName(tableName.toUpperCase());
             table.setAllTablesName(tableNamesStr.toString());
             table.setSourceDbSchema(DBSourceParameters.getSourceDbSchema());
 

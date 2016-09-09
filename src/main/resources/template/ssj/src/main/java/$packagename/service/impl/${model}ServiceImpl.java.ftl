@@ -1,12 +1,11 @@
 package ${packageName}.service.impl;
 import java.util.*;
 import ${packageName}.jooq.common.generated.tables.records.*;
-import ${packageName}.jooq.common.generated.tables.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.jooq.DSLContext;
-import org.jooq.Field;
 import ${packageName}.service.${jooqName}Service;
+import static ${packageName}.jooq.common.generated.tables.${upperFirstLetterName}.*;
 
 /**
 * ${name}
@@ -19,11 +18,8 @@ public  class ${jooqName}ServiceImpl implements ${jooqName}Service{
 	private DSLContext dslContext;
 
 	@Override
-	public ${jooqName}Record getById(Integer id){
-
-        //${jooqName} temp = new ${jooqName}();
-		//return dslContext.selectFrom(temp).where(temp.ID.in(id)).limit(1).fetchOne();
-		return null;
+	public ${jooqName}Record getById(Long id){
+		return dslContext.selectFrom(${upperName}).where(${upperName}.ID.equal(id)).limit(1).fetchOne();
 	}
 
 	@Override
