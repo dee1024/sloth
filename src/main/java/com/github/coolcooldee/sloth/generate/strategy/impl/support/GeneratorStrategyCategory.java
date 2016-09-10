@@ -14,6 +14,8 @@ public enum GeneratorStrategyCategory {
     //Spring+SpringMVC+SpringJdbcTemplate
     SSS("sss"),
 
+    SSD("ssd"),
+
     //JFinal Framework
     JFINAL("jfinal"),
 

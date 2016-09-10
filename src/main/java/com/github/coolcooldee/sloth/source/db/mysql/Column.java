@@ -11,15 +11,16 @@ public class Column {
 	private String lowerFirstLetterName;
 	private String type;
 	private String remark;
+	private boolean autoIncrement;
 
-	public Column(String name, String upperFirstLetterName,
-				  String lowerFirstLetterName, String type, String remark) {
+	public Column(String name, String upperFirstLetterName, String lowerFirstLetterName, String type, String remark, boolean autoIncrement) {
 		super();
 		this.name = name;
 		this.upperFirstLetterName = upperFirstLetterName;
 		this.lowerFirstLetterName = lowerFirstLetterName;
 		this.setRemark(remark);
 		this.type = type;
+		this.autoIncrement = autoIncrement;
 	}
 
 	public String getName() {
@@ -62,4 +63,11 @@ public class Column {
 		this.remark = remark;
 	}
 
+	public boolean isAutoIncrement() {
+		return autoIncrement;
+	}
+
+	public void setAutoIncrement(boolean autoIncrement) {
+		this.autoIncrement = autoIncrement;
+	}
 }

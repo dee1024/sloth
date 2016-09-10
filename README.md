@@ -146,6 +146,10 @@ Author
 ======
 * __Dee Qiu__ <coolcooldee@gmail.com>
 
+Others
+======
+* __QQ Group__ 570997546
+
 License
 =======
 Sloth is licensed under the Apache License, Version 2.0 (the "License");

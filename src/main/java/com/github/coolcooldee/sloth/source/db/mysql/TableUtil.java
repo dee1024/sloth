@@ -314,6 +314,8 @@ public abstract class TableUtil {
 
             String carrayName_x = StringUtil.lowerFirst(PinYinUtil.getFirstSpell(StringUtil.newTableName(columnLabel)));
 
+            boolean autoIncrement = "true".equals(map.get("isAutoIncrement").toString());
+
             String carrayType = map.get("javaForType").toString();
             if (carrayType.equals("int")) {
                 carrayType = "Integer";
@@ -331,7 +333,7 @@ public abstract class TableUtil {
                 carrayType = "Long";
             }
 
-            tabelCarray = new Column(columnLabel, carrayName_d, carrayName_x, carrayType, "");
+            tabelCarray = new Column(columnLabel, carrayName_d, carrayName_x, carrayType, "", autoIncrement);
             columns.add(tabelCarray);
         }
         return columns;
