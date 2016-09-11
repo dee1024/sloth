@@ -20,6 +20,8 @@ public class Table {
 
     private String primaryKey;
 
+    private String primaryKeyType;
+
     private String upperFirstLetterPrimaryKey;
 
     private String lowerFirstLetterPrimaryKey;
@@ -89,6 +91,14 @@ public class Table {
 
     public void setPrimaryKey(String primaryKey) {
         this.primaryKey = primaryKey;
+    }
+
+    public String getPrimaryKeyType() {
+        return primaryKeyType;
+    }
+
+    public void setPrimaryKeyType(String primaryKeyType) {
+        this.primaryKeyType = primaryKeyType;
     }
 
     public String getStringCarrayNames8() {

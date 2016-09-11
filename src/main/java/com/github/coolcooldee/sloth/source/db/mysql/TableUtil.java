@@ -273,10 +273,17 @@ public abstract class TableUtil {
             table.setSourceDbSchema(DBSourceParameters.getSourceDbSchema());
 
             if (table.getPrimaryKey() == null) {
-                ResultSet rs = conn.getMetaData().getPrimaryKeys("", "", tableName);
+                //ResultSet trs = conn.getMetaData().getColumns(null, "%", tableName,"%");
+                ResultSet rs = conn.getMetaData().getPrimaryKeys(null, "%", tableName);
                 while (rs.next()) {
                     String primaryKey = rs.getString("COLUMN_NAME");
+                    String primaryKeyType = "";
+                    for(Column column :columns){
+                        if(primaryKey.equals(column.getName()))
+                            primaryKeyType = column.getType();
+                    }
                     table.setPrimaryKey(primaryKey);
+                    table.setPrimaryKeyType(primaryKeyType);
                     table.setLowerFirstLetterPrimaryKey(StringUtil.lowerFirst(StringUtil.newTableName(primaryKey)));
                     table.setUpperFirstLetterPrimaryKey(StringUtil.upperFirst(StringUtil.newTableName(primaryKey)));
                     stringCarrayNames8 += String.format("%s=#{%s}", primaryKey, table.getLowerFirstLetterPrimaryKey());
