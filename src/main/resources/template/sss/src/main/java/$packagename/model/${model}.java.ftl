@@ -13,28 +13,16 @@ public class ${upperFirstLetterName} {
 
 	<#list columns as column>
 	/**
-	   ${column.remark}
-	 */
+	${column.remark}
+	*/
 	private ${column.type} ${column.lowerFirstLetterName};
-	
 	</#list>
-		
-
 	<#list columns as column>
-
 	public ${column.type} get${column.upperFirstLetterName}() {
 		return ${column.lowerFirstLetterName};
 	}
-
 	public void set${column.upperFirstLetterName}(${column.type} ${column.lowerFirstLetterName}) {
 		this.${column.lowerFirstLetterName} = ${column.lowerFirstLetterName};
-	} 
+	}
 	</#list>
-	
-	<#--public Page getPage() {-->
-		<#--return pagetemplate;-->
-	<#--}-->
-	<#--public void setPage(Page pagetemplate) {-->
-		<#--this.pagetemplate = pagetemplate;-->
-	<#--}-->
 }

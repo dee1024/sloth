@@ -15,10 +15,10 @@ public class Application {
 
     public static void main(String[] args) throws Exception {
         if(args==null || args.length==0) {
-//            String str = "-path/Users/dee/Downloads/abcd/Projectdee -h127.0.0.1 -P3306 -uroot -p  -dgamesapi -strategyssm -packagecom.sloth";
-//            String[] testargs = str.split(" ");
-//            Generator.execute(testargs);
-            throw new IllegalArgumentException();
+            String str = "-path/Users/dee/Downloads/abcd/Projectdee -h127.0.0.1 -P3306 -uroot -p  -dtest -strategyssm -packagecom.sloth";
+            String[] testargs = str.split(" ");
+            Generator.execute(testargs);
+            //throw new IllegalArgumentException();
         }else{
             Generator.execute(args);
         }

@@ -15,20 +15,16 @@ public class ${upperFirstLetterName} {
 	/**
 	   ${column.remark}
 	 */
-	private ${column.type} ${column.name};
+	private ${column.type} ${column.lowerFirstLetterName};
 	</#list>
+
 	<#list columns as column>
-	public ${column.type} get<#if column.name?index_of("_") gt -1>${column.name}<#else>${column.upperFirstLetterName}</#if>() {
-		return ${column.name};
+	public ${column.type} get${column.upperFirstLetterName}() {
+		return ${column.lowerFirstLetterName};
 	}
-	public void set<#if column.name?index_of("_") gt -1>${column.name}<#else>${column.upperFirstLetterName}</#if>(${column.type} ${column.name}) {
-		this.${column.name} = ${column.name};
+
+	public void set${column.upperFirstLetterName}(${column.type} ${column.lowerFirstLetterName}) {
+		this.${column.lowerFirstLetterName} = ${column.lowerFirstLetterName};
 	} 
 	</#list>
-	<#--public Page getPage() {-->
-		<#--return pagetemplate;-->
-	<#--}-->
-	<#--public void setPage(Page pagetemplate) {-->
-		<#--this.pagetemplate = pagetemplate;-->
-	<#--}-->
 }

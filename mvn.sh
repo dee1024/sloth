@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mvn clean install
-#mvn exec:java -Dexec.args="-path/Users/dee/Downloads/sloth -projectnamessmproject -packagecom.github.coolcooldee.sloth -h127.0.0.1 -P3306 -uroot -p -dtest -strategyssm"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.coolcooldee.sloth.Application"
-#mvn exec:java -Dexec.args="-path/Users/dee/Downloads/sloth -projectnamesssproject -packagecom.github.coolcooldee.sloth -h127.0.0.1 -P3306 -uroot -p -dtest -strategysss"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.coolcooldee.sloth.Application"
-#mvn exec:java -Dexec.args="-path/Users/dee/Downloads/sloth -projectnamessjproject -packagecom.github.coolcooldee.sloth -h127.0.0.1 -P3306 -uroot -p -dtest -strategyssj"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.coolcooldee.sloth.Application"
-#mvn exec:java -Dexec.args="-path/Users/dee/Downloads/sloth -projectnamessdproject -packagecom.github.coolcooldee.sloth -h127.0.0.1 -P3306 -uroot -p -dtest -strategyssd"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.coolcooldee.sloth.Application"
+#mvn exec:java -Dexec.args="-path/Users/dee/Documents/dev/github -projectnamebest-practices-springboot-mybatis -packagecom.github.coolcooldee.sloth -h127.0.0.1 -P3306 -uroot -p -dtest -strategyssm"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.coolcooldee.sloth.Application"
+#mvn exec:java -Dexec.args="-path/Users/dee/Documents/dev/github -projectnamebest-practices-springboot-springjdbc -packagecom.github.coolcooldee.sloth -h127.0.0.1 -P3306 -uroot -p -dtest -strategysss"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.coolcooldee.sloth.Application"
+#mvn exec:java -Dexec.args="-path/Users/dee/Documents/dev/github -projectnamebest-practices-springboot-jooq -packagecom.github.coolcooldee.sloth -h127.0.0.1 -P3306 -uroot -p -dtest -strategyssj"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.coolcooldee.sloth.Application"
+#mvn exec:java -Dexec.args="-path/Users/dee/Documents/dev/github -projectnamebest-practices-springboot-springdata -packagecom.github.coolcooldee.sloth -h127.0.0.1 -P3306 -uroot -p -dtest -strategyssd"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.coolcooldee.sloth.Application"

@@ -11,7 +11,7 @@ Features
 - __Generate Model–View–Controller Code__
 - __Generate API DOC__
 - __Provide Many Kinds Of Data Access With JDBC__　
-    * [Spring Data JPA]("http://projects.spring.io/spring-data-jpa/")
+    * [Spring Data]("http://projects.spring.io/spring-data/")
     * [Mybatis]("http://www.mybatis.org/mybatis-3/")
     * [JOOQ]("http://www.jooq.org")
     * [Spring JDBC]("http://docs.spring.io/spring/docs/current/spring-framework-reference/html/jdbc.html")
@@ -49,7 +49,7 @@ mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h12
       :--------- | ---- | ---- 
       -path |/workspaces/mySlothProject | the path where code generate  
       -package | com.test | Tell Sloth to use the package name
-      -strategy | ssm | generattion strategy:<br/>ssd=SpringMVC+Spring+SpringDataJPA<br/>ssm=SpringMVC+Spring+MyBatis<br/>sss=SpringMVC+Spring+SpringJDBC<br/>ssj=SpringMVC+Spring+JOOQ
+      -strategy | ssm | generattion strategy:<br/>ssd=SpringMVC+Spring+SpringData<br/>ssm=SpringMVC+Spring+MyBatis<br/>sss=SpringMVC+Spring+SpringJDBC<br/>ssj=SpringMVC+Spring+JOOQ
       -h | 127.0.0.1 | database host 
       -P | 3306 | database port 
       -u | root | database username 
