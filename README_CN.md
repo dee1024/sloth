@@ -2,7 +2,7 @@
 
 SLOTH 1.0
 =========
-__Sloth__ 是一个生成脚手架代码的工具。你只需要设置好你应用所需要用的 __Mysql__ 数据源即可。
+__Sloth__ 是一个生成脚手架代码的工具。你只需要设置好你应用所需要用的 __Mysql__ 数据源即可。([EN]("https://github.com/coolcooldee/sloth/blob/master/README.md"))
 
 特性
 ===
