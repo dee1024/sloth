@@ -3,7 +3,7 @@
 SLOTH 1.0
 =========
 Sloth is A tool to generate scaffold code from SQL databases.
-You just need to specify your application database may be used.([中文]("https://github.com/coolcooldee/sloth/blob/master/README_CN.md"))
+You just need to specify your application database may be used. ([中文](/README_CN.md))
 
 Features
 ========
