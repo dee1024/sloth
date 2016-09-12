@@ -1,5 +1,4 @@
 package ${packageName}.repository;
-import java.util.*;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 import ${packageName}.model.${upperFirstLetterName};

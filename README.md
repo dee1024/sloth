@@ -3,7 +3,8 @@
 SLOTH 1.0
 =========
 Sloth is A tool to generate scaffold code from SQL databases.
-You just need to specify your application database may be used. ([中文](/README_CN.md))
+You just need to specify your application database may be used. 
+Read this in other languages: [中文](/README_CN.md)
 
 Features
 ========
@@ -22,7 +23,7 @@ Features
 
 Quick Start
 ===========
-- __Prepare Your Database__
+- __Prepare Your Database And Create Your Database Structure__
 
       host      | port | username | password | dbname 
       --------- | ---- |:--------:| -------- |:------:
