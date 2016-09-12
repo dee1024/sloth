@@ -2,7 +2,7 @@
 
 SLOTH 1.0
 =========
-__Sloth__ 是一个生成脚手架代码的工具。你只需要设置好你应用所需要用的 __Mysql__ 数据源即可。([EN]("https://github.com/coolcooldee/sloth/blob/master/README.md"))
+__Sloth__ 是一个生成脚手架代码的工具。你只需要设置好你应用所需要用的 __Mysql__ 数据源即可。([EN](/README.md))
 
 特性
 ===
@@ -10,14 +10,14 @@ __Sloth__ 是一个生成脚手架代码的工具。你只需要设置好你应�
 - __生成 Model–View–Controller 三层代码__
 - __生成 API WEB 接口文档__
 - __提供多种数据访问方式__　
-    * [Spring Data]("http://projects.spring.io/spring-data/")
-    * [Mybatis]("http://www.mybatis.org/mybatis-3/")
-    * [JOOQ]("http://www.jooq.org")
-    * [Spring JDBC]("http://docs.spring.io/spring/docs/current/spring-framework-reference/html/jdbc.html")
+    * [Spring Data](http://projects.spring.io/spring-data/)
+    * [Mybatis](http://www.mybatis.org/mybatis-3/)
+    * [JOOQ](http://www.jooq.org)
+    * [Spring JDBC](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/jdbc.html)
 - __DRY 原则__
     * 绝不复制黏贴代码
 - __其它
-    * 生成的目标代码整合: [Springboot]("http://projects.spring.io/spring-boot/")、[Guava]("https://github.com/google/guava")、[HikariCP]("https://github.com/brettwooldridge/HikariCP")、[Apache Commons]("http://commons.apache.org")、[fastjson]("https://github.com/alibaba/fastjson")、[swagger2]("http://swagger.io")、[Flywaydb]("https://flywaydb.org")
+    * 生成的目标代码整合: [Springboot](http://projects.spring.io/spring-boot/)、[Guava](https://github.com/google/guava)、[HikariCP](https://github.com/brettwooldridge/HikariCP)、[Apache Commons](http://commons.apache.org)、[fastjson](https://github.com/alibaba/fastjson)、[swagger2](http://swagger.io)、[Flywaydb](https://flywaydb.org)
 
 快速开始
 ======
