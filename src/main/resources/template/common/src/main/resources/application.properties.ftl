@@ -8,6 +8,16 @@ ${packageName}.dbUser = ${sourceDbUsername}
 ${packageName}.dbPassword = ${sourceDbPassword}
 ${packageName}.dbName = ${sourceDbSchema}
 
+#redis配置（请修改）
+${packageName}.redis.host=
+${packageName}.redis.port=
+${packageName}.redis.database=
+${packageName}.redis.password=
+${packageName}.redis.timeout=
+${packageName}.redis.maxPoolSize=
+${packageName}.redis.poolName=
+${packageName}.redis.expireTime=
+
 #freemarker config
 spring.freemarker.templateLoaderPath=classpath:/template/
 spring.freemarker.templateEncoding=UTF-8
