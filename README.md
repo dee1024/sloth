@@ -21,6 +21,12 @@ Features
 - __OTHERS
     * Target project generated integrate [Springboot](http://projects.spring.io/spring-boot/)、[Guava](https://github.com/google/guava)、[HikariCP](https://github.com/brettwooldridge/HikariCP)、[Apache Commons](http://commons.apache.org)、[fastjson](https://github.com/alibaba/fastjson)、[swagger2](http://swagger.io)、[Flywaydb](https://flywaydb.org)
 
+Prerequisites
+=============
+You’ll need just 2 things to develop with Sloth:
+- __JDK__　(Java Development Kit), version 1.7 and above
+- __Maven__ (Project Management Tool), version 3.1.1 and above
+
 Quick Start
 ===========
 - __Prepare Your Database And Create Your Database Structure__
