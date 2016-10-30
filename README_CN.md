@@ -2,13 +2,13 @@
 
 SLOTH 1.0
 =========
-__Sloth__ 是一个生成脚手架代码的工具。你只需要设置好你应用所需要用的 __Mysql__ 数据源即可。
+__Sloth__ 是一个生成脚手架代码的工具。你只需要设置好业务应用所需要用的 __Mysql__ 数据源即可。
 其它语言版本 : [English](/README.md)
 
 特性
 ===
 - __生成一个独立可运行的 SpringBoot 应用__　
-- __生成 Model–View–Controller 三层代码__
+- __生成完整的 Model–View–Controller 三层代码__
 - __生成 API WEB 接口文档__
 - __提供多种数据访问方式__　
     * [Spring Data](http://projects.spring.io/spring-data/)
@@ -141,7 +141,7 @@ mvn exec:java -Dexec.mainClass=”com.test.Application” -Dexec.cleanupDaemonTh
 
 贡献
 ===
-我们很乐意等待你条的 pull requests !
+我们期待你的 pull requests !
 
 作者
 ===
@@ -149,7 +149,7 @@ mvn exec:java -Dexec.mainClass=”com.test.Application” -Dexec.cleanupDaemonTh
 
 其它
 ===
-* __QQ Group__ 570997546
+* __QQ群__ 570997546
 
 许可证
 ===
