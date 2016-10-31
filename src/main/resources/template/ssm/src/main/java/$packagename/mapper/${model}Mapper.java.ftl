@@ -30,8 +30,8 @@ public interface ${upperFirstLetterName}Mapper{
 	Integer updateByPrimaryKey(${upperFirstLetterName} ${lowerFirstLetterName});
 
 	@Insert({
-		"INSERT INTO ${name} (${stringCarrayNames3})",
-		"VALUE (${stringCarrayNames4}) ON DUPLICATE KEY UPDATE ${primaryKey}=${"#"}{${primaryKey}}"
+		"INSERT IGNORE INTO ${name} (${stringCarrayNames3})",
+		"VALUE (${stringCarrayNames4})"
 	})
 	Integer insert(${upperFirstLetterName} ${lowerFirstLetterName});
 
