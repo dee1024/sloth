@@ -1,7 +1,7 @@
 package ${packageName}.controller;
 
-import ${packageName}.jooq.common.generated.tables.${upperFirstLetterName};
-import com.github.coolcooldee.sloth.jooq.common.generated.tables.records.*;
+import ${packageName}.jooq.common.generated.tables.${jooqName};
+import ${packageName}.jooq.common.generated.tables.records.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ${packageName}.service.${upperFirstLetterName}Service;
@@ -24,7 +24,7 @@ public class ${upperFirstLetterName}Controller {
 	private ${upperFirstLetterName}Service ${lowerFirstLetterName}Service;
 
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public String test(@ModelAttribute ${upperFirstLetterName} ${lowerFirstLetterName}) {
+	public String test(@ModelAttribute ${jooqName}Record ${jooqName}Record) {
 		return "success";
 	}
 

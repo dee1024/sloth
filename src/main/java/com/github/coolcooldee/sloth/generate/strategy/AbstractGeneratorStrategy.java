@@ -129,6 +129,17 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
                         }
                     }
                 }
+            }else if(targetFileName.indexOf("${jooqModel}")>-1){
+                for(Table table : tables){
+                    String jooqModelName = enableGeneratedFile.getOriginalModelName(table.getJooqName());
+                    if(isGenAllTables) {
+                        baseGen(enableGeneratedFile, table, jooqModelName);
+                    }else if(genSpecifiedTableNameslist!=null){ // 只生成指定的文件
+                        if(genSpecifiedTableNameslist.contains(table.getName())){
+                            baseGen(enableGeneratedFile, table, jooqModelName);
+                        }
+                    }
+                }
             }else{
                 if(isGenAllTables) {
                     baseGen(enableGeneratedFile);
