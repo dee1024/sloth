@@ -147,6 +147,9 @@ Example
 
 ![](https://raw.githubusercontent.com/coolcooldee/sloth/master/src/main/resources/static/images/demo1.png)
 
+- __Demo__
+http://120.76.124.142/apis-docs-by-sloth.html
+
 Contributing
 ============
 If you want to contribute code, we are waiting for your pull requests !
