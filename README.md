@@ -148,7 +148,7 @@ Example
 ![](https://raw.githubusercontent.com/coolcooldee/sloth/master/src/main/resources/static/images/demo1.png)
 
 - __Demo__
-http://120.76.124.142/apis-docs-by-sloth.html
+http://www.dee1024.cc/apis-docs-by-sloth.html
 
 Contributing
 ============

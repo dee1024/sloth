@@ -139,6 +139,9 @@ mvn exec:java -Dexec.mainClass=”com.test.Application” -Dexec.cleanupDaemonTh
 
 ![](https://raw.githubusercontent.com/coolcooldee/sloth/master/src/main/resources/static/images/demo1.png)
 
+- __示例__
+http://www.dee1024.cc/apis-docs-by-sloth.html
+
 贡献
 ===
 我们期待你的 pull requests !
