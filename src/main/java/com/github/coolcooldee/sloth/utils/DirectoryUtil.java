@@ -58,6 +58,9 @@ public abstract class DirectoryUtil {
                 readFile(list[i].getPath());
                 fileLevel--;
             } else {
+                if (list[i].getName().trim().startsWith(".")) {
+                    continue;
+                }
                 System.out.println(createPrintStr(list[i].getName(), fileLevel));
             }
         }
