@@ -4,6 +4,7 @@ import com.github.coolcooldee.sloth.parameter.DBSourceParameters;
 import com.github.coolcooldee.sloth.target.JavaType;
 import com.github.coolcooldee.sloth.utils.PinYinUtil;
 import com.github.coolcooldee.sloth.utils.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 
 import java.sql.*;
 import java.util.*;
@@ -287,6 +288,11 @@ public abstract class TableUtil {
                     table.setLowerFirstLetterPrimaryKey(StringUtil.lowerFirst(StringUtil.newTableName(primaryKey)));
                     table.setUpperFirstLetterPrimaryKey(StringUtil.upperFirst(StringUtil.newTableName(primaryKey)));
                     stringCarrayNames8 += String.format("%s=#{%s}", primaryKey, table.getLowerFirstLetterPrimaryKey());
+                }
+
+                if(StringUtils.isBlank(table.getPrimaryKey())){
+                    throw new NullPointerException("table '"+tableName + "' without primary key, please setting the " +
+                            "primary key.");
                 }
 
             }

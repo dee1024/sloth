@@ -69,7 +69,7 @@
             <#list 0..columns?size-1 as i>
                 <div class="form-group">
                     <label for="input${columns[i].name}">${columns[i].name} - ${columns[i].remark}</label>
-                    <input <#if columns[i].name == primaryKey >readonly</#if> type="text" class="form-control" id="input${columns[i].name}" name="${columns[i].name}" placeholder="${columns[i].name}" value="<#if columns[i].name == primaryKey>${r'${autoIncrement?c}'}</#if>">
+                    <input <#if primaryKey?? && columns[i].name == primaryKey >readonly</#if> type="text" class="form-control" id="input${columns[i].name}" name="${columns[i].name}" placeholder="${columns[i].name}" value="<#if primaryKey?? && columns[i].name == primaryKey>${r'${autoIncrement?c}'}</#if>">
                 </div>
             </#list>
             ${r'</#escape>'}
