@@ -35,14 +35,14 @@ public class ${upperFirstLetterName}Controller {
 		${lowerFirstLetterName}Service.save(${lowerFirstLetterName});
 	}
 
-	@RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
-	public void  delete(@PathVariable Object id) {
-		${lowerFirstLetterName}Service.deleteById(id);
+	@RequestMapping(value = "/delete/{${primaryKey}}", method = RequestMethod.POST)
+	public void  delete(@PathVariable Object ${primaryKey}) {
+		${lowerFirstLetterName}Service.deleteBy${upperFirstLetterPrimaryKey}(${primaryKey});
 	}
 
-	@RequestMapping(value = "/view/{id}", method = RequestMethod.GET)
-	public ${upperFirstLetterName}  view(@PathVariable Object id) {
-		return ${lowerFirstLetterName}Service.getById(id);
+	@RequestMapping(value = "/view/{${primaryKey}}", method = RequestMethod.GET)
+	public ${upperFirstLetterName}  view(@PathVariable Object ${primaryKey}) {
+		return ${lowerFirstLetterName}Service.getBy${upperFirstLetterPrimaryKey}(${primaryKey});
 	}
 
 	@RequestMapping(value = "/update", method = RequestMethod.POST)

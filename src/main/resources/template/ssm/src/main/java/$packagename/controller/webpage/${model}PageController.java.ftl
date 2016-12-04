@@ -48,7 +48,6 @@ public class ${upperFirstLetterName}PageController {
 	@RequestMapping(value = "/create", method= RequestMethod.GET)
 		public ModelAndView create() {
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("autoIncrement", ${lowerFirstLetterName}Service.increment());
 		mav.setViewName("/${upperFirstLetterName}Create");
 		return mav;
 	}
