@@ -32,16 +32,16 @@ public  class ${upperFirstLetterName}ServiceImpl implements ${upperFirstLetterNa
 	}
 
 	@Override
-	public ${upperFirstLetterName} getById(Object id){
-		return ${lowerFirstLetterName}Mapper.getByPrimaryKey(id);
+	public ${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(Object ${primaryKey}){
+		return ${lowerFirstLetterName}Mapper.getBy${upperFirstLetterPrimaryKey}(${primaryKey});
 	}
 	@Override
-	public void deleteById(Object id){
-		${lowerFirstLetterName}Mapper.deleteByPrimaryKey(id);
+	public void deleteBy${upperFirstLetterPrimaryKey}(Object ${primaryKey}){
+		${lowerFirstLetterName}Mapper.deleteBy${upperFirstLetterPrimaryKey}(${primaryKey});
 	}
 	@Override
 	public void update(${upperFirstLetterName} ${lowerFirstLetterName}){
-		${lowerFirstLetterName}Mapper.updateByPrimaryKey(${lowerFirstLetterName});
+		${lowerFirstLetterName}Mapper.update(${lowerFirstLetterName});
 	}
 
 	@Override
@@ -63,11 +63,6 @@ public  class ${upperFirstLetterName}ServiceImpl implements ${upperFirstLetterNa
         page.setResult(${lowerFirstLetterName}Mapper.page(start,pageSize));
         page.setTotalCount(${lowerFirstLetterName}Mapper.count());
         return page;
-	}
-
-	@Override
-	public Integer increment(){
-		return ${lowerFirstLetterName}Mapper.increment();
 	}
 	
 }

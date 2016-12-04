@@ -17,9 +17,9 @@ public interface ${upperFirstLetterName}Service{
 
 	Integer count();
 
-	${upperFirstLetterName} getById(Object id);
+	${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(Object id);
 
-	void deleteById(Object id);
+	void deleteBy${upperFirstLetterPrimaryKey}(Object ${primaryKey});
 
 	void update(${upperFirstLetterName} ${lowerFirstLetterName});
 
@@ -27,5 +27,4 @@ public interface ${upperFirstLetterName}Service{
 
 	Page<${upperFirstLetterName}> page(int pageNo, int pageSize);
 
-	Integer increment();
 }

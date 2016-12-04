@@ -17,17 +17,17 @@ public interface ${upperFirstLetterName}Mapper{
 	Integer count();
 
 
-	@Select("SELECT * FROM ${name} WHERE ${primaryKey} = ${"#"}{primaryKey} LIMIT 1 ")
-	${upperFirstLetterName} getByPrimaryKey(@Param("primaryKey") Object primaryKey);
+	@Select("SELECT * FROM ${name} WHERE ${primaryKey} = ${"#"}{${primaryKey}} LIMIT 1 ")
+	${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(@Param("${primaryKey}") Object ${primaryKey});
 
 
-	@Delete("DELETE FROM ${name} WHERE ${primaryKey} = ${"#"}{primaryKey} ")
-	Integer deleteByPrimaryKey(@Param("primaryKey") Object primaryKey);
+	@Delete("DELETE FROM ${name} WHERE ${primaryKey} = ${"#"}{${primaryKey}} ")
+	Integer deleteBy${upperFirstLetterPrimaryKey}(@Param("${primaryKey}") Object ${primaryKey});
 
 	@Update({
 		"UPDATE ${name} SET ${stringCarrayNames5} where ${primaryKey} = ${"#"}{${primaryKey}}"
 	})
-	Integer updateByPrimaryKey(${upperFirstLetterName} ${lowerFirstLetterName});
+	Integer update(${upperFirstLetterName} ${lowerFirstLetterName});
 
 	@Insert({
 		"INSERT IGNORE INTO ${name} (${stringCarrayNames3})",
@@ -42,9 +42,5 @@ public interface ${upperFirstLetterName}Mapper{
 
 	@Select("SELECT * FROM ${name} LIMIT ${"#"}{start}, ${"#"}{step}")
 	List<${upperFirstLetterName}> page(@Param("start") int start, @Param("step") int step );
-
-
-	@Select("SELECT `AUTO_INCREMENT` as number FROM  INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '${sourceDbSchema}' AND TABLE_NAME = '${name}'")
-	Integer increment();
 	
 }
