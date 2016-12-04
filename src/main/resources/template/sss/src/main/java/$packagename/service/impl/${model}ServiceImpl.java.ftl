@@ -32,15 +32,15 @@ public  class ${upperFirstLetterName}ServiceImpl implements ${upperFirstLetterNa
 
 	@Override
 	public ${upperFirstLetterName} getById(Object id){
-		return ${lowerFirstLetterName}Dao.getByPrimaryKey(id);
+		return ${lowerFirstLetterName}Dao.getBy${upperFirstLetterPrimaryKey}(id);
 	}
 	@Override
 	public void deleteById(Object id){
-		${lowerFirstLetterName}Dao.deleteByPrimaryKey(id);
+		${lowerFirstLetterName}Dao.deleteBy${upperFirstLetterPrimaryKey}(id);
 	}
 	@Override
 	public void update(${upperFirstLetterName} ${lowerFirstLetterName}){
-		${lowerFirstLetterName}Dao.updateByPrimaryKey(${lowerFirstLetterName});
+		${lowerFirstLetterName}Dao.update(${lowerFirstLetterName});
 	}
 
 	@Override

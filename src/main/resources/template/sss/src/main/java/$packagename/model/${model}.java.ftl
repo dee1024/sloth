@@ -11,12 +11,14 @@ import javax.annotation.Generated;
 )
 public class ${upperFirstLetterName} {
 
-	<#list columns as column>
-	/**
-	${column.remark}
+    <#list columns as column>
+	<#if column.remark?? && column.remark?length gt 1 >
+    /**
+    * ${column.remark}
 	*/
+	</#if>
 	private ${column.type} ${column.lowerFirstLetterName};
-	</#list>
+    </#list>
 	<#list columns as column>
 	public ${column.type} get${column.upperFirstLetterName}() {
 		return ${column.lowerFirstLetterName};

@@ -25,17 +25,17 @@ public class ${upperFirstLetterName}DaoImpl implements ${upperFirstLetterName}Da
 		return jdbcTemplate.queryForObject(sql,null,Integer.class);
 	}
 
-	public ${upperFirstLetterName} getByPrimaryKey(Object primaryKey){
+	public ${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(Object ${primaryKey}){
 		String sql = "select * from ${name} where ${primaryKey} = ?" ;
-		return jdbcTemplate.queryForObject( sql, new Object[] { primaryKey }, ${upperFirstLetterName}.class);
+		return jdbcTemplate.queryForObject( sql, new Object[] { ${primaryKey} }, ${upperFirstLetterName}.class);
 	}
 
-	public Integer deleteByPrimaryKey(Object primaryKey){
+	public Integer deleteBy${upperFirstLetterPrimaryKey}(Object ${primaryKey}){
 		String sql = "delete from ${name} where ${primaryKey} = ? ";
-		return jdbcTemplate.update(sql, primaryKey);
+		return jdbcTemplate.update(sql, ${primaryKey});
 	}
 
-	public Integer updateByPrimaryKey(${upperFirstLetterName} ${lowerFirstLetterName}){
+	public Integer update(${upperFirstLetterName} ${lowerFirstLetterName}){
 		String sql = " update ${name} set ${stringCarrayNames9}  where ${primaryKey} = ? ";
 		return jdbcTemplate.update(sql, ${stringCarrayNames10});
 	}

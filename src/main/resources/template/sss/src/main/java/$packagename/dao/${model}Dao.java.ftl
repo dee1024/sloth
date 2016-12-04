@@ -14,11 +14,11 @@ public interface ${upperFirstLetterName}Dao{
 
 	Integer count();
 
-	${upperFirstLetterName} getByPrimaryKey(Object primaryKey);
+	${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(Object ${primaryKey});
 
-	Integer deleteByPrimaryKey(Object primaryKey);
+	Integer deleteBy${upperFirstLetterPrimaryKey}(Object ${primaryKey});
 
-	Integer updateByPrimaryKey(${upperFirstLetterName} ${lowerFirstLetterName});
+	Integer update(${upperFirstLetterName} ${lowerFirstLetterName});
 
 	Integer insert(${upperFirstLetterName} ${lowerFirstLetterName});
 
