@@ -20,7 +20,7 @@ public interface ${upperFirstLetterName}Dao{
 
 	Integer update(${upperFirstLetterName} ${lowerFirstLetterName});
 
-	Integer insert(${upperFirstLetterName} ${lowerFirstLetterName});
+	Integer save(${upperFirstLetterName} ${lowerFirstLetterName});
 
 	List<${upperFirstLetterName}> list();
 

@@ -33,7 +33,7 @@ public interface ${upperFirstLetterName}Mapper{
 		"INSERT IGNORE INTO ${name} (${stringCarrayNames3})",
 		"VALUE (${stringCarrayNames4})"
 	})
-	Integer insert(${upperFirstLetterName} ${lowerFirstLetterName});
+	Integer save(${upperFirstLetterName} ${lowerFirstLetterName});
 
 
 	@Select("SELECT * FROM ${name} LIMIT 10 ")
