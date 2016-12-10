@@ -27,7 +27,7 @@ public  class ${upperFirstLetterName}ServiceImpl implements ${upperFirstLetterNa
 	private ${upperFirstLetterName}Dao ${lowerFirstLetterName}Dao;
 
 	public Integer save(${upperFirstLetterName} ${lowerFirstLetterName}){
-		return ${lowerFirstLetterName}Dao.insert(${lowerFirstLetterName});
+		return ${lowerFirstLetterName}Dao.save(${lowerFirstLetterName});
 	}
 
 	@Override

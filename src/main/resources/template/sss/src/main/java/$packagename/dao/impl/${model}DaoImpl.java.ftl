@@ -40,7 +40,7 @@ public class ${upperFirstLetterName}DaoImpl implements ${upperFirstLetterName}Da
 		return jdbcTemplate.update(sql, ${stringCarrayNames10});
 	}
 
-	public Integer insert(${upperFirstLetterName} ${lowerFirstLetterName}){
+	public Integer save(${upperFirstLetterName} ${lowerFirstLetterName}){
 		String sql = " insert into ${name} ( ${stringCarrayNames3} ) values (${stringCarrayNames11}) ";
 		return jdbcTemplate.update(sql, ${stringCarrayNames10});
 	}
