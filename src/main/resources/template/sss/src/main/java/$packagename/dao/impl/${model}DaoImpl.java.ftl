@@ -46,11 +46,14 @@ public class ${upperFirstLetterName}DaoImpl implements ${upperFirstLetterName}Da
 
 	public Integer save(${upperFirstLetterName} ${lowerFirstLetterName}){
 		String sql = " insert into ${name} ( ${stringCarrayNames3} ) values (${stringCarrayNames11}) ";
-		return jdbcTemplate.update(sql, ${stringCarrayNames10});
+		return jdbcTemplate.update(sql, ${stringCarrayNames12});
 	}
 
 	public List<${upperFirstLetterName}> list(){
-		return null;
+		List<${upperFirstLetterName}> ${name}s = new ArrayList<>();
+		String sql = "select * from ${name} limit 50" ;
+		${name}s = jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(${upperFirstLetterName}.class));
+		return ${name}s;
 	}
 
 	public List<${upperFirstLetterName}> page(int start, int step ){

@@ -34,7 +34,7 @@ public class DB {
         HikariConfig hiConfig = new HikariConfig();
         String url = "jdbc:mysql://" + dbConfig.getDBHost() + ":" + dbConfig.getDBPort() + "/" + dbConfig.getDBName()+"?useUnicode=true&cautoReconnect=true&characterEncoding=utf8";
         hiConfig.setDriverClassName("com.mysql.jdbc.Driver");
-        hiConfig.setAutoCommit(false);
+        hiConfig.setAutoCommit(true);
         hiConfig.setJdbcUrl(url);
         hiConfig.setUsername(dbConfig.getDBUser());
         hiConfig.setPassword(dbConfig.getDBPassword());

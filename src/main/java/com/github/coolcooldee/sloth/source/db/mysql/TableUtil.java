@@ -243,13 +243,13 @@ public abstract class TableUtil {
 
                 stringCarrayNames2 += column.getType() + " " + column.getLowerFirstLetterName();
 
-                if(!column.isAutoIncrement()) { //如果是主键，不需要在 insert 语句中
+                if(!column.isAutoIncrement()) { //如果是主键，不需要在 insert 语句中 (Mabatis)
                     stringCarrayNames3 += column.getName();
                 }
-                if(!column.isAutoIncrement()) { //如果是主键，不需要在 insert 语句中
+                if(!column.isAutoIncrement()) { //如果是主键，不需要在 insert 语句中 (Mabatis)
                     stringCarrayNames4 += String.format("#{%s}", column.getLowerFirstLetterName());
                 }
-                if(!column.isAutoIncrement()) { //如果是主键，不需要在 insert 语句中
+                if(!column.isAutoIncrement()) { //如果是主键，不需要在 insert 语句中 (Mabatis)
                     stringCarrayNames5 += String.format("%s=#{%s}", column.getName(),
                             column.getName());
                 }

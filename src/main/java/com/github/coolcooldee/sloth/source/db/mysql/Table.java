@@ -249,7 +249,9 @@ public class Table {
             return "";
         StringBuilder sb = new StringBuilder();
         for(int i=0; i<columns.size(); i++){
-            if(i>0)
+            if(getPrimaryKey().equals(columns.get(i).getName())) // ignore primary key
+                continue;
+            if(!"".equals(sb.toString()))
                 sb.append(", ");
             sb.append(columns.get(i).getName()+" = ?");
         }
@@ -262,10 +264,13 @@ public class Table {
             return "";
         StringBuilder sb = new StringBuilder();
         for(int i=0; i<columns.size(); i++){
-            if(i>0)
+            if(getPrimaryKey().equals(columns.get(i).getName())) // ignore primary key
+                continue;
+            if(!"".equals(sb.toString()))
                 sb.append(", ");
-            sb.append(lowerFirstLetterName+".get"+columns.get(i).getUpperFirstLetterName()+"() ");
+            sb.append(lowerFirstLetterName+".get"+columns.get(i).getUpperFirstLetterName()+"()");
         }
+        sb.append(", ").append(lowerFirstLetterName+".get"+getUpperFirstLetterPrimaryKey()+"()");
         return sb.toString();
     }
 
@@ -274,9 +279,25 @@ public class Table {
             return "";
         StringBuilder sb = new StringBuilder();
         for(int i=0; i<columns.size(); i++){
-            if(i>0)
+            if(getPrimaryKey().equals(columns.get(i).getName())) // ignore primary key
+                continue;
+            if(!"".equals(sb.toString()))
                 sb.append(", ");
             sb.append("?");
+        }
+        return sb.toString();
+    }
+
+    public String getStringCarrayNames12(){
+        if(columns==null)
+            return "";
+        StringBuilder sb = new StringBuilder();
+        for(int i=0; i<columns.size(); i++){
+            if(getPrimaryKey().equals(columns.get(i).getName())) // ignore primary key
+                continue;
+            if(!"".equals(sb.toString()))
+                sb.append(", ");
+            sb.append(lowerFirstLetterName+".get"+columns.get(i).getUpperFirstLetterName()+"()");
         }
         return sb.toString();
     }
