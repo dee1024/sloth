@@ -3,6 +3,7 @@ import java.util.*;
 import ${packageName}.model.${upperFirstLetterName};
 import ${packageName}.dao.${upperFirstLetterName}Dao;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.stereotype.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import javax.annotation.Generated;
@@ -26,8 +27,11 @@ public class ${upperFirstLetterName}DaoImpl implements ${upperFirstLetterName}Da
 	}
 
 	public ${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(Object ${primaryKey}){
-		String sql = "select * from ${name} where ${primaryKey} = ?" ;
-		return jdbcTemplate.queryForObject( sql, new Object[] { ${primaryKey} }, ${upperFirstLetterName}.class);
+		String sql = "select * from ${name} where ${primaryKey} = ? limit 1" ;
+		List<${upperFirstLetterName}> ${name}s = jdbcTemplate.query(sql,new Object[]{${primaryKey}}, BeanPropertyRowMapper.newInstance(${upperFirstLetterName}.class));
+    	if(${name}s==null || ${name}s.size()==0)
+    		return null;
+    	return ${name}s.get(0);
 	}
 
 	public Integer deleteBy${upperFirstLetterPrimaryKey}(Object ${primaryKey}){

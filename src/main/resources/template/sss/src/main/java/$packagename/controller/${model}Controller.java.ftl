@@ -30,7 +30,7 @@ public class ${upperFirstLetterName}Controller {
 	}
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public void save(${upperFirstLetterName} ${lowerFirstLetterName}) {
+	public void save(@RequestBody ${upperFirstLetterName} ${lowerFirstLetterName}) {
 		${lowerFirstLetterName}Service.save(${lowerFirstLetterName});
 	}
 
@@ -44,8 +44,8 @@ public class ${upperFirstLetterName}Controller {
 		return ${lowerFirstLetterName}Service.getById(${primaryKey});
 	}
 
-	@RequestMapping(value = "/update/{${primaryKey}}", method = RequestMethod.POST)
-	public void update(${upperFirstLetterName} ${lowerFirstLetterName}) {
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	public void update(@RequestBody ${upperFirstLetterName} ${lowerFirstLetterName}) {
 		${lowerFirstLetterName}Service.update(${lowerFirstLetterName});
 	}
 
