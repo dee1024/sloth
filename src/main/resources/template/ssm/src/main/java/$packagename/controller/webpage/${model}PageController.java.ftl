@@ -38,9 +38,9 @@ public class ${upperFirstLetterName}PageController {
 	}
 
 	@RequestMapping(value = "/detail/{id}", method= RequestMethod.GET)
-	public ModelAndView detail(@PathVariable Object id) {
+	public ModelAndView detail(@PathVariable ${primaryKeyType} ${primaryKey}) {
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("row", ${lowerFirstLetterName}Service.getById(id));
+		mav.addObject("row", ${lowerFirstLetterName}Service.getBy${upperFirstLetterPrimaryKey}(${primaryKey}));
 		mav.setViewName("/${upperFirstLetterName}Detail");
 		return mav;
 	}
