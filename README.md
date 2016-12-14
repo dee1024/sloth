@@ -5,6 +5,7 @@ SLOTH 1.0
 Sloth is A tool to generate scaffold code from SQL databases.
 You just need to specify your application database may be used. 
 If you know what the code generator does in Ruby on Rails (RoR), Sloth works just like that, and it’s specific to JAVA language now.
+Sloth can help developers quickly build beautiful web applications.
 Read this in other languages: [中文](/README_CN.md)
 
 Features
