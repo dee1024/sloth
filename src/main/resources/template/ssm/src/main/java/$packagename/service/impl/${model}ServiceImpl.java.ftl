@@ -28,15 +28,15 @@ public  class ${upperFirstLetterName}ServiceImpl implements ${upperFirstLetterNa
 	private ${upperFirstLetterName}Mapper ${lowerFirstLetterName}Mapper;
 
 	public Integer save(${upperFirstLetterName} ${lowerFirstLetterName}){
-		return ${lowerFirstLetterName}Mapper.insert(${lowerFirstLetterName});
+		return ${lowerFirstLetterName}Mapper.save(${lowerFirstLetterName});
 	}
 
 	@Override
-	public ${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(Object ${primaryKey}){
+	public ${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(${primaryKeyType} ${primaryKey}){
 		return ${lowerFirstLetterName}Mapper.getBy${upperFirstLetterPrimaryKey}(${primaryKey});
 	}
 	@Override
-	public void deleteBy${upperFirstLetterPrimaryKey}(Object ${primaryKey}){
+	public void deleteBy${upperFirstLetterPrimaryKey}(${primaryKeyType} ${primaryKey}){
 		${lowerFirstLetterName}Mapper.deleteBy${upperFirstLetterPrimaryKey}(${primaryKey});
 	}
 	@Override

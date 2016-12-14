@@ -4,8 +4,8 @@ import ${packageName}.jooq.common.generated.tables.records.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.jooq.DSLContext;
-import ${packageName}.service.${upperFirstLetterName}Service;
-import ${packageName}.jooq.common.generated.tables.${upperFirstLetterName};
+import ${packageName}.service.*;
+import ${packageName}.jooq.common.generated.tables.*;
 import javax.annotation.Generated;
 
 @Generated(
@@ -22,8 +22,8 @@ public  class ${upperFirstLetterName}ServiceImpl implements ${upperFirstLetterNa
 	private DSLContext dslContext;
 
 	@Override
-	public ${upperFirstLetterName}Record getById(Long id){
-		return dslContext.selectFrom(${upperFirstLetterName}.${upperName}).where(${upperFirstLetterName}.${upperName}.ID.equals(id)).limit(1).fetchOne();
+	public ${jooqName}Record getBy${upperFirstLetterPrimaryKey}(${primaryKeyType} ${primaryKey}){
+		return dslContext.selectFrom(${jooqName}.${upperName}).where(${jooqName}.${upperName}.${upperPrimaryKey}.equals(${primaryKey})).limit(1).fetchOne();
 	}
 
 	@Override
@@ -32,7 +32,7 @@ public  class ${upperFirstLetterName}ServiceImpl implements ${upperFirstLetterNa
 	}
 
 	@Override
-	public List<${upperFirstLetterName}Record> list(){
+	public List<${jooqName}Record> list(){
 		return null;
 	}
 	

@@ -26,7 +26,7 @@ public class ${upperFirstLetterName}DaoImpl implements ${upperFirstLetterName}Da
 		return jdbcTemplate.queryForObject(sql,null,Integer.class);
 	}
 
-	public ${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(Object ${primaryKey}){
+	public ${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(${primaryKeyType} ${primaryKey}){
 		String sql = "select * from ${name} where ${primaryKey} = ? limit 1" ;
 		List<${upperFirstLetterName}> ${name}s = jdbcTemplate.query(sql,new Object[]{${primaryKey}}, BeanPropertyRowMapper.newInstance(${upperFirstLetterName}.class));
     	if(${name}s==null || ${name}s.size()==0)
@@ -34,7 +34,7 @@ public class ${upperFirstLetterName}DaoImpl implements ${upperFirstLetterName}Da
     	return ${name}s.get(0);
 	}
 
-	public Integer deleteBy${upperFirstLetterPrimaryKey}(Object ${primaryKey}){
+	public Integer deleteBy${upperFirstLetterPrimaryKey}(${primaryKeyType} ${primaryKey}){
 		String sql = "delete from ${name} where ${primaryKey} = ? ";
 		return jdbcTemplate.update(sql, ${primaryKey});
 	}

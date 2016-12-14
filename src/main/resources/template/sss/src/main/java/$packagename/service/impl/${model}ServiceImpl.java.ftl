@@ -31,12 +31,12 @@ public  class ${upperFirstLetterName}ServiceImpl implements ${upperFirstLetterNa
 	}
 
 	@Override
-	public ${upperFirstLetterName} getById(Object id){
-		return ${lowerFirstLetterName}Dao.getBy${upperFirstLetterPrimaryKey}(id);
+	public ${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(${primaryKeyType} ${primaryKey}){
+		return ${lowerFirstLetterName}Dao.getBy${upperFirstLetterPrimaryKey}(${primaryKey});
 	}
 	@Override
-	public void deleteById(Object id){
-		${lowerFirstLetterName}Dao.deleteBy${upperFirstLetterPrimaryKey}(id);
+	public void deleteBy${upperFirstLetterPrimaryKey}(${primaryKeyType} ${primaryKey}){
+		${lowerFirstLetterName}Dao.deleteBy${upperFirstLetterPrimaryKey}(${primaryKey});
 	}
 	@Override
 	public void update(${upperFirstLetterName} ${lowerFirstLetterName}){

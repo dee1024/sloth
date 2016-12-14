@@ -36,12 +36,12 @@ public class ${upperFirstLetterName}Controller {
 	}
 
 	@RequestMapping(value = "/delete/{${primaryKey}}", method = RequestMethod.POST)
-	public void  delete(@PathVariable Object ${primaryKey}) {
+	public void  delete(@PathVariable ${primaryKeyType} ${primaryKey}) {
 		${lowerFirstLetterName}Service.deleteBy${upperFirstLetterPrimaryKey}(${primaryKey});
 	}
 
 	@RequestMapping(value = "/view/{${primaryKey}}", method = RequestMethod.GET)
-	public ${upperFirstLetterName}  view(@PathVariable Object ${primaryKey}) {
+	public ${upperFirstLetterName}  view(@PathVariable ${primaryKeyType} ${primaryKey}) {
 		return ${lowerFirstLetterName}Service.getBy${upperFirstLetterPrimaryKey}(${primaryKey});
 	}
 

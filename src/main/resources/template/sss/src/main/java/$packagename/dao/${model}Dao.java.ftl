@@ -14,9 +14,9 @@ public interface ${upperFirstLetterName}Dao{
 
 	Integer count();
 
-	${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(Object ${primaryKey});
+	${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(${primaryKeyType} ${primaryKey});
 
-	Integer deleteBy${upperFirstLetterPrimaryKey}(Object ${primaryKey});
+	Integer deleteBy${upperFirstLetterPrimaryKey}(${primaryKeyType} ${primaryKey});
 
 	Integer update(${upperFirstLetterName} ${lowerFirstLetterName});
 

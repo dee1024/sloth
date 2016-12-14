@@ -1,5 +1,7 @@
 package com.github.coolcooldee.sloth.source.db.mysql;
 
+import com.github.coolcooldee.sloth.utils.StringUtil;
+
 import java.util.List;
 import java.util.Set;
 
@@ -85,6 +87,10 @@ public class Table {
         this.stringCarrayNames7 = stringCarrayNames7;
     }
 
+    public String getUpperPrimaryKey(){
+        return primaryKey.toUpperCase();
+    }
+
     public String getPrimaryKey() {
         return primaryKey;
     }
@@ -126,9 +132,16 @@ public class Table {
     }
 
     public String getJooqName() {
-        String startS = upperFirstLetterName.substring(0,1);
-        String ends = upperFirstLetterName.substring(1, upperFirstLetterName.length());
-        return startS.toUpperCase()+ends.toLowerCase();
+//        String startS = upperFirstLetterName.substring(0,1);
+//        String ends = upperFirstLetterName.substring(1, upperFirstLetterName.length());
+//        return startS.toUpperCase()+ends.toLowerCase();
+        String[] tempNames = name.toLowerCase().split("_");
+        StringBuffer sb = new StringBuffer();
+        for(int i=0; i<tempNames.length; i++){
+            sb.append(StringUtil.upperFirst(tempNames[i]));
+        }
+        return sb.toString();
+
     }
 
     public String getUpperFirstLetterName() {

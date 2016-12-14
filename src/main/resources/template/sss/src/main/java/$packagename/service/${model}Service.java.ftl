@@ -17,9 +17,9 @@ public interface ${upperFirstLetterName}Service{
 
 	Integer count();
 
-	${upperFirstLetterName} getById(Object id);
+	${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(${primaryKeyType} ${primaryKey});
 
-	void deleteById(Object id);
+	void deleteBy${upperFirstLetterPrimaryKey}(${primaryKeyType} ${primaryKey});
 
 	void update(${upperFirstLetterName} ${lowerFirstLetterName});
 

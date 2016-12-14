@@ -15,8 +15,8 @@ public interface ${upperFirstLetterName}Service{
 
 	Integer count();
 
-    ${upperFirstLetterName}Record getById(Long id);
+    ${jooqName}Record getBy${upperFirstLetterPrimaryKey}(${primaryKeyType} ${primaryKey});
 
-	List<${upperFirstLetterName}Record> list();
+	List<${jooqName}Record> list();
 
 }

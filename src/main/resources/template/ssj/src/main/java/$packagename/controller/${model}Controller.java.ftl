@@ -1,6 +1,6 @@
 package ${packageName}.controller;
 
-import ${packageName}.jooq.common.generated.tables.${upperFirstLetterName};
+import ${packageName}.jooq.common.generated.tables.${jooqName};
 import ${packageName}.jooq.common.generated.tables.records.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,13 +24,13 @@ public class ${upperFirstLetterName}Controller {
 	private ${upperFirstLetterName}Service ${lowerFirstLetterName}Service;
 
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public String test(@ModelAttribute ${upperFirstLetterName}Record ${upperFirstLetterName}Record) {
+	public String test(@ModelAttribute ${jooqName}Record ${jooqName}Record) {
 		return "success";
 	}
 
 	@RequestMapping(value = "/view/{id}", method = RequestMethod.GET)
-	public ${upperFirstLetterName}Record  view(@PathVariable Long id) {
-		return ${lowerFirstLetterName}Service.getById(id);
+	public ${jooqName}Record  view(@PathVariable ${primaryKeyType} ${primaryKey}) {
+		return ${lowerFirstLetterName}Service.getBy${upperFirstLetterPrimaryKey}(${primaryKey});
 	}
 
 	@RequestMapping(value = "/count", method = RequestMethod.GET)

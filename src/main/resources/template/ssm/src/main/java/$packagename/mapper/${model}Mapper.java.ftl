@@ -18,11 +18,11 @@ public interface ${upperFirstLetterName}Mapper{
 
 
 	@Select("SELECT * FROM ${name} WHERE ${primaryKey} = ${"#"}{${primaryKey}} LIMIT 1 ")
-	${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(@Param("${primaryKey}") Object ${primaryKey});
+	${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(@Param("${primaryKey}") ${primaryKeyType} ${primaryKey});
 
 
 	@Delete("DELETE FROM ${name} WHERE ${primaryKey} = ${"#"}{${primaryKey}} ")
-	Integer deleteBy${upperFirstLetterPrimaryKey}(@Param("${primaryKey}") Object ${primaryKey});
+	Integer deleteBy${upperFirstLetterPrimaryKey}(@Param("${primaryKey}") ${primaryKeyType} ${primaryKey});
 
 	@Update({
 		"UPDATE ${name} SET ${stringCarrayNames5} where ${primaryKey} = ${"#"}{${primaryKey}}"
