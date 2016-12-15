@@ -15,7 +15,7 @@ public class Application {
 
     public static void main(String[] args) throws Exception {
         if(args==null || args.length==0) {
-            String str = "-path/Users/dee/Documents/dev/workspace -projectnamegamesapi -h127.0.0.1 -P3306 -uroot -p  -dgamesapi -strategyssj -packagecom.github.coolcool.sloth.gamesapi";
+            String str = "-path/Users/dee/Documents/dev/workspace -projectnamegamesapi -h127.0.0.1 -P3306 -uroot -p -dgamesapi -strategysss -packagecom.github.coolcool.sloth.gamesapi";
             String[] testargs = str.split(" ");
             Generator.execute(testargs);
             //throw new IllegalArgumentException();

@@ -244,10 +244,10 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
         for (File file : files){
             if(!file.getName().endsWith(".ftl"))
                 continue;
-            String templateFileRelativeDir = file.getAbsolutePath().replace(SourceProjectPathParamters.getSourceProjectClassPath(),"/").replace(file.getName(),"");
+            String templateFileRelativeDir = file.getAbsolutePath().replace(SourceProjectPathParamters.getSourceProjectClassPath(),"/").replace(file.getName(),"").replaceAll("\\\\","/");
             String templateFileName = file.getName();
-            String targetFileAbsoluteBaseDir = TargetProjectParameters.getTargetProjectStorePath();
-            String targetFileRelativeDir = file.getAbsolutePath().replace(templatePath,"").replace("$packagename",TargetProjectParameters.getTargetPackagePath()).replace(file.getName(),"");
+            String targetFileAbsoluteBaseDir = TargetProjectParameters.getTargetProjectStorePath().replaceAll("\\\\","/");
+            String targetFileRelativeDir = file.getAbsolutePath().replace(templatePath,"").replace("$packagename",TargetProjectParameters.getTargetPackagePath()).replace(file.getName(),"").replaceAll("\\\\","/");
             //String targetFileName = file.getName().replace(".ftl","");
             String targetFileName = file.getName().substring(0,file.getName().length()-4);
 
