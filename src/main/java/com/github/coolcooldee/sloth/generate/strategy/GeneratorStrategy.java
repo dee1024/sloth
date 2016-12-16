@@ -17,25 +17,4 @@ public interface GeneratorStrategy {
 
     void execute();
 
-    static GeneratorStrategy getInstance(String s){
-
-        if(StringUtil.isEmpty(s))
-            return  null;
-
-        List<Class<?>> list = ClassUtil.getAllAssignedClass(AbstractGeneratorStrategy.class);
-        for(Class<?> ec : list){
-            try {
-                EnableSupportUserInputPatamter esu =  (EnableSupportUserInputPatamter)ec.newInstance();
-                if(s.equals(esu.getSpecifiedStr())){
-                    return (GeneratorStrategy)esu;
-                }
-            } catch (InstantiationException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            }
-        }
-        return null;
-    }
-
 }

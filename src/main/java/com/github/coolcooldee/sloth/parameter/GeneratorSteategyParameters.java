@@ -2,6 +2,7 @@ package com.github.coolcooldee.sloth.parameter;
 
 import com.github.coolcooldee.sloth.generate.strategy.impl.ssm.SSMGeneratorStrategy;
 import com.github.coolcooldee.sloth.generate.strategy.GeneratorStrategy;
+import com.github.coolcooldee.sloth.generate.strategy.impl.support.GeneratorStrategyFactory;
 
 /**
  * Setting steategy parameters
@@ -19,7 +20,7 @@ public abstract class GeneratorSteategyParameters {
     static GeneratorStrategy generatorStrategy;
 
     public static void init(){
-        GeneratorStrategy generatorStrategy = GeneratorStrategy.getInstance(UserInputParamters.getStrategy4genParam());
+        GeneratorStrategy generatorStrategy = GeneratorStrategyFactory.getInstance(UserInputParamters.getStrategy4genParam());
         if(generatorStrategy!=null)
             setGeneratorStrategy(generatorStrategy);
     }
