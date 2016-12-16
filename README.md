@@ -17,12 +17,12 @@ Features
 - __Generate API DOC__
 - __Provide Many Kinds Of Data Access With JDBC__　
     * [Spring Data](http://projects.spring.io/spring-data/)
+    * [Spring JdbcTemplate](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/jdbc.html)
     * [Mybatis](http://www.mybatis.org/mybatis-3/)
     * [JOOQ](http://www.jooq.org)
-    * [Spring JDBC](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/jdbc.html)
 - __DRY ( don't repeat yourself principle )__
     * Never copy and paste boilerplate between projects again
-- __OTHERS
+- __OTHERS__
     * Target project generated integrate [Springboot](http://projects.spring.io/spring-boot/)、[Guava](https://github.com/google/guava)、[HikariCP](https://github.com/brettwooldridge/HikariCP)、[Apache Commons](http://commons.apache.org)、[fastjson](https://github.com/alibaba/fastjson)、[swagger2](http://swagger.io)、[Flywaydb](https://flywaydb.org)
 
 Prerequisites
@@ -91,7 +91,7 @@ Example
       gameServer |
       
 - __Target Project Code__
-```bash
+```java
 ├── deploy.sh
 ├── mvn.sh
 ├── pom.xml
