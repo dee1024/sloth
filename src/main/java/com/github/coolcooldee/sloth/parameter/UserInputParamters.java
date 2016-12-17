@@ -36,7 +36,7 @@ public abstract class UserInputParamters {
                 if (temp.startsWith("-path")) {
                     setStorePathInUserParam(inputArgs[i].replace("-path", ""));
                     if (!getStorePathInUserParam().endsWith(File.pathSeparator)) {
-                        setStorePathInUserParam(getStorePathInUserParam() + "/");
+                        setStorePathInUserParam(getStorePathInUserParam() + File.separator);
                     }
                 }else if (temp.startsWith("-rollback")) {
                     setRollbackVersionParam(inputArgs[i].replace("-package", ""));

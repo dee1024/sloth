@@ -2,6 +2,8 @@ package com.github.coolcooldee.sloth.generate.strategy.impl.play;
 
 import com.github.coolcooldee.sloth.generate.strategy.impl.EnableGeneratedFile;
 
+import java.io.File;
+
 /**
  * Created by sloth on 16/6/28.
  */
@@ -9,9 +11,9 @@ public enum PLAYCodeCategory implements EnableGeneratedFile {
 
     MODEL(
             "*.java",
-            "model/",
+            "model/".replace("/", File.separator),
             "model.ftl",
-            "/template/play/"
+            "/template/play/".replace("/", File.separator)
     ),
     ;
 

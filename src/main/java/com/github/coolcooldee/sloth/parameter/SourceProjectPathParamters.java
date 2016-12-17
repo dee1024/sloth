@@ -2,6 +2,8 @@ package com.github.coolcooldee.sloth.parameter;
 
 import com.github.coolcooldee.sloth.utils.DirectoryUtil;
 
+import java.io.File;
+
 /**
  *
  * Created by sloth on 16/7/3.
@@ -11,9 +13,9 @@ public abstract class SourceProjectPathParamters {
     /**
      *
      */
-    static String sourceProjectClassPath = System.getProperty("user.dir")+"/target/classes/";
+    static String sourceProjectClassPath = (System.getProperty("user.dir")+"/target/classes/").replace("/", File.separator);
 
-    static String sourceProjectStaticFilePath = sourceProjectClassPath+"template/common/src/main/resources/static/";
+    static String sourceProjectStaticFilePath = (sourceProjectClassPath+"template/common/src/main/resources/static/").replace("/", File.separator);
 
     public static String getSourceProjectClassPath() {
         return sourceProjectClassPath;

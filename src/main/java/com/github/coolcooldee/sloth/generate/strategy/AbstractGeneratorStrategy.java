@@ -55,7 +55,8 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
      * @return
      */
     private  EnableGeneratedFile[] getAllCommonFiles(){
-        return getAllTemplateFilesByTemplatePath(SourceProjectPathParamters.getSourceProjectClassPath()+"template/common/");
+        return getAllTemplateFilesByTemplatePath((SourceProjectPathParamters.getSourceProjectClassPath()
+                +"template/common/").replace("/",File.separator));
     }
 
     /**
@@ -63,7 +64,7 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
      * @return
      */
     private  EnableGeneratedFile[] getAllCustomizedFiles(){
-        return getAllTemplateFilesByTemplatePath(SourceProjectPathParamters.getSourceProjectClassPath()+"template/"+getSpecifiedStr()+"/");
+        return getAllTemplateFilesByTemplatePath((SourceProjectPathParamters.getSourceProjectClassPath()+"template/"+getSpecifiedStr()+"/").replace("/",File.separator));
     }
 
     protected abstract boolean ignoreDefaultDBCode();
@@ -225,13 +226,13 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
             configuration.setObjectWrapper(new DefaultObjectWrapper());
             Template template = configuration.getTemplate(templateFileName);
             template.setEncoding(encoding);
-            if(!targetFileAbsoluteDir.endsWith("/"))
-                targetFileAbsoluteDir+="/";
+            if(!targetFileAbsoluteDir.endsWith(File.separator))
+                targetFileAbsoluteDir+=File.separator;
             FileUtil.mkdir(targetFileAbsoluteDir);
             Writer fw=new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(targetFileAbsoluteDir + targetFileName)),encoding));
             template.process(templateData, fw);
         }catch (Throwable e){
-            logger.error("Can not found the template file, path is \"" + templateFileRelativeDir + templateFileName +". \"");
+            logger.error("Can not found the template file, path is \"" + templateFileRelativeDir + templateFileName +".\"");
             e.printStackTrace();
             throw new RuntimeException("IOException occur , please check !! ");
         }
@@ -244,10 +245,11 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
         for (File file : files){
             if(!file.getName().endsWith(".ftl"))
                 continue;
-            String templateFileRelativeDir = file.getAbsolutePath().replace(SourceProjectPathParamters.getSourceProjectClassPath(),"/").replace(file.getName(),"").replaceAll("\\\\","/");
+            String templateFileRelativeDir = file.getAbsolutePath().replace(SourceProjectPathParamters.getSourceProjectClassPath(),File.separator).replace(file.getName(),"");
+
             String templateFileName = file.getName();
-            String targetFileAbsoluteBaseDir = TargetProjectParameters.getTargetProjectStorePath().replaceAll("\\\\","/");
-            String targetFileRelativeDir = file.getAbsolutePath().replace(templatePath,"").replace("$packagename",TargetProjectParameters.getTargetPackagePath()).replace(file.getName(),"").replaceAll("\\\\","/");
+            String targetFileAbsoluteBaseDir = TargetProjectParameters.getTargetProjectStorePath();
+            String targetFileRelativeDir = file.getAbsolutePath().replace(templatePath,"").replace("$packagename",TargetProjectParameters.getTargetPackagePath()).replace(file.getName(),"");
             //String targetFileName = file.getName().replace(".ftl","");
             String targetFileName = file.getName().substring(0,file.getName().length()-4);
 

@@ -10,7 +10,7 @@ import java.io.File;
 public abstract class TargetProjectParameters {
 
     // TARGET INFO
-    protected static String targetsDirectory = System.getProperty("user.dir") + "/target/";
+    protected static String targetsDirectory = (System.getProperty("user.dir") + "/target/").replace("/", File.separator);
     protected static String targetsName = "mySlothProject";
     protected static String targetPackage = "com.sloth.generated";
     protected static String encoding = "UTF-8";
@@ -20,14 +20,14 @@ public abstract class TargetProjectParameters {
 
 
     //xxxxx/target/DefauleProjectByRK/
-    private static String targetProjectStorePath = targetsDirectory + targetsName + "/";
+    private static String targetProjectStorePath = targetsDirectory + targetsName + "/".replace("/", File.separator);
 
     //xxxxx/target/DefauleProjectByRK/src/main/java/
-    private static String targetProjectJavaStorePath = targetProjectStorePath + "src/main/java/";
+    private static String targetProjectJavaStorePath = targetProjectStorePath + "src/main/java/".replace("/", File.separator);
 
     //xxxxx/target/DefauleProjectByRK/src/main/java/com.sloth/src/main/resources/
-    private static String targetProjectResourceStorePath = targetProjectStorePath + "src/main/resources/";
-    private static String targetProjectStaticResourceStorePath = targetProjectStorePath + "src/main/resources/static/";
+    private static String targetProjectResourceStorePath = targetProjectStorePath + "src/main/resources/".replace("/", File.separator);
+    private static String targetProjectStaticResourceStorePath = targetProjectStorePath + "src/main/resources/static/".replace("/", File.separator);
 
 
     //xxxxx/target/DefauleProjectByRK/src/main/java/com.sloth/src/main/assembly/
@@ -45,12 +45,12 @@ public abstract class TargetProjectParameters {
         if (UserInputParamters.getProjectNameInUserParam() != null)
             setTargetsName(UserInputParamters.getProjectNameInUserParam());
 
-        targetProjectStorePath = targetsDirectory + targetsName + "/";
-        targetProjectJavaStorePath = targetProjectStorePath + "src/main/java/";
-        targetProjectJavaWhitPackNameStorePath = targetProjectJavaStorePath + targetPackage.replace(".", "/") + "/";
-        targetProjectResourceStorePath = targetProjectStorePath + "src/main/resources/";
-        targetProjectStaticResourceStorePath = targetProjectStorePath + "src/main/resources/static/";
-        targetProjectMavenAssemblyStorePath = targetProjectStorePath + "src/main/assembly/";
+        targetProjectStorePath = (targetsDirectory + targetsName + "/").replace("/", File.separator);
+        targetProjectJavaStorePath = (targetProjectStorePath + "src/main/java/").replace("/", File.separator);
+        targetProjectJavaWhitPackNameStorePath = (targetProjectJavaStorePath + targetPackage.replace(".", "/") + "/").replace("/", File.separator);
+        targetProjectResourceStorePath = (targetProjectStorePath + "src/main/resources/").replace("/", File.separator);
+        targetProjectStaticResourceStorePath = (targetProjectStorePath + "src/main/resources/static/").replace("/", File.separator);
+        targetProjectMavenAssemblyStorePath = (targetProjectStorePath + "src/main/assembly/").replace("/", File.separator);
     }
 
     public static String getTargetsDirectory() {

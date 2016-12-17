@@ -125,10 +125,10 @@ public abstract class DirectoryUtil {
                     if (name.startsWith(relativeSrcPath)&&(name.endsWith(".js")||name.endsWith(".css") || name.endsWith(".html"))) {
 
                         try {
-                            InputStream inputStream=Application.class.getClass().getResourceAsStream("/"+name);
+                            InputStream inputStream=Application.class.getClass().getResourceAsStream(File.separator+name);
                             String text = CharStreams.toString(new InputStreamReader(inputStream, "UTF-8"));
                             //System.out.println(text);
-                            String filePath = dest.getPath() + name.replace(relativeSrcPath,"/");
+                            String filePath = dest.getPath() + name.replace(relativeSrcPath,File.separator);
                             File newFile = new File(filePath);
                             if(!newFile.exists()){
                                 newFile.createNewFile();
