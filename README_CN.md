@@ -49,6 +49,7 @@ mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h12
       :--------- | ---- | ---- 
       -path |/workspaces/mySlothProject | 生成的目标项目的路径  
       -package | com.test | 生成的目标项目的包名
+      -projectname | mySlothProject | 目前项目的名字  
       -strategy | ssm | 生成策略:<br/>ssd=SpringMVC+Spring+SpringData<br/>ssm=SpringMVC+Spring+MyBatis<br/>sss=SpringMVC+Spring+SpringJDBC<br/>ssj=SpringMVC+Spring+JOOQ
       -h | 127.0.0.1 | 数据库地址 
       -P | 3306 | 数据库端口
