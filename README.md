@@ -59,7 +59,8 @@ mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h12
       generate args             | e.g | description 
       :--------- | ---- | ---- 
       -path |/workspaces/mySlothProject | the path where code generate  
-      -package | com.test | Tell Sloth to use the package name
+      -projectname | mySlothProject | the target project name  
+      -package | com.test | tell sloth to use the package name
       -strategy | ssm | generattion strategy:<br/>ssd=SpringMVC+Spring+SpringData<br/>ssm=SpringMVC+Spring+MyBatis<br/>sss=SpringMVC+Spring+SpringJDBC<br/>ssj=SpringMVC+Spring+JOOQ
       -h | 127.0.0.1 | database host 
       -P | 3306 | database port 
