@@ -6,13 +6,16 @@ SLOTH 1.0
 
 Sloth is A tool to generate scaffold code from SQL databases.
 You just need to specify your application database may be used. 
+It allows for rapidly getting started on new projects.
 If you know what the code generator does in Ruby on Rails (RoR), Sloth works just like that, and it’s specific to JAVA language now.
+Sloth is always the right choice for your scaffolding needs.
 Sloth can help developers quickly build beautiful web applications.
 Read this in other languages: [中文](/README_CN.md)
 
 Features
 ========
-- __Generate Stand-Alone SpringBoot Applications__　
+- __Generate Stand-Alone SpringBoot Applications__
+- __Rapidly create a new project executable__
 - __Generate Model–View–Controller Code__
 - __Generate API DOC__
 - __Provide Many Kinds Of Data Access With JDBC__　
@@ -61,6 +64,7 @@ mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h12
       -path |/workspaces/mySlothProject | the path where code generate  
       -projectname | mySlothProject | the target project name  
       -package | com.test | tell sloth to use the package name
+      -help | ---- | to see which options are available
       -strategy | ssm | generattion strategy:<br/>ssd=SpringMVC+Spring+SpringData<br/>ssm=SpringMVC+Spring+MyBatis<br/>sss=SpringMVC+Spring+SpringJDBC<br/>ssj=SpringMVC+Spring+JOOQ
       -h | 127.0.0.1 | database host 
       -P | 3306 | database port 

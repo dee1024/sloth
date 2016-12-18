@@ -46,8 +46,8 @@ public abstract class UserInputParamters {
                     setStrategy4genParam(inputArgs[i].replace("-strategy", ""));
                 } else if (temp.startsWith("-projectname")) {
                     setProjectNameInUserParam(inputArgs[i].replace("-projectname", ""));
-                } else if (temp.startsWith("-h")) {
-                    setDbHostInUserParam(inputArgs[i].replace("-h", ""));
+                } else if (temp.startsWith("-help")) {
+                    setDbHostInUserParam(inputArgs[i].replace("-help", ""));
                     if ("".equals(DBSourceParameters.getSourceDbHost())) {
                         System.out.println("-h\tdb's host.");
                         System.out.println("-P\tdb's Port.");
