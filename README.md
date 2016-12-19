@@ -4,12 +4,9 @@ SLOTH 1.0
 =========
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/nimelepbpejjlbmoobocpfnjhihnpked.svg)]()  [![version](https://img.shields.io/badge/release-v1.0.1-brightgreen.svg)]()  [![issues](https://img.shields.io/badge/issues-2-orange.svg)]()  [![Licence](https://img.shields.io/badge/Licence-Apache-blue.svg)]()  
 
-Sloth is A tool to generate scaffold code from SQL databases.
-You just need to specify your application database may be used. 
-It allows for rapidly getting started on new projects.
+Sloth is A tool to generate scaffold code from SQL databases.You just need to specify your application database may be used. It allows for rapidly getting started on new projects.
 If you know what the code generator does in Ruby on Rails (RoR), Sloth works just like that, and it’s specific to JAVA language now.
-Sloth is always the right choice for your scaffolding needs.
-Sloth can help developers quickly build beautiful web applications.
+Sloth is always the right choice for your scaffolding needs.Sloth can help developers quickly build beautiful web applications.
 Read this in other languages: [中文](/README_CN.md)
 
 Features
@@ -30,32 +27,33 @@ Features
 
 Prerequisites
 =============
-You’ll need just 2 things to develop with Sloth:
+Before useing Sloth, you will need the following:
 - __JDK__　(Java Development Kit), version 1.7 and above
-- __Maven__ (Project Management Tool), version 3.1.1 and above
+- __Maven__ (Project Management Tool), version 3.0 and above
+- __GIT__ 
 
 Quick Start
 ===========
-- __Prepare Your Database And Create Your Database Structure__
+- __Step 1: Prepare Your Database And Create Your Database Structure__
 
       host      | port | username | password | dbname 
       --------- | ---- |:--------:| -------- |:------:
       127.0.0.1 | 3306 | root     |  123456  | test    
 
 
-- __Clone Sloth__
+- __Step 2: Clone Sloth__
 ```bash
 git clone https://github.com/coolcooldee/sloth.git
 ```
-- __Into The Sloth Root Directory__
+- __Step 3: Into The Sloth Root Directory__
 ```bash
 cd sloth
 ```
-- __Maven Install__
+- __Step 4: Maven Install__
 ```bash
 mvn clean install
 ```
-- __Sloth Generating__
+- __Step 5: Sloth Generating__
 ```
 mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h127.0.0.1 -P3306 -uroot -p123456 -dtest -strategyssm"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.coolcooldee.sloth.Application"
 ```
@@ -72,17 +70,17 @@ mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h12
       -p | 123456 | database password
       -d | test | database name
 
-- __Into Sloth Target Project Generated__
+- __Step 6: Into Sloth Target Project Generated__
 ```bash
 cd /workspaces/mySlothProject
 ```
 
-- __Runngin Sloth Target Project__
+- __Step 7: Runngin Sloth Target Project__
 ```bash
 mvn clean install
 mvn exec:java -Dexec.mainClass=”com.test.Application” -Dexec.cleanupDaemonThreads=false
 ```
-- __DONE__
+- __Step 8: Open a new tab in your web browser on__
 <http://localhost:8081/apis-docs-by-sloth.html>
 
 Example
