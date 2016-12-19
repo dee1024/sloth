@@ -67,10 +67,12 @@
 
             ${r'<#escape x as x?html>'}
             <#list 0..columns?size-1 as i>
-                <div class="form-group">
-                    <label for="input${columns[i].name}">${columns[i].name} - ${columns[i].remark}</label>
-                    <input <#if primaryKey?? && columns[i].name == primaryKey >readonly</#if> type="text" class="form-control" id="input${columns[i].name}" name="${columns[i].name}" placeholder="${columns[i].name}" value="<#if primaryKey?? && columns[i].name == primaryKey>${r'${autoIncrement?c}'}</#if>">
-                </div>
+                <#if !columns[i].autoIncrement >
+                    <div class="form-group">
+                        <label for="input${columns[i].name}">${columns[i].name} <#if columns[i].remark!="">- ${columns[i].remark}</#if></label>
+                        <input type="text" class="form-control" id="input${columns[i].name}" name="${columns[i].name}" placeholder="${columns[i].name}" value="" />
+                    </div>
+                </#if>
             </#list>
             ${r'</#escape>'}
                 <button type="button" id="submit" class="btn btn-primary btn-lg pull-right" data-loading-text="<i class='fa fa-spinner fa-spin'></i> sending..">Send</button>
@@ -202,7 +204,7 @@
                 history.go(-1);
 
             if (createFlag)
-                window.location.href = "detail/" + $("#input${primaryKey}").val();
+                window.location.href = "list";
         });
     });
 

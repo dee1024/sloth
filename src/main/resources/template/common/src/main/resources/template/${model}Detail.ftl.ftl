@@ -68,7 +68,9 @@
             ${r'<#escape x as x?html>'}
             <#list 0..columns?size-1 as i>
                 <div class="form-group">
-                    <label for="input${columns[i].name}">${columns[i].name} - ${columns[i].remark}</label>
+                    <label for="input${columns[i].name}">${columns[i].name} <#if columns[i]
+                    .remark!="">- ${columns[i]
+            .remark}</#if></label>
                     <input <#if columns[i].name== primaryKey >readonly</#if> type="text" class="form-control" id="input${columns[i].name}" name="${columns[i].name}" placeholder="${columns[i].name}" value="${r'<#if row.'}${columns[i].name}${r'??>${row.'}${columns[i].name}<#if columns[i].type?index_of("Integer") gt -1 || columns[i].type?index_of("Long") gt -1 >${r'?c}</#if>'}<#elseif columns[i].type?index_of("Date") gt -1>${r'?date}</#if>'}<#else>${r'}</#if>'}</#if>">
                 </div>
             </#list>
