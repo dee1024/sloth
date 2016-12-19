@@ -63,7 +63,7 @@ mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h12
       -projectname | mySlothProject | the target project name  
       -package | com.test | tell sloth to use the package name
       -help | ---- | to see which options are available
-      -strategy | ssm | generattion strategy:<br/>ssd=SpringMVC+Spring+SpringData<br/>ssm=SpringMVC+Spring+MyBatis<br/>sss=SpringMVC+Spring+SpringJDBC<br/>ssj=SpringMVC+Spring+JOOQ
+      -strategy | ssm | generattion strategy:<br/>ssd=SpringBoot + SpringData<br/>ssm=SpringMVC + Spring+MyBatis<br/>sss=SpringBoot + SpringJDBC<br/>ssj=SpringBoot + JOOQ
       -h | 127.0.0.1 | database host 
       -P | 3306 | database port 
       -u | root | database username 
