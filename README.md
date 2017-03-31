@@ -40,7 +40,8 @@ Quick Start
       | host      | port | username | password | dbname |
       |-----------|------|----------|----------|--------|
       | 127.0.0.1 | 3306 | root     |  123456  | test   |
-      
+
+### Core Packages
       | Package | Version | Dependencies |
       |--------|-------|------------|
       | [`babel-core`](/packages/babel-core) | [![npm](https://img.shields.io/npm/v/babel-core.svg?maxAge=2592000)](https://www.npmjs.com/package/babel-core) | [![Dependency Status](https://david-dm.org/babel/babel.svg?path=packages/babel-core)](https://david-dm.org/babel/babel?path=packages/babel-core) |
