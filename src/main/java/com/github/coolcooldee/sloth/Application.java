@@ -1,11 +1,13 @@
 package com.github.coolcooldee.sloth;
 
 import com.github.coolcooldee.sloth.generate.Generator;
+import com.github.coolcooldee.sloth.parameter.UserInputParamters;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  * @author Dee1024
+ * @link https://github.com/coolcooldee/sloth
  * @since 16/6/16
  *
  */
@@ -15,12 +17,20 @@ public class Application {
 
     public static void main(String[] args) throws Exception {
         if(args==null || args.length==0) {
-            String str = "-path/Users/dee/Documents/dev/workspace -projectnamegamesapi -h127.0.0.1 -P3306 -uroot -p -dgamesapi -strategyssd -packagecom.github.coolcool.sloth.gamesapi";
-//            String str = "-path/Users/dee/Documents/dev/workspace -projectnamedatacollector -h127.0.0.1 -P3306 -uroot -p -dtest -strategysss -packagecom.kingsoft";
-            String[] testargs = str.split(" ");
-            Generator.execute(testargs);
-            //throw new IllegalArgumentException();
+            //setting demo paramters
+            String path = "/Users/dee/Documents/dev/workspace";
+            String projectName = "gamesapi";
+            String dbHost = "127.0.0.1";
+            String dbPort = "3306";
+            String dbUser = "root";
+            String dbPassword = "";
+            String dbName = "gamesapi";
+            String strategy = "ssd";
+            String packageName = "com.github.coolcool.sloth.gamesapi";
+            //generating
+            Generator.execute(UserInputParamters.genInputArgs(path,projectName,dbHost,dbPort,dbUser,dbPassword,dbName,strategy,packageName));
         }else{
+            //generating
             Generator.execute(args);
         }
 

@@ -1,6 +1,9 @@
 package com.github.coolcooldee.sloth.parameter;
 
+import com.github.coolcooldee.sloth.Application;
 import com.github.coolcooldee.sloth.utils.StringUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 
@@ -10,6 +13,8 @@ import java.io.File;
  * Created by sloth on 16/6/16.
  */
 public abstract class UserInputParamters {
+
+    static Logger logger = LoggerFactory.getLogger(UserInputParamters.class);
 
     private static String storePathInUserParam;
     private static String packageNameInUserParam;
@@ -25,6 +30,14 @@ public abstract class UserInputParamters {
     private static String strategy4genParam;
 
     private static String rollbackVersionParam = "";
+
+    public static String[] genInputArgs(String path, String projectname, String dbHost, String dbPort, String dbUser, String dbPassword, String dbName, String strategy, String packageName){
+        String str = "-path$1 -projectname$2 -h$3 -P$4 -u$5 -p$6 -d$7 -strategy$8 -package$9";
+        str = str.replace("$1",path).replace("$2",projectname).replace("$3",dbHost).replace("$4", dbPort)
+                .replace("$5",dbUser).replace("$6",dbPassword).replace("$7",dbName).replace("$8",strategy)
+                .replace("$9",packageName);
+        return str.split(" ");
+    }
 
     public static int init(String[] inputArgs) {
         if (inputArgs != null) {
@@ -49,17 +62,17 @@ public abstract class UserInputParamters {
                 } else if (temp.startsWith("-help")) {
                     setDbHostInUserParam(inputArgs[i].replace("-help", ""));
                     if ("".equals(DBSourceParameters.getSourceDbHost())) {
-                        System.out.println("-h\tdb's host.");
-                        System.out.println("-P\tdb's Port.");
-                        System.out.println("-u\tdb's username.");
-                        System.out.println("-p\tdb's password.");
-                        System.out.println("-d\tdb's schema name.");
-                        System.out.println("-t\tdb's table name.");
-                        System.out.println("-strategy\tassign the strategy for generating target project.");
-                        System.out.println("-path\ttarget project's dir path.");
-                        System.out.println("-package\ttarget project's package.");
-                        System.out.println("-projectname\ttarget project's name.");
-                        System.out.println("-rollback\trollback the target project to previous version.");
+                        logger.info("-h\tdb's host.");
+                        logger.info("-P\tdb's Port.");
+                        logger.info("-u\tdb's username.");
+                        logger.info("-p\tdb's password.");
+                        logger.info("-d\tdb's schema name.");
+                        logger.info("-t\tdb's table name.");
+                        logger.info("-strategy\tassign the strategy for generating target project.");
+                        logger.info("-path\ttarget project's dir path.");
+                        logger.info("-package\ttarget project's package.");
+                        logger.info("-projectname\ttarget project's name.");
+                        logger.info("-rollback\trollback the target project to previous version.");
                         return -1;
                     }
                 } else if (temp.startsWith("-P")) {

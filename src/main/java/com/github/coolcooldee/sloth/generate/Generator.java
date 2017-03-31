@@ -14,17 +14,17 @@ public class Generator {
 
         // Step 1
         UserInputParamters.init(args);
-        // Step 2
+        // Step 1.1
         DBSourceParameters.inti();
-        // Step 3
+        // Step 1.2
         TargetProjectParameters.init();
-        // Step 4
+        // Step 1.3
         TemplateParameters.init();
-        // Step 5
+        // Step 1.4
         GeneratorSteategyParameters.init();
-        // Step 6
+        // Step 2
         GeneratorSteategyParameters.getGeneratorStrategy().execute();
-        //Step 7
+        // Step 3
         printlnResult();
     }
 
@@ -34,12 +34,8 @@ public class Generator {
         logger.info("\n\n");
         logger.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
         logger.info("@      Genarate Successfully !       @");
-        logger.info("@   Thank you for using Sloth 1.0    @");
+        logger.info("@   Thank you for using Sloth 1.1    @");
         logger.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-    }
-
-    public static void main(String[] args) throws Exception {
-        Generator.execute(args);
     }
 
 }
