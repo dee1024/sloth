@@ -20,8 +20,9 @@ Features
     * [Spring JdbcTemplate](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/jdbc.html)
     * [Mybatis](http://www.mybatis.org/mybatis-3/)
     * [JOOQ](http://www.jooq.org)
-- __DRY ( don't repeat yourself principle )__
+- __Reduce repetitive coding__
     * Never copy and paste boilerplate between projects again
+- __Generate your code in less time with fewer bugs__ 
 - __OTHERS__
     * Target project generated integrate [Springboot](http://projects.spring.io/spring-boot/)、[Guava](https://github.com/google/guava)、[HikariCP](https://github.com/brettwooldridge/HikariCP)、[Apache Commons](http://commons.apache.org)、[fastjson](https://github.com/alibaba/fastjson)、[swagger2](http://swagger.io)、[Flywaydb](https://flywaydb.org)
 
@@ -36,10 +37,10 @@ Quick Start
 ===========
 - __Step 1: Prepare Your Database And Create Your Database Structure__
 
-      host      | port | username | password | dbname 
-      --------- | ---- |:--------:| -------- |:------:
-      127.0.0.1 | 3306 | root     |  123456  | test    
-
+      | host      | port | username | password | dbname |
+      |-----------|------|----------|----------|--------|
+      | 127.0.0.1 | 3306 | root     |  123456  | test   |
+      
 
 - __Step 2: Clone Sloth__
 ```bash
