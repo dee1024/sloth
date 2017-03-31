@@ -17,7 +17,7 @@ __Sloth__ 是一个生成脚手架代码的工具。你只需要设置好业务�
     * [Spring JDBC](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/jdbc.html)
 - __DRY 原则__
     * 绝不复制黏贴代码
-- __其它
+- __其它__
     * 生成的目标代码整合: [Springboot](http://projects.spring.io/spring-boot/)、[Guava](https://github.com/google/guava)、[HikariCP](https://github.com/brettwooldridge/HikariCP)、[Apache Commons](http://commons.apache.org)、[fastjson](https://github.com/alibaba/fastjson)、[swagger2](http://swagger.io)、[Flywaydb](https://flywaydb.org)
 
 快速开始
