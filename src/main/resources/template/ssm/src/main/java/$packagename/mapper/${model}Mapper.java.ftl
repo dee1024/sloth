@@ -18,6 +18,11 @@ public interface ${upperFirstLetterName}Mapper{
 
 
 	@Select("SELECT * FROM ${name} WHERE ${primaryKey} = ${"#"}{${primaryKey}} LIMIT 1 ")
+	@Results({
+		<#list columns as column>
+			<#if column_index gt 0>,</#if>@Result(property="${column.lowerFirstLetterName}",column="${column.name}")
+		</#list>
+	})
 	${upperFirstLetterName} getBy${upperFirstLetterPrimaryKey}(@Param("${primaryKey}") ${primaryKeyType} ${primaryKey});
 
 
@@ -37,10 +42,20 @@ public interface ${upperFirstLetterName}Mapper{
 
 
 	@Select("SELECT * FROM ${name} LIMIT 10 ")
+@Results({
+<#list columns as column>
+	<#if column_index gt 0>,</#if>@Result(property="${column.lowerFirstLetterName}",column="${column.name}")
+</#list>
+})
 	List<${upperFirstLetterName}> list();
 
 
 	@Select("SELECT * FROM ${name} LIMIT ${"#"}{start}, ${"#"}{step}")
+@Results({
+<#list columns as column>
+	<#if column_index gt 0>,</#if>@Result(property="${column.lowerFirstLetterName}",column="${column.name}")
+</#list>
+})
 	List<${upperFirstLetterName}> page(@Param("start") int start, @Param("step") int step );
 	
 }
