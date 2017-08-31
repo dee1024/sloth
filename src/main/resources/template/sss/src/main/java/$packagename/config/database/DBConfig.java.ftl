@@ -26,7 +26,7 @@ public class DBConfig {
     private String dbName;
 
     public void setDbHost(String dbHost) {
-        this.dbHost = dbHost;
+        this.dbHost = dbHost.trim();
     }
 
     public void setDbPort(int dbPort) {
@@ -34,15 +34,15 @@ public class DBConfig {
     }
 
     public void setDbUser(String dbUser) {
-        this.dbUser = dbUser;
+        this.dbUser = dbUser.trim();
     }
 
     public void setDbPassword(String dbPassword) {
-        this.dbPassword = dbPassword;
+        this.dbPassword = dbPassword.trim();
     }
 
     public void setDbName(String dbName) {
-        this.dbName = dbName;
+        this.dbName = dbName.trim();
     }
 
     public String getDBHost() {

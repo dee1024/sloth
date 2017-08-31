@@ -35,8 +35,7 @@ public interface ${upperFirstLetterName}Mapper{
 	Integer update(${upperFirstLetterName} ${lowerFirstLetterName});
 
 	@Insert({
-		"INSERT IGNORE INTO ${name} (${stringCarrayNames3})",
-		"VALUE (${stringCarrayNames4})"
+		"INSERT IGNORE INTO ${name} (${stringCarrayNames3}) VALUE (${stringCarrayNames4})"
 	})
 	Integer save(${upperFirstLetterName} ${lowerFirstLetterName});
 

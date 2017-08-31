@@ -75,7 +75,9 @@ public abstract class UserInputParamters {
                         logger.info("-rollback\trollback the target project to previous version.");
                         return -1;
                     }
-                } else if (temp.startsWith("-P")) {
+                } else if (temp.startsWith("-h")) {
+                    setDbHostInUserParam(inputArgs[i].replace("-h", ""));
+                }else if (temp.startsWith("-P")) {
                     setDbPortInUserParam(inputArgs[i].replace("-P", ""));
                 } else if (temp.startsWith("-u")) {
                     setDbUserNameInUserParam(inputArgs[i].replace("-u", ""));
