@@ -57,18 +57,22 @@ mvn clean install
 ```
 mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h127.0.0.1 -P3306 -uroot -p123456 -dtest -strategyssm"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.coolcooldee.sloth.Application"
 ```
-      generate args|            e.g            | description 
-      -------------| --------------------------| ----------------------------
-      -path        |/workspaces/mySlothProject | the path where code generate  
-      -projectname | mySlothProject            | the target project name  
-      -package     | com.test                  | tell sloth to use the package name
-      -help        |                           | to see which options are available
-      -strategy    | ssm                       | generattion strategy:<br/>ssd=SpringBoot + SpringData<br/>ssm=SpringMVC + Spring+MyBatis<br/>sss=SpringBoot + SpringJDBC<br/>ssj=SpringBoot + JOOQ
-      -h           | 127.0.0.1                 | database host 
-      -P           | 3306                      | database port 
-      -u           | root                      | database username 
-      -p           | 123456                    | database password
-      -d           | test                      | database name
+      |generate args|            e.g            | description                 |
+      |-------------| --------------------------| ----------------------------|
+      |-path        |/workspaces/mySlothProject | the path where code generate|
+      |-projectname | mySlothProject            | the target project name|
+      |-package     | com.test                  | tell sloth to use the package name|
+      |-help        |                           | to see which options are available|
+      |-strategy    | ssm                       | generattion strategy:|
+      |             |                           | ssd=SpringBoot + SpringData|
+      |             |                           | ssm=SpringMVC + Spring+MyBatis|
+      |             |                           | sss=SpringBoot + SpringJDBC|
+      |             |                           | ssj=SpringBoot + JOOQ|
+      |-h           | 127.0.0.1                 | database host|
+      |-P           | 3306                      | database port|
+      |-u           | root                      | database username|
+      |-p           | 123456                    | database password|
+      |-d           | test                      | database name|
 
 - __Step 6: Into Sloth Target Project Generated__
 ```bash
