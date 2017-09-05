@@ -24,9 +24,9 @@ __Sloth__ 是一个生成脚手架代码的工具。你只需要设置好业务�
 ======
 - __步骤一：准备好数据源__
 
-      host      | port | username | password | dbname 
-      --------- | ---- |:--------:| -------- |:------:
-      127.0.0.1 | 3306 | root     |  123456  | test    
+      host | port | username | password | dbname
+      ------------ | ------------- | ------------- | ------------- | -------------
+      127.0.0.1 | 3306 | root | 123456 | test
 
 
 - __步骤二：Clone Sloth__
@@ -45,17 +45,20 @@ mvn clean install
 ```
 mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h127.0.0.1 -P3306 -uroot -p123456 -dtest -strategyssm"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.coolcooldee.sloth.Application"
 ```
-      生成使用的参数             | 例如 | 参数说明 
-      :--------- | ---- | ---- 
-      -path |/workspaces/mySlothProject | 生成的目标项目的路径  
-      -package | com.test | 生成的目标项目的包名
-      -projectname | mySlothProject | 目前项目的名字  
-      -strategy | ssm | 生成策略:<br/>ssd=SpringBoot + SpringData<br/>ssm=SpringBoot + MyBatis<br/>sss=SpringBoot + SpringJDBC<br/>ssj=SpringBoot + JOOQ
-      -h | 127.0.0.1 | 数据库地址 
-      -P | 3306 | 数据库端口
-      -u | root | 数据库用户名 
-      -p | 123456 | 数据库用户密码
-      -d | test | 数据库库名
+
+
+生成使用的参数 | 例如         |参数说明
+------------ | -------------|-------------
+-path           | /workspaces/mySlothProject | 生成的目标项目的路径
+-projectname  | mySlothProject | 生成的目标项目的包名
+-package  | com.test| 目前项目的名字
+-help  |    | 查看帮助
+-strategy  | ssm|   生成策略:ssd=SpringBoot + SpringData,ssm=SpringMVC + Spring+MyBatis,sss=SpringBoot + SpringJDBC,ssj=SpringBoot + JOOQ
+-h  | 127.0.0.1|数据库地址
+-P  | 3306|数据库端口
+-u  | root|数据库用户名
+-p  | 123456|数据库用户密码
+-d  | test|数据库库名
 
 - __步骤六：进入新生成的目标项目的根目录__
 ```bash
