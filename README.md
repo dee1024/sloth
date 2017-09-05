@@ -65,11 +65,7 @@ generate args | e.g         |description
 -projectname  | mySlothProject | the target project name
 -package  | com.test|tell sloth to use the package name
 -help  |    |to see which options are available
--strategy  | ssm|   generattion strategy:|
-      |             |                           | ssd=SpringBoot + SpringData|
-      |             |                           | ssm=SpringMVC + Spring+MyBatis|
-      |             |                           | sss=SpringBoot + SpringJDBC|
-      |             |                           | ssj=SpringBoot + JOOQ
+-strategy  | ssm|   generattion strategy:ssd=SpringBoot + SpringData,ssm=SpringMVC + Spring+MyBatis,sss=SpringBoot + SpringJDBC,ssj=SpringBoot + JOOQ
 -h  | 127.0.0.1|database host
 -P  | 3306|database port
 -u  | root|database username
