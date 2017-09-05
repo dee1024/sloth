@@ -37,6 +37,10 @@ Quick Start
 ===========
 - __Step 1: Prepare Your Database And Create Your Database Structure__
 
+host | port | username | password | dbname
+------------ | ------------- | ------------- | ------------- | -------------
+127.0.0.1 | 3306 | root | 123456 | test
+
       | host      | port | username | password | dbname |
       |-----------|------|----------|----------|--------|
       | 127.0.0.1 | 3306 | root     |  123456  | test   |
@@ -89,12 +93,12 @@ Example
 =======
 - __Database Tables Source__
 
-      TableName |
-      --------- |
-      game |
-      gameRole |
-      gameServer |
-      
+TableName |
+------------ |
+game |
+gameRole |
+gameServer |
+
 - __Target Project Code__
 ```java
 ├── deploy.sh
