@@ -54,22 +54,23 @@ cd sloth
 mvn clean install
 ```
 - __Step 5: Sloth Generating__
-
-
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-
 ```
 mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h127.0.0.1 -P3306 -uroot -p123456 -dtest -strategyssm"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.coolcooldee.sloth.Application"
 ```
 
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+generate args | e.g         |
+------------ | -------------|
+-path           | /workspaces/mySlothProject|the path where code generate
+-projectname  | mySlothProject|the target project name
+-package  | com.test|
+-help  |    |
+-strategy  | ssm|
+-h  | 127.0.0.1|
+-P  | 3306|
+-u  | root|
+-p  | 123456|
+-d  | test|
 
 
 
