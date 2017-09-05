@@ -6,17 +6,17 @@
 
     <groupId>${packageName}</groupId>
     <artifactId>${projectName}</artifactId>
-    <version>V1.0</version>
+    <version>v${"$"}{current.time}</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.2.RELEASE</version>
+        <version>1.5.6.RELEASE</version>
     </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.7</java.version>
+        <java.version>1.8</java.version>
         <db.url>jdbc:mysql://${sourceDbHost}:${sourceDbPort}</db.url>
         <db.username>${sourceDbUsername}</db.username>
         <db.password>${sourceDbPassword}</db.password>
@@ -37,12 +37,6 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
@@ -58,18 +52,23 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-redis</artifactId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+            <version>1.4.6.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.37</version>
         </dependency>
-
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
@@ -140,7 +139,6 @@
 
     </dependencies>
 
-
     <build>
         <resources>
             <resource>
@@ -161,10 +159,9 @@
                 <configuration>
                     <source>${"$"}{java.version}</source>
                     <target>${"$"}{java.version}</target>
-                    <encoding>UTF-8</encoding>
+                    <encoding>${"$"}{project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
@@ -182,8 +179,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -208,7 +203,6 @@
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
@@ -238,7 +232,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <encoding>UTF-8</encoding>
+                            <encoding>${"$"}{project.build.sourceEncoding}</encoding>
                             <outputDirectory>${"$"}{project.build.directory}</outputDirectory>
                             <resources>
                                 <resource>
@@ -250,14 +244,12 @@
                     </execution>
                 </executions>
             </plugin>
-
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
-                    <finalName>${"$"}{project.artifactId}-jar-without-dependencies</finalName>
+                    <finalName>${"$"}{project.artifactId}-V${"$"}{current.time}</finalName>
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
@@ -268,7 +260,6 @@
                             <Class-Path>. lib/ config/</Class-Path>
                         </manifestEntries>
                     </archive>
-
                     <includes>
                         <include>mybatis/**</include>
                         <include>com/**</include>
@@ -276,20 +267,14 @@
                     </includes>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
+                    <descriptors>
+                        <descriptor>src/main/assembly/assembly.xml</descriptor>
+                    </descriptors>
                     <finalName>${"$"}{project.artifactId}</finalName>
-                    <archive>
-                        <manifest>
-                            <mainClass>${"$"}{start-class}</mainClass>
-                        </manifest>
-                    </archive>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
                 </configuration>
                 <executions>
                     <execution>
@@ -301,7 +286,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 </project>

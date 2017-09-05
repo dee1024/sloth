@@ -7,12 +7,12 @@
 
     <groupId>${packageName}</groupId>
     <artifactId>${projectName}</artifactId>
-    <version>V1.0</version>
+    <version>v${"$"}{current.time}</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.0.RELEASE</version>
+        <version>1.5.6.RELEASE</version>
     </parent>
 
     <properties>
@@ -63,10 +63,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-redis</artifactId>
+            <version>1.4.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -166,7 +171,7 @@
                 <configuration>
                     <source>${"$"}{java.version}</source>
                     <target>${"$"}{java.version}</target>
-                    <encoding>UTF-8</encoding>
+                    <encoding>${"$"}{project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
 
@@ -187,8 +192,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -243,7 +246,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <encoding>UTF-8</encoding>
+                            <encoding>${"$"}{project.build.sourceEncoding}</encoding>
                             <outputDirectory>${"$"}{project.build.directory}</outputDirectory>
                             <resources>
                                 <resource>
@@ -255,14 +258,12 @@
                     </execution>
                 </executions>
             </plugin>
-
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
-                    <finalName>${"$"}{project.artifactId}-jar-without-dependencies</finalName>
+                    <finalName>${"$"}{project.artifactId}-v${"$"}{current.time}</finalName>
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
@@ -273,7 +274,6 @@
                             <Class-Path>. lib/ config/</Class-Path>
                         </manifestEntries>
                     </archive>
-
                     <includes>
                         <include>mybatis/**</include>
                         <include>com/**</include>
@@ -281,21 +281,14 @@
                     </includes>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
-
+                    <descriptors>
+                        <descriptor>src/main/assembly/assembly.xml</descriptor>
+                    </descriptors>
                     <finalName>${"$"}{project.artifactId}</finalName>
-                        <archive>
-                            <manifest>
-                                <mainClass>${"$"}{start-class}</mainClass>
-                            </manifest>
-                        </archive>
-                        <descriptorRefs>
-                            <descriptorRef>jar-with-dependencies</descriptorRef>
-                        </descriptorRefs>
                 </configuration>
                 <executions>
                     <execution>
@@ -307,7 +300,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 </project>

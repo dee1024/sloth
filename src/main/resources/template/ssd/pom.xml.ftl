@@ -7,12 +7,12 @@
 
     <groupId>${packageName}</groupId>
     <artifactId>${projectName}</artifactId>
-    <version>V1.0</version>
+    <version>v${"$"}{current.time}</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.0.RELEASE</version>
+        <version>1.5.6.RELEASE</version>
     </parent>
 
     <properties>
@@ -59,6 +59,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+            <version>1.4.6.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>

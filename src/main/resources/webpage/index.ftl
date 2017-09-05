@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Chihche">
     <!-- <link rel="icon" href="../../favicon.ico"> -->
-    <title>Sloth - Bbuild Tool</title>
+    <title>sloth - Bbuild Tool</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/cover.css" rel="stylesheet">
@@ -33,7 +33,7 @@
 
             <div class="masthead clearfix">
                 <div class="inner">
-                    <h3 class="masthead-brand">Sloth</h3>
+                    <h3 class="masthead-brand">sloth</h3>
                     <nav>
                         <ul class="nav masthead-nav">
                             <li id="homeTab" class="active"><a href="#home" data-toggle="tab">Home</a></li>
@@ -47,7 +47,7 @@
             <div class="tab-content">
                 <div class="tab-pane fade in active" id="home">
                     <div class="inner cover">
-                        <h1 class="cover-heading">Sloth - 构建工具</h1>
+                        <h1 class="cover-heading">sloth - 构建工具</h1>
                         <p class="lead">轻松、简单、快速，帮您踏出第一步的工具</p>
                         <p class="lead">透过数据库的结构，自动生成项目，帮您略过繁杂且重复的动作！</p>
                         <p class="lead">目前提供框架</p>
@@ -152,7 +152,7 @@
 
             <div class="mastfoot">
                 <div class="inner">
-                    <p>Sloth Build Tool 2016</p>
+                    <p>sloth Build Tool 2016</p>
                     <p>V1.0 (Beta)</p>
                 </div>
             </div>

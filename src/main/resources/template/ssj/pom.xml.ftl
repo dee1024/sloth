@@ -6,13 +6,12 @@
 
     <groupId>${packageName}</groupId>
     <artifactId>${projectName}</artifactId>
-    <version>V1.0</version>
+    <version>v${"$"}{current.time}</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.0.RELEASE</version> <!-- 1.3.2.RELEASE -->
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>1.5.6.RELEASE</version>
     </parent>
 
     <properties>
@@ -35,48 +34,36 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <!-- redis -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-redis</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-websocket</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-messaging</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
-        <!--<dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.8.0</version>
-        </dependency>-->
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+            <version>1.4.6.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -263,7 +250,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <encoding>UTF-8</encoding>
+                            <encoding>${"$"}{project.build.sourceEncoding}/encoding>
                             <outputDirectory>${"$"}{project.build.directory}</outputDirectory>
                             <resources>
                                 <resource>
@@ -282,7 +269,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
-                    <finalName>${"$"}{project.artifactId}-jar-without-dependencies</finalName>
+                    <finalName>${"$"}{project.artifactId}-V${"$"}{current.time}</finalName>
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
