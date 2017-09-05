@@ -34,7 +34,7 @@ public class Generator {
         logger.info("\n\n");
         logger.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
         logger.info("@      Genarate Successfully !       @");
-        logger.info("@   Thank you for using Sloth 1.1    @");
+        logger.info("@   Thank you for using sloth 1.1    @");
         logger.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
     }
 

@@ -250,7 +250,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <encoding>${"$"}{project.build.sourceEncoding}/encoding>
+                            <encoding>${"$"}{project.build.sourceEncoding}</encoding>
                             <outputDirectory>${"$"}{project.build.directory}</outputDirectory>
                             <resources>
                                 <resource>
@@ -269,7 +269,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
-                    <finalName>${"$"}{project.artifactId}-V${"$"}{current.time}</finalName>
+                    <finalName>${"$"}{project.artifactId}-v${"$"}{current.time}</finalName>
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
@@ -287,15 +287,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
+                    <descriptors>
+                        <descriptor>src/main/assembly/assembly.xml</descriptor>
+                    </descriptors>
                     <finalName>${"$"}{project.artifactId}</finalName>
-                        <archive>
-                            <manifest>
-                                <mainClass>${"$"}{start-class}</mainClass>
-                            </manifest>
-                        </archive>
-                        <descriptorRefs>
-                            <descriptorRef>jar-with-dependencies</descriptorRef>
-                        </descriptorRefs>
                 </configuration>
                 <executions>
                     <execution>
