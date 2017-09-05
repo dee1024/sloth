@@ -59,37 +59,22 @@ mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h12
 ```
 
 
-generate args | e.g         |
------------- | -------------|
--path           | /workspaces/mySlothProject|the path where code generate
--projectname  | mySlothProject|the target project name
--package  | com.test|
--help  |    |
--strategy  | ssm|
--h  | 127.0.0.1|
--P  | 3306|
--u  | root|
--p  | 123456|
--d  | test|
-
-
-
-      |generate args|            e.g            | description                 |
-      |-------------| --------------------------| ----------------------------|
-      |-path        |/workspaces/mySlothProject | the path where code generate|
-      |-projectname | mySlothProject            | the target project name|
-      |-package     | com.test                  | tell sloth to use the package name|
-      |-help        |                           | to see which options are available|
-      |-strategy    | ssm                       | generattion strategy:|
+generate args | e.g         |description
+------------ | -------------|-------------
+-path           | /workspaces/mySlothProject | the path where code generate
+-projectname  | mySlothProject | the target project name
+-package  | com.test|tell sloth to use the package name
+-help  |    |to see which options are available
+-strategy  | ssm|   generattion strategy:|
       |             |                           | ssd=SpringBoot + SpringData|
       |             |                           | ssm=SpringMVC + Spring+MyBatis|
       |             |                           | sss=SpringBoot + SpringJDBC|
-      |             |                           | ssj=SpringBoot + JOOQ|
-      |-h           | 127.0.0.1                 | database host|
-      |-P           | 3306                      | database port|
-      |-u           | root                      | database username|
-      |-p           | 123456                    | database password|
-      |-d           | test                      | database name|
+      |             |                           | ssj=SpringBoot + JOOQ
+-h  | 127.0.0.1|database host
+-P  | 3306|database port
+-u  | root|database username
+-p  | 123456|database password
+-d  | test|database name
 
 - __Step 6: Into Sloth Target Project Generated__
 ```bash
