@@ -77,11 +77,11 @@ mvn exec:java -Dexec.mainClass=”com.test.Application” -Dexec.cleanupDaemonTh
 ===
 - __我的数据源__
 
-      TableName |
-      --------- |
-      game |
-      gameRole |
-      gameServer |
+TableName |
+------------ |
+game |
+gameRole |
+gameServer |
       
 - __所生成的目标项目代码结构__
 ```bash
