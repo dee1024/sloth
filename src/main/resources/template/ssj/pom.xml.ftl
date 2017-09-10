@@ -148,6 +148,11 @@
             <artifactId>jooq-meta</artifactId>
             <version>3.8.2</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 

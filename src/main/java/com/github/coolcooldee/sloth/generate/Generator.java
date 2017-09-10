@@ -1,5 +1,6 @@
 package com.github.coolcooldee.sloth.generate;
 
+import com.github.coolcooldee.sloth.Application;
 import com.github.coolcooldee.sloth.parameter.*;
 
 import com.github.coolcooldee.sloth.utils.DirectoryUtil;
@@ -34,7 +35,7 @@ public class Generator {
         logger.info("\n\n");
         logger.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
         logger.info("@      Genarate Successfully !       @");
-        logger.info("@   Thank you for using sloth 1.1    @");
+        logger.info("@   Thank you for using sloth "+ Application.version_desc+"    @");
         logger.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
     }
 

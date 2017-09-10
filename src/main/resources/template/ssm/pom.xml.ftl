@@ -8,21 +8,23 @@
     <artifactId>${projectName}</artifactId>
     <version>v${"$"}{current.time}</version>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.6.RELEASE</version>
-    </parent>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
+        <springboot.version>1.5.6.RELEASE</springboot.version>
+        <springboot.redis.version>1.4.6.RELEASE</springboot.redis.version>
         <db.url>jdbc:mysql://${sourceDbHost}:${sourceDbPort}</db.url>
         <db.username>${sourceDbUsername}</db.username>
         <db.password>${sourceDbPassword}</db.password>
         <db.schema>${sourceDbSchema}</db.schema>
         <start-class>${packageName}.Application</start-class>
     </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>${springboot.version}</version>
+    </parent>
 
     <dependencies>
         <dependency>
@@ -62,7 +64,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-redis</artifactId>
-            <version>1.4.6.RELEASE</version>
+            <version>${springboot.redis.version}</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -136,7 +138,11 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.2.2</version>
         </dependency>
-
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>

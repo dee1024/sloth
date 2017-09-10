@@ -35,18 +35,17 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
     public void execute(){
         //genVersionControllFileAndBackup();
 
-        if(StringUtil.isEmpty(UserInputParamters.getDbTableInUserParam())){
-            // step 1
-            copyDefaultStaticResourcesFile();
-            // step 2
-            genEnableGeneratedFileIn(getAllCommonFiles());
-            // step 3
-            genEnableGeneratedFileIn(getAllCustomizedFiles());
-
-        }else{
+        if(!StringUtil.isEmpty(UserInputParamters.getDbTableInUserParam())){
             String[] args = UserInputParamters.getDbTableInUserParam().split(",");
             genEnableGeneratedFileIn(getAllCustomizedFiles(), args);
+            return;
         }
+        // step 1
+        copyDefaultStaticResourcesFile();
+        // step 2
+        genEnableGeneratedFileIn(getAllCommonFiles());
+        // step 3
+        genEnableGeneratedFileIn(getAllCustomizedFiles());
     }
 
 

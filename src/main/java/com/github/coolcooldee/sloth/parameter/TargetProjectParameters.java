@@ -24,6 +24,7 @@ public abstract class TargetProjectParameters {
 
     //xxxxx/target/DefauleProjectByRK/src/main/java/
     private static String targetProjectJavaStorePath = targetProjectStorePath + "src/main/java/".replace("/", File.separator);
+    private static String targetProjectTestJavaStorePath = targetProjectStorePath + "src/test/java/".replace("/", File.separator);
 
     //xxxxx/target/DefauleProjectByRK/src/main/java/com.sloth/src/main/resources/
     private static String targetProjectResourceStorePath = targetProjectStorePath + "src/main/resources/".replace("/", File.separator);
@@ -47,6 +48,7 @@ public abstract class TargetProjectParameters {
 
         targetProjectStorePath = (targetsDirectory + targetsName + "/").replace("/", File.separator);
         targetProjectJavaStorePath = (targetProjectStorePath + "src/main/java/").replace("/", File.separator);
+        targetProjectTestJavaStorePath = (targetProjectStorePath + "src/test/java/").replace("/", File.separator);
         targetProjectJavaWhitPackNameStorePath = (targetProjectJavaStorePath + targetPackage.replace(".", "/") + "/").replace("/", File.separator);
         targetProjectResourceStorePath = (targetProjectStorePath + "src/main/resources/").replace("/", File.separator);
         targetProjectStaticResourceStorePath = (targetProjectStorePath + "src/main/resources/static/").replace("/", File.separator);
