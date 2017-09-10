@@ -28,7 +28,7 @@ public  class ${upperFirstLetterName}ServiceImpl implements ${upperFirstLetterNa
 
 	@Override
 	public Integer count(){
-	    return 0;
+		return dslContext.fetchCount(${jooqName}.${upperName});
 	}
 
 	@Override

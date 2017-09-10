@@ -11,8 +11,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <springboot.version>1.5.6.RELEASE</springboot.version>
-        <springboot.redis.version>1.4.6.RELEASE</springboot.redis.version>
         <db.url>jdbc:mysql://${sourceDbHost}:${sourceDbPort}</db.url>
         <db.username>${sourceDbUsername}</db.username>
         <db.password>${sourceDbPassword}</db.password>
@@ -23,7 +21,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>${springboot.version}</version>
+        <version>1.5.6.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -64,7 +62,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-redis</artifactId>
-            <version>${springboot.redis.version}</version>
+            <version>1.4.6.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
