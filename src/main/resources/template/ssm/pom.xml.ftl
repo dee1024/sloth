@@ -249,7 +249,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
-                    <finalName>${"$"}{project.artifactId}-V${"$"}{current.time}</finalName>
+                    <finalName>${"$"}{project.artifactId}-v${"$"}{current.time}</finalName>
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
