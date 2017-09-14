@@ -152,6 +152,7 @@
 
 
     <build>
+        <finalName>${"$"}{project.artifactId}-v${"$"}{current.time}</finalName>
         <resources>
             <resource>
                 <directory>${"$"}{basedir}/src/main/java</directory>
@@ -263,7 +264,6 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
-                    <finalName>${"$"}{project.artifactId}-v${"$"}{current.time}</finalName>
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
