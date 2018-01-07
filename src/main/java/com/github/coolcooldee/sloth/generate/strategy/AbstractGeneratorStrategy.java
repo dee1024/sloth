@@ -112,8 +112,9 @@ public abstract class AbstractGeneratorStrategy implements GeneratorStrategy, En
             e.printStackTrace();
             throw new RuntimeException(e);
         }
-        if(tables.size()>0)
+        if(tables.size()>0) {
             TemplateParameters.getTemplateParameterInfo().setAllTablesName(tables.get(0).getAllTablesName());
+        }
         //
         for (int i = 0; i < enableGeneratedFiles.length; i++) {
             EnableGeneratedFile enableGeneratedFile = enableGeneratedFiles[i];
