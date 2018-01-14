@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * @author Dee1024
- * @link https://github.com/dee1024/sloth
+ * @link https://github.com/dee1024/code-generator
  * @since 16/6/16
  *
  */
@@ -25,7 +25,7 @@ public class Application {
             String dbHost = "127.0.0.1";
             String dbPort = "3306";
             String dbUser = "root";
-            String dbPassword = "";
+            String dbPassword = "123456";
             String dbName = "test";
             String strategy = "ssm";
             String packageName = "com.dee.test";

@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/dee1024/sloth/master/src/main/resources/static/images/logo.png)
+![](https://raw.githubusercontent.com/dee1024/code-generator/master/src/main/resources/static/images/logo.png)
 
 SLOTH 1.0
 =========
@@ -43,11 +43,11 @@ host | port | username | password | dbname
 
 - __Step 2: Clone Sloth__
 ```bash
-git clone https://github.com/dee1024/sloth.git
+git clone https://github.com/dee1024/code-generator.git
 ```
 - __Step 3: Into The Sloth Root Directory__
 ```bash
-cd sloth
+cd code-generator
 ```
 - __Step 4: Maven Install__
 ```bash
@@ -153,7 +153,8 @@ gameServer |
 ```
 - __Target Project Api Webpage__
 
-![](https://raw.githubusercontent.com/dee1024/sloth/master/src/main/resources/static/images/demo1.png)
+![](https://raw.githubusercontent.com/dee1024/code-generator/master/src/main/resources/static/images/demo1.png)
+
 
 - __Demo__
 http://www.dee1024.cc/apis-docs-by-sloth.html
@@ -164,7 +165,7 @@ If you want to contribute code, we are waiting for your pull requests !
 
 Author
 ======
-* __Dee Qiu__ <dee1024@gmail.com>
+* __Dee Qiu__ <coolcooldee@gmail.com>
 
 Others
 ======

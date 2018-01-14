@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/dee1024/sloth/master/src/main/resources/static/images/logo.png)
+![](https://raw.githubusercontent.com/dee1024/code-generator/master/src/main/resources/static/images/logo.png)
 
 SLOTH 1.0
 =========
@@ -31,11 +31,11 @@ host | port | username | password | dbname
 
 - __步骤二：Clone Sloth__
 ```bash
-git clone https://github.com/dee1024/sloth.git
+git clone https://github.com/dee1024/code-generator.git
 ```
 - __步骤三：进入 Sloth 的根目录__
 ```bash
-cd sloth
+cd code-generator
 ```
 - __步骤四：使用 Maven 安装 Sloth__
 ```bash
@@ -141,7 +141,7 @@ gameServer |
 ```
 - __目标项目的接口文档页面示意图__
 
-![](https://raw.githubusercontent.com/dee1024/sloth/master/src/main/resources/static/images/demo1.png)
+![](https://raw.githubusercontent.com/dee1024/code-generator/master/src/main/resources/static/images/demo1.png)
 
 - __示例__
 http://www.dee1024.cc/apis-docs-by-sloth.html
