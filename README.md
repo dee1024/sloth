@@ -157,7 +157,7 @@ gameServer |
 
 
 - __Demo__
-http://www.dee1024.cc/apis-docs-by-sloth.html
+http://dee1024.cc/apis-docs-by-sloth.html
 
 Contributing
 ============

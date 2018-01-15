@@ -21,14 +21,14 @@ public class Application {
         if(args==null || args.length==0) {
             //setting demo paramters
             String path = "/Users/dee/Documents/dev/workspace";
-            String projectName = "test";
-            String dbHost = "127.0.0.1";
+            String projectName = "slothdemo";
+            String dbHost = "59.37.172.51";
             String dbPort = "3306";
             String dbUser = "root";
-            String dbPassword = "123456";
-            String dbName = "test";
+            String dbPassword = "WJCLZVcubGYpipA0";
+            String dbName = "slothdemo";
             String strategy = "ssm";
-            String packageName = "com.dee.test";
+            String packageName = "com.dee1024";
             //generating
             Generator.execute(UserInputParamters.genInputArgs(path,projectName,dbHost,dbPort,dbUser,dbPassword,dbName,strategy,packageName));
         }else{

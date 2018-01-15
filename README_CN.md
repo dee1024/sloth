@@ -144,7 +144,7 @@ gameServer |
 ![](https://raw.githubusercontent.com/dee1024/code-generator/master/src/main/resources/static/images/demo1.png)
 
 - __示例__
-http://www.dee1024.cc/apis-docs-by-sloth.html
+http://dee1024.cc/apis-docs-by-sloth.html
 
 贡献
 ===
