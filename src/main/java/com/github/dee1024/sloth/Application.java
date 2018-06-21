@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * @author Dee1024
- * @link https://github.com/dee1024/code-generator
+ * @link https://github.com/dee1024/sloth
  * @since 16/6/16
  *
  */
@@ -20,15 +20,15 @@ public class Application {
     public static void main(String[] args) throws Exception {
         if(args==null || args.length==0) {
             //setting demo paramters
-            String path = "/Users/dee/Documents/dev/workspace";
-            String projectName = "slothdemo";
-            String dbHost = "59.37.172.51";
+            String path = "/Users/dee/Documents/dev/xsj_docs/oa";
+            String projectName = "huidao_oa_gen";
+            String dbHost = "127.0.0.1";
             String dbPort = "3306";
             String dbUser = "root";
-            String dbPassword = "WJCLZVcubGYpipA0";
-            String dbName = "slothdemo";
-            String strategy = "ssm";
-            String packageName = "com.dee1024";
+            String dbPassword = "123456";
+            String dbName = "huidao_oa";
+            String strategy = "ssd";
+            String packageName = "com.huidao.oa";
             //generating
             Generator.execute(UserInputParamters.genInputArgs(path,projectName,dbHost,dbPort,dbUser,dbPassword,dbName,strategy,packageName));
         }else{

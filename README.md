@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/coolcooldee/sloth/master/src/main/resources/static/images/logo.png)
+![](https://raw.githubusercontent.com/dee1024/sloth/master/src/main/resources/static/images/logo.png)
 
 SLOTH 1.0
 =========
@@ -43,7 +43,7 @@ host | port | username | password | dbname
 
 - __Step 2: Clone Sloth__
 ```bash
-git clone https://github.com/coolcooldee/sloth.git
+git clone https://github.com/dee1024/sloth.git
 ```
 - __Step 3: Into The Sloth Root Directory__
 ```bash
@@ -55,7 +55,7 @@ mvn clean install
 ```
 - __Step 5: Sloth Generating__
 ```
-mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h127.0.0.1 -P3306 -uroot -p123456 -dtest -strategyssm"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.coolcooldee.sloth.Application"
+mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h127.0.0.1 -P3306 -uroot -p123456 -dtest -strategyssm"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.dee1024.sloth.Application"
 ```
 
 
@@ -153,7 +153,7 @@ gameServer |
 ```
 - __Target Project Api Webpage__
 
-![](https://raw.githubusercontent.com/coolcooldee/sloth/master/src/main/resources/static/images/demo1.png)
+![](https://raw.githubusercontent.com/dee1024/sloth/master/src/main/resources/static/images/demo1.png)
 
 - __Demo__
 http://www.dee1024.cc/apis-docs-by-sloth.html
@@ -164,7 +164,7 @@ If you want to contribute code, we are waiting for your pull requests !
 
 Author
 ======
-* __Dee Qiu__ <coolcooldee@gmail.com>
+* __Dee Qiu__ <dee1024@gmail.com>
 
 Others
 ======

@@ -1,6 +1,5 @@
 package com.github.dee1024.sloth.parameter;
 
-import com.github.dee1024.sloth.Application;
 import com.github.dee1024.sloth.utils.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

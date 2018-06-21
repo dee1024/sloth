@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/coolcooldee/sloth/master/src/main/resources/static/images/logo.png)
+![](https://raw.githubusercontent.com/dee1024/sloth/master/src/main/resources/static/images/logo.png)
 
 SLOTH 1.0
 =========
@@ -31,7 +31,7 @@ host | port | username | password | dbname
 
 - __步骤二：Clone Sloth__
 ```bash
-git clone https://github.com/coolcooldee/sloth.git
+git clone https://github.com/dee1024/sloth.git
 ```
 - __步骤三：进入 Sloth 的根目录__
 ```bash
@@ -43,7 +43,7 @@ mvn clean install
 ```
 - __步骤五：使用 Sloth 生成__
 ```
-mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h127.0.0.1 -P3306 -uroot -p123456 -dtest -strategyssm"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.coolcooldee.sloth.Application"
+mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h127.0.0.1 -P3306 -uroot -p123456 -dtest -strategyssm"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.dee1024.sloth.Application"
 ```
 
 
@@ -141,7 +141,7 @@ gameServer |
 ```
 - __目标项目的接口文档页面示意图__
 
-![](https://raw.githubusercontent.com/coolcooldee/sloth/master/src/main/resources/static/images/demo1.png)
+![](https://raw.githubusercontent.com/dee1024/sloth/master/src/main/resources/static/images/demo1.png)
 
 - __示例__
 http://www.dee1024.cc/apis-docs-by-sloth.html

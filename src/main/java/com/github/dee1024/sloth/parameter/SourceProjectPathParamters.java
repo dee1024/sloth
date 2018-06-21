@@ -34,7 +34,9 @@ public abstract class SourceProjectPathParamters {
     }
 
     public static void main(String[] args) {
-        DirectoryUtil.readFile(sourceProjectStaticFilePath);
+
+         String sourceProjectClassPath = (System.getProperty("user.dir")+"/target/classes/").replace("/", File.separator);
+        System.out.println(sourceProjectClassPath);
     }
 
 }

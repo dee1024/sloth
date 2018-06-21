@@ -5,7 +5,6 @@ import com.github.dee1024.sloth.parameter.EnableSupportUserInputPatamter;
 import com.github.dee1024.sloth.generate.strategy.GeneratorStrategy;
 
 import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;

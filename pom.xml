@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.coolcooldee</groupId>
+    <groupId>com.github.dee1024</groupId>
     <artifactId>sloth</artifactId>
     <version>1.0.1-snapshot</version>
 
@@ -17,30 +17,33 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <db.url>jdbc:mysql://localhost:3306</db.url>
         <db.username>root</db.username>
         <db.password></db.password>
         <db.schema>test</db.schema>
-        <start-class>com.github.coolcooldee.sloth.Application</start-class>
+        <start-class>com.github.dee1024.sloth.Application</start-class>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+            <version>1.4.0.RELEASE</version>
         </dependency>
 
         <!--support http-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>1.4.0.RELEASE</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
+            <version>1.4.0.RELEASE</version>
             <optional>true</optional>
         </dependency>
 
@@ -48,6 +51,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>1.4.0.RELEASE</version>
             <scope>test</scope>
         </dependency>
 
@@ -55,12 +59,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
+            <version>1.4.0.RELEASE</version>
         </dependency>
 
         <!--Freemarker-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
+            <version>1.4.1.RELEASE</version>
         </dependency>
 
         <!-- apache -->
@@ -93,11 +99,11 @@
             <version>2.5.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
-            <version>2.3.20</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.freemarker</groupId>-->
+            <!--<artifactId>freemarker</artifactId>-->
+            <!--<version>2.3.20</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -135,7 +141,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.github.coolcooldee.sloth.Application</mainClass>
+                            <mainClass>com.github.dee1024.sloth.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

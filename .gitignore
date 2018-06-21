@@ -22,11 +22,11 @@ src/main/.DS_Store
 src/main/config/
 src/main/java/.DS_Store
 src/main/java/com/.DS_Store
-src/main/java/com/github/coolcooldee/sloth/source/db/db2/
-src/main/java/com/github/coolcooldee/sloth/source/db/h2/
-src/main/java/com/github/coolcooldee/sloth/source/db/sqlite/
-src/main/java/com/github/coolcooldee/sloth/source/db/sybase/
-src/main/java/com/github/coolcooldee/sloth/source/pojo/
+src/main/java/com/github/dee1024/sloth/source/db/db2/
+src/main/java/com/github/dee1024/sloth/source/db/h2/
+src/main/java/com/github/dee1024/sloth/source/db/sqlite/
+src/main/java/com/github/dee1024/sloth/source/db/sybase/
+src/main/java/com/github/dee1024/sloth/source/pojo/
 src/main/resources/.DS_Store
 src/main/resources/static/.DS_Store
 src/main/resources/static/images/.DS_Store

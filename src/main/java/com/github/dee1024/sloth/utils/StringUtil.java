@@ -1,7 +1,5 @@
 package com.github.dee1024.sloth.utils;
 
-import java.util.Arrays;
-
 /**
  * Created by sloth on 16/6/16.
  */
