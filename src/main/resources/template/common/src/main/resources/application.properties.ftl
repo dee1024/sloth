@@ -1,5 +1,5 @@
-baseServiceUrl=http://localhost:8081
-server.port=8081
+baseServiceUrl=http://localhost:8080
+server.port=8080
 
 #DB config
 ${packageName}.dbHost = ${sourceDbHost}

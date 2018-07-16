@@ -2,7 +2,7 @@ baseServiceUrl=http://localhost:8081
 server.port=8081
 
 #DB config
-spring.datasource.url = jdbc:mysql://${sourceDbHost}:${sourceDbPort}/${sourceDbSchema}
+spring.datasource.url = jdbc:mysql://${sourceDbHost}:${sourceDbPort}/${sourceDbSchema}?useUnicode=true&characterEncoding=UTF-8
 spring.datasource.username = ${sourceDbUsername}
 spring.datasource.password = ${sourceDbPassword}
 spring.datasource.driverClassName = com.mysql.jdbc.Driver
