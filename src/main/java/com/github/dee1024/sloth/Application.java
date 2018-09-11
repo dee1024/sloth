@@ -21,14 +21,14 @@ public class Application {
         if(args==null || args.length==0) {
             //setting demo paramters
             String path = "/Users/dee/Documents/dev/xsj_docs/oa";
-            String projectName = "huidao_oa_gen";
+            String projectName = "test";
             String dbHost = "127.0.0.1";
             String dbPort = "3306";
             String dbUser = "root";
             String dbPassword = "123456";
             String dbName = "huidao_oa";
             String strategy = "ssd";
-            String packageName = "com.huidao.oa";
+            String packageName = "com.demo.test";
             //generating
             Generator.execute(UserInputParamters.genInputArgs(path,projectName,dbHost,dbPort,dbUser,dbPassword,dbName,strategy,packageName));
         }else{
