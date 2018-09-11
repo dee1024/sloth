@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/dee1024/sloth/master/src/main/resources/static/images/logo.png)
 
-SLOTH 1.0
+SLOTH 1.2
 =========
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/nimelepbpejjlbmoobocpfnjhihnpked.svg)]()  [![version](https://img.shields.io/badge/release-v1.0.1-brightgreen.svg)]()  [![issues](https://img.shields.io/badge/issues-2-orange.svg)]()  [![Licence](https://img.shields.io/badge/Licence-Apache-blue.svg)]()  
 
