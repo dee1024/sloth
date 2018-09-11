@@ -2,99 +2,101 @@
 
 SLOTH 1.0
 =========
-
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/nimelepbpejjlbmoobocpfnjhihnpked.svg)]()  [![version](https://img.shields.io/badge/release-v1.0.1-brightgreen.svg)]()  [![issues](https://img.shields.io/badge/issues-2-orange.svg)]()  [![Licence](https://img.shields.io/badge/Licence-Apache-blue.svg)]()  
 
-__Sloth__ 是一个生成脚手架代码的工具。你只需要设置好业务应用所需要用的 __Mysql__ 数据源即可。如果你用过 Ruby on Rails 的代码生成器的话，那么 Sloth 也同样适用于这样的场景， 它使用 Java 语言构建，生成的脚手架代码亦是 Java。旨在为开发者提供一系列健壮的工具、程序库和工作流，帮助他们快速构建出漂亮、引人注目的Web应用。
-其它语言版本 : [English](/README_EN.md)
+sloth is A tool to generate scaffold code from SQL databases.You just need to specify your application database may be used. It allows for rapidly getting started on new projects.
+If you know what the code generator does in Ruby on Rails (RoR), sloth works just like that, and it’s specific to JAVA language now.
+sloth is always the right choice for your scaffolding needs.sloth can help developers quickly build beautiful web applications.
+Read this in other languages: [中文](/README_CN.md)
 
-特性
-===
-- __生成一个独立可运行的 SpringBoot 应用__　
-- __生成完整的 Model–View–Controller 三层代码__
-- __生成 API WEB 接口文档__
-- __提供多种数据访问方式__　
+Features
+========
+- __Generate Stand-Alone SpringBoot Applications__
+- __Rapidly create a new project executable__
+- __Generate Model–View–Controller Code__
+- __Generate API DOC__
+- __Provide Many Kinds Of Data Access With JDBC__　
     * [Spring Data](http://projects.spring.io/spring-data/)
+    * [Spring JdbcTemplate](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/jdbc.html)
     * [Mybatis](http://www.mybatis.org/mybatis-3/)
     * [JOOQ](http://www.jooq.org)
-    * [Spring JDBC](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/jdbc.html)
-- __DRY 原则__
-    * 绝不复制黏贴代码
-- __其它__
-    * 生成的目标代码整合: [Springboot](http://projects.spring.io/spring-boot/)、[Guava](https://github.com/google/guava)、[HikariCP](https://github.com/brettwooldridge/HikariCP)、[Apache Commons](http://commons.apache.org)、[fastjson](https://github.com/alibaba/fastjson)、[swagger2](http://swagger.io)、[Flywaydb](https://flywaydb.org)
+- __Reduce repetitive coding__
+    * Never copy and paste boilerplate between projects again
+- __Generate your code in less time with fewer bugs__ 
+- __OTHERS__
+    * Target project generated integrate [Springboot](http://projects.spring.io/spring-boot/)、[Guava](https://github.com/google/guava)、[HikariCP](https://github.com/brettwooldridge/HikariCP)、[Apache Commons](http://commons.apache.org)、[fastjson](https://github.com/alibaba/fastjson)、[swagger2](http://swagger.io)、[Flywaydb](https://flywaydb.org)
 
-环境
+Prerequisites
 =============
-- __JDK__　JDK 1.7 +
-- __Maven__ version 3.0 
+Before useing sloth, you will need the following:
+- __JDK__　(Java Development Kit), version 1.7 and above
+- __Maven__ (Project Management Tool), version 3.0 and above
 - __GIT__ 
 
-
-快速开始
-======
-- __步骤一：准备好数据源__
+Quick Start
+===========
+- __Step 1: Prepare Your Database And Create Your Database Structure__
 
 host | port | username | password | dbname
 ------------ | ------------- | ------------- | ------------- | -------------
 127.0.0.1 | 3306 | root | 123456 | test
 
-
-- __步骤二：Clone Sloth__
+- __Step 2: Clone Sloth__
 ```bash
 git clone https://github.com/dee1024/sloth.git
 ```
-- __步骤三：进入 Sloth 的根目录__
+- __Step 3: Into The Sloth Root Directory__
 ```bash
 cd sloth
 ```
-- __步骤四：使用 Maven 安装 Sloth__
+- __Step 4: Maven Install__
 ```bash
 mvn clean install
 ```
-- __步骤五：使用 Sloth 生成__
+- __Step 5: Sloth Generating__
 ```
 mvn exec:java -Dexec.args="-path/workspaces/mySlothProject -packagecom.test -h127.0.0.1 -P3306 -uroot -p123456 -dtest -strategyssm"  -Dexec.cleanupDaemonThreads=false -Dexec.mainClass="com.github.dee1024.sloth.Application"
 ```
 
 
-生成使用的参数 | 例如         |参数说明
+generate args | e.g         |description
 ------------ | -------------|-------------
--path           | /workspaces/mySlothProject | 生成的目标项目的路径
--projectname  | mySlothProject | 生成的目标项目的包名
--package  | com.test| 目前项目的名字
--help  |    | 查看帮助
--strategy  | ssm|   生成策略:ssd=SpringBoot + SpringData,ssm=SpringMVC + Spring+MyBatis,sss=SpringBoot + SpringJDBC,ssj=SpringBoot + JOOQ
--h  | 127.0.0.1|数据库地址
--P  | 3306|数据库端口
--u  | root|数据库用户名
--p  | 123456|数据库用户密码
--d  | test|数据库库名
+-path           | /workspaces/mySlothProject | the path where code generate
+-projectname  | mySlothProject | the target project name
+-package  | com.test|tell sloth to use the package name
+-help  |    |to see which options are available
+-strategy  | ssm|   generattion strategy:ssd=SpringBoot + SpringData,ssm=SpringMVC + Spring+MyBatis,sss=SpringBoot + SpringJDBC,ssj=SpringBoot + JOOQ
+-h  | 127.0.0.1|database host
+-P  | 3306|database port
+-u  | root|database username
+-p  | 123456|database password
+-d  | test|database name
 
-- __步骤六：进入新生成的目标项目的根目录__
+- __Step 6: Into Sloth Target Project Generated__
 ```bash
 cd /workspaces/mySlothProject
 ```
 
-- __步骤七：启动新生成的目标项目__
+- __Step 7: Runngin Sloth Target Project__
 ```bash
 mvn clean install
 mvn exec:java -Dexec.mainClass=”com.test.Application” -Dexec.cleanupDaemonThreads=false
 ```
-- __步骤八：完成__
+- __Step 8: Open a new tab in your web browser on__
 <http://localhost:8081/apis-docs-by-sloth.html>
 
-例子
-===
-- __我的数据源__
+Example
+=======
+- __Database Tables Source__
 
 TableName |
 ------------ |
 game |
 gameRole |
 gameServer |
-      
-- __所生成的目标项目代码结构__
-```bash
+
+- __Target Project Code__
+```java
 ├── deploy.sh
 ├── mvn.sh
 ├── pom.xml
@@ -149,27 +151,27 @@ gameServer |
 ├── start.sh
 ├── stop.sh
 ```
-- __目标项目的接口文档页面示意图__
+- __Target Project Api Webpage__
 
 ![](https://raw.githubusercontent.com/dee1024/sloth/master/src/main/resources/static/images/demo1.png)
 
-- __示例__
+- __Demo__
 http://www.dee1024.cc/apis-docs-by-sloth.html
 
-贡献
-===
-我们期待你的 pull requests !
+Contributing
+============
+If you want to contribute code, we are waiting for your pull requests !
 
-作者
-===
-* __Dee Qiu__ <coolcooldee@gmail.com>
+Author
+======
+* __Dee Qiu__ <dee1024@gmail.com>
 
-其它
-===
-* __QQ群__ 570997546
+Others
+======
+* __QQ Group__ 570997546
 
-许可证
-===
+License
+=======
 Sloth is licensed under the Apache License, Version 2.0 (the "License");
 
 
