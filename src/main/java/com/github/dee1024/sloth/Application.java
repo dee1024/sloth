@@ -26,7 +26,7 @@ public class Application {
             String dbPort = "3306";
             String dbUser = "root";
             String dbPassword = "123456";
-            String dbName = "huidao_oa";
+            String dbName = "test";
             String strategy = "ssd";
             String packageName = "com.demo.test";
             //generating
